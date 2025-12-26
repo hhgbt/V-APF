@@ -87,6 +87,61 @@ class FeatureExtractor:
         except Exception as e:
             return None, str(e)
 
+    def extract_features(self, request_url: str, method: str, probe_payload: dict, base_payload: dict = None, probe_str: str = None, timeout: float = 5.0):
+        """通用特征提取器。
+
+        参数:
+            request_url: 提交的完整 URL
+            method: 请求方法 'GET' 或 'POST'
+            probe_payload: 探测请求的参数字典（含要注入的 payload）
+            base_payload: 可选的基准请求参数字典；若为 None，会以 probe_payload 的字段名构造默认值 'test'
+            probe_str: 可选的探测字符串，用于判断是否反射
+            timeout: 请求超时时间
+
+        返回:
+            tuple (sample_dict, base_text, probe_text) 或 (None, None, None) 在失败时。
+        """
+        # 准备 base_payload
+        if base_payload is None:
+            base_payload = {k: "test" for k in probe_payload.keys()}
+
+        # 合并页面隐藏 token（如果存在）到两个 payload
+        try:
+            tokens = self._fetch_form_tokens(request_url, "")
+        except Exception:
+            tokens = {}
+
+        if tokens:
+            base_payload.update(tokens)
+            probe_payload.update(tokens)
+
+        base_feat, base_text = self.get_feature_vector(request_url, method, base_payload, timeout=timeout)
+        if not base_feat:
+            return None, None, None
+
+        probe_feat, probe_text = self.get_feature_vector(request_url, method, probe_payload, timeout=timeout)
+        if not probe_feat:
+            return None, None, None
+
+        sample = {
+            # 按训练时使用的特征名组织（保证名字完全一致以便对齐）
+            "probe_reflected": 1 if probe_str and probe_str in (probe_text or "") else 0,
+            "len_diff": abs(probe_feat["resp_length"] - base_feat["resp_length"]),
+            "has_text_diff": 1 if (probe_text != base_text) else 0,
+            "status_changed": 1 if probe_feat["status_code"] != base_feat["status_code"] else 0,
+            "resp_time_diff": probe_feat["resp_time"] - base_feat["resp_time"],
+            "resp_time_base": base_feat["resp_time"],
+            "resp_time_probe": probe_feat["resp_time"],
+            "resp_length_base": base_feat["resp_length"],
+            "resp_length_probe": probe_feat["resp_length"],
+            "has_sql_error_probe": probe_feat.get("has_sql_error", 0),
+            "has_sql_error_base": base_feat.get("has_sql_error", 0),
+            "has_script_tag_probe": probe_feat.get("has_script_tag", 0),
+            "has_script_tag_base": base_feat.get("has_script_tag", 0),
+        }
+
+        return sample, base_text, probe_text
+
     def run(self):
         os.makedirs(os.path.dirname(self.output_csv) or ".", exist_ok=True)
         dataset = []
@@ -119,36 +174,19 @@ class FeatureExtractor:
                     # 如果 tokens 中包含与 form input 相同的名字（如 user_token），保留真实值
                     probe_payload.update(form_tokens)
 
-                    probe_feat, probe_text = self.get_feature_vector(request_url, method, probe_payload)
-                    if not probe_feat:
+                    # 使用通用的特征提取器以保证训练/预测时特征一致
+                    sample, base_text, probe_text = self.extract_features(request_url, method, probe_payload, base_payload=base_payload, probe_str=probe_str)
+                    if not sample:
                         continue
-
-                    # 衍生/差分特征
-                    sample = {
+                    # 保留一些上下文信息以便人工标注
+                    sample.update({
                         "page_url": page_url,
                         "request_url": request_url,
                         "form_method": method,
                         "payload_type": p["type"],
                         "payload": probe_str,
-                        "resp_length_base": base_feat["resp_length"],
-                        "status_code_base": base_feat["status_code"],
-                        "resp_time_base": base_feat["resp_time"],
-                        "has_sql_error_base": base_feat["has_sql_error"],
-                        "has_script_tag_base": base_feat["has_script_tag"],
-                        "resp_length_probe": probe_feat["resp_length"],
-                        "status_code_probe": probe_feat["status_code"],
-                        "resp_time_probe": probe_feat["resp_time"],
-                        "has_sql_error_probe": probe_feat["has_sql_error"],
-                        "has_script_tag_probe": probe_feat["has_script_tag"],
-                        # 差分
-                        "len_diff": abs(probe_feat["resp_length"] - base_feat["resp_length"]),
-                        "status_changed": 1 if probe_feat["status_code"] != base_feat["status_code"] else 0,
-                        "resp_time_diff": probe_feat["resp_time"] - base_feat["resp_time"],
-                        "has_text_diff": 1 if (probe_text != base_text) else 0,
-                        "probe_reflected": 1 if probe_str in (probe_text or "") else 0,
-                        # 标签留空，供后续人工标注：0/1
                         "label": "",
-                    }
+                    })
 
                     dataset.append(sample)
 
