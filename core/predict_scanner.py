@@ -18,6 +18,7 @@ if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
 from core.fuzzer_feature_extractor import FeatureExtractor
+from core.mutator import Mutator
 
 
 class AIScanner:
@@ -79,24 +80,56 @@ class AIScanner:
 
         # 检查是否需要进入自适应变异阶段（只在顶层调用时进行）
         if adaptive and result and result.get("probability") is not None:
-            vulnerability_prob = result["probability"][1] * 100
-            if 40 <= vulnerability_prob <= 75:
-                print("[+] 进入自适应变异阶段...")
-                adaptive_payloads = ["' OR SLEEP(5) -- ", "' AND (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x3a, (SELECT database()), 0x3a, FLOOR(RAND(0)*2)) x FROM information_schema.tables GROUP BY x) a) -- "]
-                for adaptive_payload in adaptive_payloads:
-                    print(f"[*] 使用变异 Payload: {adaptive_payload}")
-                    # 对变异 payload 执行一次非自适应扫描以避免递归
-                    mut_result = self.scan(target_url, method, payload_type, adaptive_payload, adaptive=False)
-                    if mut_result and mut_result.get("prediction") == 1:
-                        prob = mut_result.get("probability")
-                        if prob is not None:
-                            print(f"[@] 发现漏洞 (变异 Payload 概率 {prob[1]*100:.2f}%)")
-                        else:
-                            print("[@] 发现漏洞 (变异 Payload 检测到正例)")
-                        result = mut_result
+            pos_conf = result["probability"][1]
+            # 当正例置信度低于 60% 时，启动变异反馈循环
+            if pos_conf < 0.6:
+                print(f"[+] 置信度低 ({pos_conf*100:.1f}%)，进入自适应变异反馈循环...")
+                mutator = Mutator(max_attempts=10)
+                attempts = 0
+                best_result = result
+                for mutated in mutator.generate(payload_str):
+                    attempts += 1
+                    print(f"[*] 尝试变异 #{attempts}: {mutated}")
+                    # 直接重新提取特征并预测（避免递归调用 scan() 以保留控制）
+                    feat = self.get_live_features(target_url, method, payload_type, mutated)
+                    if not feat:
+                        print("[!] 变异后无法提取到特征，跳过")
+                        continue
+                    dfm = pd.DataFrame([feat]).reindex(columns=self.feature_list, fill_value=0)
+                    try:
+                        pm = self.model.predict(dfm)[0]
+                        pp = None
+                        try:
+                            pp = self.model.predict_proba(dfm)[0]
+                        except Exception:
+                            pass
+                    except Exception as e:
+                        print(f"[!] 预测失败: {e}")
+                        continue
+
+                    mutated_result = {"prediction": int(pm), "probability": pp, "features": feat}
+                    # 如果这是更高的正例置信度则替换
+                    if pp is not None and best_result.get("probability") is not None:
+                        if pp[1] > best_result["probability"][1]:
+                            best_result = mutated_result
+                    else:
+                        # 若无法获得概率信息，但预测为正例，优先使用
+                        if mutated_result.get("prediction") == 1 and best_result.get("prediction") == 0:
+                            best_result = mutated_result
+
+                    # 终止条件：达到或超过 60% 的正例置信度，或模型直接判定为漏洞
+                    conf = (pp[1] if pp is not None else (1.0 if mutated_result.get("prediction") == 1 else 0.0))
+                    if mutated_result.get("prediction") == 1 or conf >= 0.6:
+                        print(f"[+] 通过变异达成终止条件 (置信度 {conf*100:.2f}%)")
+                        result = mutated_result
                         break
+
+                else:
+                    # 完成所有尝试仍未达标，使用 best_result（可能仍是原始结果）
+                    print("[+] 变异尝试耗尽，使用最佳观测结果")
+                    result = best_result
             else:
-                print("[+] 无需变异，扫描结束。")
+                print("[+] 置信度足够，无需自适应变异。")
 
         return result
 
