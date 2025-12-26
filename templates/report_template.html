@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 渗透测试报告</title>
+    <style>
+        @font-face {
+            font-family: 'DroidSansFallback';
+            src: url('file:///usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf');
+        }
+        @page { size: A4; margin: 2cm; }
+        body { font-family: 'DroidSansFallback', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; padding: 0; color: #333; font-size: 12px; }
+        h1, h2, h3 { color: #2c3e50; }
+        .header { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
+        .summary-box { display: flex; justify-content: space-between; background: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #ddd; }
+        .stat-item { text-align: center; width: 30%; }
+        .stat-value { font-size: 20px; font-weight: bold; color: #2980b9; display: block; margin-bottom: 5px; }
+        .chart-container { text-align: center; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 8px; border: 1px solid #ddd; text-align: left; vertical-align: top; }
+        th { background-color: #f2f2f2; font-weight: bold; }
+        .vuln-row { background-color: #fff0f0; }
+        .safe-row { background-color: #ffffff; }
+        .progress-bar { background-color: #e0e0e0; border-radius: 3px; width: 100%; height: 16px; position: relative; margin-top: 5px; }
+        .progress-fill { height: 100%; border-radius: 3px; text-align: center; color: white; line-height: 16px; font-size: 10px; font-weight: bold; }
+        /* 风险等级样式映射 */
+        .critical, .严重 { background-color: #c0392b; }
+        .high, .高危 { background-color: #e67e22; }
+        .medium, .中危 { background-color: #f1c40f; }
+        .low, .低危 { background-color: #27ae60; }
+        .safe, .安全 { background-color: #2ecc71; }
+        
+        .feature-box { font-size: 0.85em; color: #555; }
+        .payload { font-family: 'Courier New', monospace; font-size: 0.9em; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 驱动渗透测试报告</h1>
+        <p>生成时间: {{ timestamp }}</p>
+    </div>
+
+    <div class="summary-box">
+        <div class="stat-item">
+            <span class="stat-value">{{ total_scans }}</span>
+            <span>扫描总数</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">{{ total_vulns }}</span>
+            <span>发现漏洞数</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">{{ avg_confidence }}%</span>
+            <span>平均 AI 置信度</span>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h3>AI 漏洞检测分布</h3>
+        {% if chart_path %}
+        <img src="file://{{ chart_path }}" alt="漏洞分布图" style="max-height: 300px;">
+        {% else %}
+        <p>暂无图表数据</p>
+        {% endif %}
+        
+        {% if radar_chart_path %}
+        <h3>核心漏洞特征指纹 (雷达图)</h3>
+        <p>可视化展示最高危漏洞的特征偏离情况。</p>
+        <img src="file://{{ radar_chart_path }}" alt="特征雷达图" style="max-height: 400px;">
+        {% endif %}
+    </div>
+
+    <h2>详细扫描结果</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 5%">#</th>
+                <th style="width: 20%">URL</th>
+                <th style="width: 25%">Payload / 修复建议</th>
+                <th style="width: 10%">风险等级</th>
+                <th style="width: 25%">置信度</th>
+                <th style="width: 15%">特征 (差异)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr class="{{ 'vuln-row' if result.prediction == 1 else 'safe-row' }}">
+                <td>{{ loop.index }}</td>
+                <td>{{ result.url }}</td>
+                <td class="payload">
+                    <strong>Payload:</strong><br>
+                    {{ result.payload }}
+                    {% if result.prediction == 1 and result.remediation %}
+                    <br><br>
+                    <strong style="color: #2980b9;">修复建议:</strong><br>
+                    <span style="font-size: 0.9em; font-family: sans-serif; color: #444;">{{ result.remediation }}</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if result.prediction == 1 %}
+                        <span class="badge {{ result.risk_level }}" style="padding: 3px 6px; color: white; border-radius: 3px; font-weight: bold; font-size: 10px;">{{ result.risk_level }}</span>
+                    {% else %}
+                        <span style="color: #27ae60;">安全</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% set conf = result.confidence * 100 %}
+                    <div class="progress-bar">
+                        <div class="progress-fill {{ result.risk_level }}" style="width: {{ conf }}%;">
+                            {{ "%.1f"|format(conf) }}%
+                        </div>
+                    </div>
+                </td>
+                <td class="feature-box">
+                    {% if result.features %}
+                    <!-- Display key diff features -->
+                    <strong>长度差异:</strong> {{ result.features.len_diff }}<br>
+                    <strong>时间差异:</strong> {{ "%.3f"|format(result.features.resp_time_diff) }}s<br>
+                    <strong>SQL报错:</strong> {{ result.features.sql_error_count }}
+                    {% else %}
+                    无数据
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

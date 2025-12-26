@@ -2,6 +2,7 @@ import os
 import sys
 import pickle
 import time
+import json
 from typing import Optional
 
 import pandas as pd
@@ -11,8 +12,7 @@ try:
 except Exception:
     joblib = None
 
-# Ensure project root is on sys.path so `core` package imports work when
-# running scripts directly (python3 core/predict_scanner.py)
+# 确保项目根目录在 sys.path 中，以便直接运行脚本时（python3 core/predict_scanner.py）能正确导入 `core` 包
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
@@ -131,7 +131,47 @@ class AIScanner:
             else:
                 print("[+] 置信度足够，无需自适应变异。")
 
+        self._save_result(target_url, payload_str, payload_type, result)
         return result
+
+    def _save_result(self, url: str, payload: str, payload_type: str, result: dict):
+        if not result:
+            return
+        
+        output_file = os.path.join(ROOT, "data/scan_results.json")
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        
+        # 准备数据条目
+        prob = result.get("probability")
+        if prob is not None and hasattr(prob, "tolist"):
+            prob = prob.tolist()
+            
+        entry = {
+            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "url": url,
+            "payload": payload,
+            "payload_type": payload_type,
+            "prediction": int(result.get("prediction", 0)),
+            "probability": prob,
+            "features": result.get("features")
+        }
+        
+        # 加载现有数据或创建新列表
+        data = []
+        if os.path.exists(output_file):
+            try:
+                with open(output_file, "r") as f:
+                    content = f.read()
+                    if content:
+                        data = json.loads(content)
+            except (json.JSONDecodeError, ValueError):
+                pass
+        
+        data.append(entry)
+        
+        # 保存回文件
+        with open(output_file, "w") as f:
+            json.dump(data, f, indent=4)
 
     def _find_page_form(self, url: str) -> Optional[dict]:
         # 在 extractor.data 中寻找匹配的 page 和 form
