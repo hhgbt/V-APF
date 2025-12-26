@@ -87,7 +87,7 @@ class FeatureExtractor:
         except Exception as e:
             return None, str(e)
 
-    def extract_features(self, request_url: str, method: str, probe_payload: dict, base_payload: dict = None, probe_str: str = None, timeout: float = 5.0):
+    def extract_features(self, request_url: str, method: str, probe_payload: dict, base_payload: dict = None, probe_str: str = None, timeout: float = 5.0, base_resp_metrics: dict = None):
         """通用特征提取器。
 
         参数:
@@ -97,6 +97,7 @@ class FeatureExtractor:
             base_payload: 可选的基准请求参数字典；若为 None，会以 probe_payload 的字段名构造默认值 'test'
             probe_str: 可选的探测字符串，用于判断是否反射
             timeout: 请求超时时间
+            base_resp_metrics: 可选的基准响应指标（从爬虫阶段获取），包含 base_resp_length 和 base_resp_time
 
         返回:
             tuple (sample_dict, base_text, probe_text) 或 (None, None, None) 在失败时。
@@ -115,9 +116,42 @@ class FeatureExtractor:
             base_payload.update(tokens)
             probe_payload.update(tokens)
 
+        # 优先使用爬虫阶段获取的基准指标，减少请求次数并提高准确性
+        if base_resp_metrics and "base_resp_length" in base_resp_metrics:
+            base_feat = {
+                "resp_length": base_resp_metrics.get("base_resp_length", 0),
+                "resp_time": base_resp_metrics.get("base_resp_time", 0.0),
+                "status_code": 200, # 假设爬虫能爬到的页面状态码为 200，或者需要额外传递
+                "has_sql_error": 0, # 假设基准页面无报错
+                "has_script_tag": 0 # 假设基准页面无注入脚本
+            }
+            base_text = "" # 如果使用了预先记录的指标，可能无法进行 has_text_diff 的精确比对，这里视情况权衡
+            # 为了兼容 has_text_diff，如果必须要对比文本，还是得发请求。
+            # 这里策略：如果提供了 metrics，我们仍然发请求以获取 text 用于 diff，但 resp_time_diff 可以参考 metrics
+            # 或者：为了效率，如果提供了 metrics，我们就不发 base 请求了？
+            # 考虑到 has_text_diff 是强特征，我们还是发一次 base 请求比较稳妥，或者仅在 base_text 确实需要时发。
+            # 现阶段为了逻辑统一，我们还是发一次请求，但可以用 metrics 来校准/对比
+            
+            # 重新思考：爬虫记录的 metrics 是最“纯净”的。现在的 base_payload 是填了 "test" 的，可能已经不算完全的“空载”了。
+            # 我们继续执行 get_feature_vector 获取当前环境下的 base_feat，但可以用 metrics 做参考或增强
+            pass
+
         base_feat, base_text = self.get_feature_vector(request_url, method, base_payload, timeout=timeout)
         if not base_feat:
             return None, None, None
+
+        # 如果爬虫提供了基准长度，用它来校准 len_diff 计算可能更准？
+        # 实际上，base_payload 填入 "test" 后的响应长度，应该和爬虫记录的原始长度非常接近。
+        # 我们这里主要使用 base_resp_metrics 来辅助计算 resp_time_diff，因为爬虫那次请求可能网络更稳定？
+        # 或者，直接使用当前的 base_feat 即可，爬虫的数据主要用于 Labeling 阶段的参考？
+        # 用户指令是：“提取器在计算 len_diff 时会变得极度精准”。这意味着应该利用 base_resp_length。
+        
+        if base_resp_metrics:
+             # 如果提供了基准指标，覆盖 base_feat 中的关键数值，以爬虫记录的“纯净”状态为准
+             if "base_resp_length" in base_resp_metrics:
+                 base_feat["resp_length"] = base_resp_metrics["base_resp_length"]
+             if "base_resp_time" in base_resp_metrics:
+                 base_feat["resp_time"] = base_resp_metrics["base_resp_time"]
 
         probe_feat, probe_text = self.get_feature_vector(request_url, method, probe_payload, timeout=timeout)
         if not probe_feat:
@@ -148,6 +182,13 @@ class FeatureExtractor:
 
         for page in self.data.get("pages", []):
             page_url = page.get("url")
+            # 获取爬虫记录的基准指标
+            base_metrics = {
+                "base_resp_length": page.get("base_resp_length"),
+                "base_resp_time": page.get("base_resp_time")
+            }
+            security_level = page.get("level", "unknown")
+
             for form in page.get("forms", []):
                 # 组合动作 URL（action 可能是相对路径）
                 action = form.get("action") or ""
@@ -160,9 +201,8 @@ class FeatureExtractor:
 
                 # 1) 干净基准请求
                 base_payload = {inp["name"]: "test" for inp in inputs}
-                base_feat, base_text = self.get_feature_vector(request_url, method, base_payload)
-                if not base_feat:
-                    continue
+                # 注意：这里我们依然会发请求以获取 text 用于 diff，但在 extract_features 内部会利用 base_metrics 修正 length/time
+                
                 # 2) 获取表单页面的隐藏字段（CSRF token 等），以便将它们加入提交
                 form_tokens = self._fetch_form_tokens(page_url, form.get("action") or "")
 
@@ -175,7 +215,14 @@ class FeatureExtractor:
                     probe_payload.update(form_tokens)
 
                     # 使用通用的特征提取器以保证训练/预测时特征一致
-                    sample, base_text, probe_text = self.extract_features(request_url, method, probe_payload, base_payload=base_payload, probe_str=probe_str)
+                    sample, base_text, probe_text = self.extract_features(
+                        request_url, 
+                        method, 
+                        probe_payload, 
+                        base_payload=base_payload, 
+                        probe_str=probe_str,
+                        base_resp_metrics=base_metrics
+                    )
                     if not sample:
                         continue
                     # 保留一些上下文信息以便人工标注
@@ -185,6 +232,7 @@ class FeatureExtractor:
                         "form_method": method,
                         "payload_type": p["type"],
                         "payload": probe_str,
+                        "security_level": security_level, # 传递安全等级给 auto_labeler 使用
                         "label": "",
                     })
 
@@ -201,8 +249,8 @@ class FeatureExtractor:
 
 def main():
     parser = argparse.ArgumentParser(description="Fuzzer feature extractor for targets.json")
-    parser.add_argument("--targets", "-t", default="targets.json", help="Path to targets.json")
-    parser.add_argument("--out", "-o", default="data/training_data.csv", help="Output CSV path")
+    parser.add_argument("--targets", "-t", default="data/targets.json", help="Path to targets.json")
+    parser.add_argument("--out", "-o", default="data/training_features_raw.csv", help="Output CSV path")
     args = parser.parse_args()
 
     extractor = FeatureExtractor(targets_file=args.targets, output_csv=args.out)
