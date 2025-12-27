@@ -279,7 +279,10 @@ class FeatureExtractor:
                         if inp['type'] == 'hidden' or 'token' in param_name.lower():
                             continue
 
-                        test_payloads = self.payloads[:3] 
+                        # 选取 Payload (这里简单选取前 2 个作为演示，以免太慢)
+                        # 实际生产中应根据 risk_level 动态调整 payload 数量
+                        # [Optimized] 使用全部新 Payloads (约 20 个)，虽然慢但数据质量高
+                        test_payloads = self.payloads 
                         
                         for payload in test_payloads:
                             probe_params = base_params.copy()
