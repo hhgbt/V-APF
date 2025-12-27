@@ -1,0 +1,4613 @@
+{
+  "base_url": "http://127.0.0.1/bWAPP/app",
+  "pages": [
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_1.php",
+      "baseline": {
+        "resp_length_base": 13529,
+        "status_base": 200,
+        "dom_hash": 5961405513697415691,
+        "resp_time_base": 0.6310582160949707
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/sqli_1.php",
+          "inputs": [
+            {
+              "name": "title",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_2.php",
+      "baseline": {
+        "resp_length_base": 14259,
+        "status_base": 200,
+        "dom_hash": -2828755622464585556,
+        "resp_time_base": 0.5604300498962402
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/sqli_2.php",
+          "inputs": [
+            {
+              "name": "movie",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_2.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_2.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_6.php",
+      "baseline": {
+        "resp_length_base": 13537,
+        "status_base": 200,
+        "dom_hash": -9158946337655515125,
+        "resp_time_base": 0.5557436943054199
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_6.php",
+          "inputs": [
+            {
+              "name": "title",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_6.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_6.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_16.php",
+      "baseline": {
+        "resp_length_base": 13146,
+        "status_base": 200,
+        "dom_hash": 2676936492597737382,
+        "resp_time_base": 0.5518770217895508
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_16.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_16.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_16.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xss_get.php",
+      "baseline": {
+        "resp_length_base": 13346,
+        "status_base": 200,
+        "dom_hash": 6252482744155696902,
+        "resp_time_base": 0.5597946643829346
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/xss_get.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_get.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_get.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xss_post.php",
+      "baseline": {
+        "resp_length_base": 13351,
+        "status_base": 200,
+        "dom_hash": 3918823267615239708,
+        "resp_time_base": 0.5551409721374512
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_post.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_post.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_post.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xss_stored_1.php",
+      "baseline": {
+        "resp_length_base": 14425,
+        "status_base": 200,
+        "dom_hash": -5969441356478240293,
+        "resp_time_base": 0.5667283535003662
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_stored_1.php",
+          "inputs": [
+            {
+              "name": "entry",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "entry_add",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            },
+            {
+              "name": "entry_all",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            },
+            {
+              "name": "entry_delete",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_stored_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_stored_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/commandi.php",
+      "baseline": {
+        "resp_length_base": 12969,
+        "status_base": 200,
+        "dom_hash": 5395309143676681293,
+        "resp_time_base": 0.5717649459838867
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi.php",
+          "inputs": [
+            {
+              "name": "target",
+              "default": "www.nsa.gov",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/commandi_blind.php",
+      "baseline": {
+        "resp_length_base": 12993,
+        "status_base": 200,
+        "dom_hash": -1958212049164545429,
+        "resp_time_base": 0.5636203289031982
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi_blind.php",
+          "inputs": [
+            {
+              "name": "target",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi_blind.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi_blind.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/fi_local.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5261509418487549
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/fi_remote.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5348620414733887
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/unrestricted_file_upload.php",
+      "baseline": {
+        "resp_length_base": 13402,
+        "status_base": 200,
+        "dom_hash": -1175691308506084758,
+        "resp_time_base": 0.5552899837493896
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/unrestricted_file_upload.php",
+          "inputs": [
+            {
+              "name": "file",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "MAX_FILE_SIZE",
+              "default": "10",
+              "type": "hidden",
+              "risk_level": "high"
+            },
+            {
+              "name": "form",
+              "default": "Upload",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/unrestricted_file_upload.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/unrestricted_file_upload.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xmli_1.php",
+      "baseline": {
+        "resp_length_base": 13165,
+        "status_base": 200,
+        "dom_hash": -5662597398547037241,
+        "resp_time_base": 0.5607261657714844
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/xmli_1.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xmli_2.php",
+      "baseline": {
+        "resp_length_base": 13715,
+        "status_base": 200,
+        "dom_hash": 6743112999116540549,
+        "resp_time_base": 0.5699143409729004
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/xmli_2.php",
+          "inputs": [
+            {
+              "name": "genre",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_2.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_2.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/phpi.php",
+      "baseline": {
+        "resp_length_base": 12777,
+        "status_base": 200,
+        "dom_hash": 4031859604706149268,
+        "resp_time_base": 0.5458097457885742
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/phpi.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/phpi.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/csrf_1.php",
+      "baseline": {
+        "resp_length_base": 13401,
+        "status_base": 200,
+        "dom_hash": -6390039926003358528,
+        "resp_time_base": 0.5497808456420898
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/csrf_1.php",
+          "inputs": [
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/csrf_2.php",
+      "baseline": {
+        "resp_length_base": 13388,
+        "status_base": 200,
+        "dom_hash": 7569235211068281080,
+        "resp_time_base": 0.5520226955413818
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/csrf_2.php",
+          "inputs": [
+            {
+              "name": "account",
+              "default": "123-45678-90",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "amount",
+              "default": "0",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_2.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_2.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/ssrf_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5255482196807861
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/htmli_get.php",
+      "baseline": {
+        "resp_length_base": 13274,
+        "status_base": 200,
+        "dom_hash": -2342705826660791747,
+        "resp_time_base": 0.5531883239746094
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/htmli_get.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_get.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_get.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/htmli_post.php",
+      "baseline": {
+        "resp_length_base": 13362,
+        "status_base": 200,
+        "dom_hash": -405536050745753766,
+        "resp_time_base": 0.5558445453643799
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_post.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_post.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_post.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/portal.php",
+      "baseline": {
+        "resp_length_base": 23450,
+        "status_base": 200,
+        "dom_hash": -2586515880765611232,
+        "resp_time_base": 0.5853197574615479
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/index.php",
+      "baseline": {
+        "resp_length_base": 23450,
+        "status_base": 200,
+        "dom_hash": -2586515880765611232,
+        "resp_time_base": 0.5697736740112305
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/admin/",
+      "baseline": {
+        "resp_length_base": 3178,
+        "status_base": 200,
+        "dom_hash": -4083088423273780570,
+        "resp_time_base": 0.5483748912811279
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/login.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": -3302000748671707235,
+        "resp_time_base": 0.5797758102416992
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/login.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5241193771362305
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/password_change.php",
+      "baseline": {
+        "resp_length_base": 13594,
+        "status_base": 200,
+        "dom_hash": 3514194489998756509,
+        "resp_time_base": 0.5491933822631836
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/password_change.php",
+          "inputs": [
+            {
+              "name": "password_curr",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/password_change.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/password_change.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/user_extra.php",
+      "baseline": {
+        "resp_length_base": 13959,
+        "status_base": 200,
+        "dom_hash": 379810335500817715,
+        "resp_time_base": 0.5473747253417969
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_extra.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "email",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "secret",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mail_activation",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_extra.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_extra.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/security_level_set.php",
+      "baseline": {
+        "resp_length_base": 13435,
+        "status_base": 200,
+        "dom_hash": -5409193815924076633,
+        "resp_time_base": 0.5636577606201172
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/security_level_set.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/security_level_set.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/security_level_set.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/reset.php",
+      "baseline": {
+        "resp_length_base": 12611,
+        "status_base": 200,
+        "dom_hash": -6481739146040999371,
+        "resp_time_base": 0.5715799331665039
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/reset.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/reset.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/credits.php",
+      "baseline": {
+        "resp_length_base": 14102,
+        "status_base": 200,
+        "dom_hash": -4986256471522944518,
+        "resp_time_base": 0.552971363067627
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/credits.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/credits.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/logout.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": -3302000748671707235,
+        "resp_time_base": 0.5641739368438721
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/login.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/phpi.php?message=test",
+      "baseline": {
+        "resp_length_base": 1633,
+        "status_base": 500,
+        "dom_hash": 6222105850358975379,
+        "resp_time_base": 0.5383560657501221
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/bWAPP/app/phpi.php",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "test",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/user_new.php",
+      "baseline": {
+        "resp_length_base": 3428,
+        "status_base": 200,
+        "dom_hash": -532459657451045657,
+        "resp_time_base": 0.543095588684082
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_new.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "email",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "secret",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mail_activation",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/info.php",
+      "baseline": {
+        "resp_length_base": 3332,
+        "status_base": 200,
+        "dom_hash": 2822513894795085548,
+        "resp_time_base": 0.5492212772369385
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/training.php",
+      "baseline": {
+        "resp_length_base": 3764,
+        "status_base": 200,
+        "dom_hash": 4425253860518479632,
+        "resp_time_base": 0.5652346611022949
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_1.php",
+      "baseline": {
+        "resp_length_base": 13529,
+        "status_base": 200,
+        "dom_hash": 5961405513697415691,
+        "resp_time_base": 0.5842649936676025
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/sqli_1.php",
+          "inputs": [
+            {
+              "name": "title",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_2.php",
+      "baseline": {
+        "resp_length_base": 14259,
+        "status_base": 200,
+        "dom_hash": -2828755622464585556,
+        "resp_time_base": 0.5518021583557129
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/sqli_2.php",
+          "inputs": [
+            {
+              "name": "movie",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_2.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_2.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_6.php",
+      "baseline": {
+        "resp_length_base": 13537,
+        "status_base": 200,
+        "dom_hash": -9158946337655515125,
+        "resp_time_base": 0.5544955730438232
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_6.php",
+          "inputs": [
+            {
+              "name": "title",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_6.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_6.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_16.php",
+      "baseline": {
+        "resp_length_base": 13146,
+        "status_base": 200,
+        "dom_hash": 2676936492597737382,
+        "resp_time_base": 0.5651450157165527
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_16.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_16.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_16.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xss_get.php",
+      "baseline": {
+        "resp_length_base": 13346,
+        "status_base": 200,
+        "dom_hash": 6252482744155696902,
+        "resp_time_base": 0.5477840900421143
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/xss_get.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_get.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_get.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xss_post.php",
+      "baseline": {
+        "resp_length_base": 13351,
+        "status_base": 200,
+        "dom_hash": 3918823267615239708,
+        "resp_time_base": 0.546579122543335
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_post.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_post.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_post.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xss_stored_1.php",
+      "baseline": {
+        "resp_length_base": 14425,
+        "status_base": 200,
+        "dom_hash": -5969441356478240293,
+        "resp_time_base": 0.5493080615997314
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_stored_1.php",
+          "inputs": [
+            {
+              "name": "entry",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "entry_add",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            },
+            {
+              "name": "entry_all",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            },
+            {
+              "name": "entry_delete",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_stored_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_stored_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/commandi.php",
+      "baseline": {
+        "resp_length_base": 12969,
+        "status_base": 200,
+        "dom_hash": 5395309143676681293,
+        "resp_time_base": 0.5546145439147949
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi.php",
+          "inputs": [
+            {
+              "name": "target",
+              "default": "www.nsa.gov",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/commandi_blind.php",
+      "baseline": {
+        "resp_length_base": 12993,
+        "status_base": 200,
+        "dom_hash": -1958212049164545429,
+        "resp_time_base": 0.5670614242553711
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi_blind.php",
+          "inputs": [
+            {
+              "name": "target",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi_blind.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi_blind.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/fi_local.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5338139533996582
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/fi_remote.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.523655891418457
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/unrestricted_file_upload.php",
+      "baseline": {
+        "resp_length_base": 13402,
+        "status_base": 200,
+        "dom_hash": -1175691308506084758,
+        "resp_time_base": 0.5473554134368896
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/unrestricted_file_upload.php",
+          "inputs": [
+            {
+              "name": "file",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "MAX_FILE_SIZE",
+              "default": "10",
+              "type": "hidden",
+              "risk_level": "high"
+            },
+            {
+              "name": "form",
+              "default": "Upload",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/unrestricted_file_upload.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/unrestricted_file_upload.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xmli_1.php",
+      "baseline": {
+        "resp_length_base": 13165,
+        "status_base": 200,
+        "dom_hash": -5662597398547037241,
+        "resp_time_base": 0.5382602214813232
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/xmli_1.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xmli_2.php",
+      "baseline": {
+        "resp_length_base": 13715,
+        "status_base": 200,
+        "dom_hash": 6743112999116540549,
+        "resp_time_base": 0.5457229614257812
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/xmli_2.php",
+          "inputs": [
+            {
+              "name": "genre",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_2.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_2.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/phpi.php",
+      "baseline": {
+        "resp_length_base": 12777,
+        "status_base": 200,
+        "dom_hash": 4031859604706149268,
+        "resp_time_base": 0.543825626373291
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/phpi.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/phpi.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/csrf_1.php",
+      "baseline": {
+        "resp_length_base": 13401,
+        "status_base": 200,
+        "dom_hash": -6390039926003358528,
+        "resp_time_base": 0.5419623851776123
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/csrf_1.php",
+          "inputs": [
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/csrf_2.php",
+      "baseline": {
+        "resp_length_base": 13388,
+        "status_base": 200,
+        "dom_hash": 7569235211068281080,
+        "resp_time_base": 0.5515310764312744
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/csrf_2.php",
+          "inputs": [
+            {
+              "name": "account",
+              "default": "123-45678-90",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "amount",
+              "default": "0",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_2.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_2.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/ssrf_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5247936248779297
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/htmli_get.php",
+      "baseline": {
+        "resp_length_base": 13274,
+        "status_base": 200,
+        "dom_hash": -2342705826660791747,
+        "resp_time_base": 0.5486633777618408
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/htmli_get.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_get.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_get.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/htmli_post.php",
+      "baseline": {
+        "resp_length_base": 13362,
+        "status_base": 200,
+        "dom_hash": -405536050745753766,
+        "resp_time_base": 0.540027379989624
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_post.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_post.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_post.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/portal.php",
+      "baseline": {
+        "resp_length_base": 23450,
+        "status_base": 200,
+        "dom_hash": -2586515880765611232,
+        "resp_time_base": 0.5696640014648438
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/index.php",
+      "baseline": {
+        "resp_length_base": 23450,
+        "status_base": 200,
+        "dom_hash": -2586515880765611232,
+        "resp_time_base": 0.5567402839660645
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/admin/",
+      "baseline": {
+        "resp_length_base": 3178,
+        "status_base": 200,
+        "dom_hash": -4083088423273780570,
+        "resp_time_base": 0.5353307723999023
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/login.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": -3302000748671707235,
+        "resp_time_base": 0.5569899082183838
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/login.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5253753662109375
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/password_change.php",
+      "baseline": {
+        "resp_length_base": 13594,
+        "status_base": 200,
+        "dom_hash": 3514194489998756509,
+        "resp_time_base": 0.5629782676696777
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/password_change.php",
+          "inputs": [
+            {
+              "name": "password_curr",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/password_change.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/password_change.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/user_extra.php",
+      "baseline": {
+        "resp_length_base": 13959,
+        "status_base": 200,
+        "dom_hash": 379810335500817715,
+        "resp_time_base": 0.5544590950012207
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_extra.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "email",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "secret",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mail_activation",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_extra.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_extra.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/security_level_set.php",
+      "baseline": {
+        "resp_length_base": 13435,
+        "status_base": 200,
+        "dom_hash": -5409193815924076633,
+        "resp_time_base": 0.5700030326843262
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/security_level_set.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/security_level_set.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/security_level_set.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/reset.php",
+      "baseline": {
+        "resp_length_base": 12611,
+        "status_base": 200,
+        "dom_hash": -6481739146040999371,
+        "resp_time_base": 0.5736372470855713
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/reset.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/reset.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/credits.php",
+      "baseline": {
+        "resp_length_base": 14102,
+        "status_base": 200,
+        "dom_hash": -4986256471522944518,
+        "resp_time_base": 0.555959939956665
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/credits.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/credits.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/logout.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": -3302000748671707235,
+        "resp_time_base": 0.543086051940918
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/login.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/phpi.php?message=test",
+      "baseline": {
+        "resp_length_base": 1633,
+        "status_base": 500,
+        "dom_hash": 6222105850358975379,
+        "resp_time_base": 0.5322375297546387
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/bWAPP/app/phpi.php",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "test",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/user_new.php",
+      "baseline": {
+        "resp_length_base": 3428,
+        "status_base": 200,
+        "dom_hash": -532459657451045657,
+        "resp_time_base": 0.5384871959686279
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_new.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "email",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "secret",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mail_activation",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/info.php",
+      "baseline": {
+        "resp_length_base": 3332,
+        "status_base": 200,
+        "dom_hash": 2822513894795085548,
+        "resp_time_base": 0.5455727577209473
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/training.php",
+      "baseline": {
+        "resp_length_base": 3764,
+        "status_base": 200,
+        "dom_hash": 4425253860518479632,
+        "resp_time_base": 0.5365450382232666
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_1.php",
+      "baseline": {
+        "resp_length_base": 13529,
+        "status_base": 200,
+        "dom_hash": 5961405513697415691,
+        "resp_time_base": 0.5806517601013184
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/sqli_1.php",
+          "inputs": [
+            {
+              "name": "title",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_2.php",
+      "baseline": {
+        "resp_length_base": 14259,
+        "status_base": 200,
+        "dom_hash": -2828755622464585556,
+        "resp_time_base": 0.5486831665039062
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/sqli_2.php",
+          "inputs": [
+            {
+              "name": "movie",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_2.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_2.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_6.php",
+      "baseline": {
+        "resp_length_base": 13537,
+        "status_base": 200,
+        "dom_hash": -9158946337655515125,
+        "resp_time_base": 0.5694363117218018
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_6.php",
+          "inputs": [
+            {
+              "name": "title",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_6.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_6.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/sqli_16.php",
+      "baseline": {
+        "resp_length_base": 13146,
+        "status_base": 200,
+        "dom_hash": 2676936492597737382,
+        "resp_time_base": 0.5482730865478516
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_16.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_16.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/sqli_16.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xss_get.php",
+      "baseline": {
+        "resp_length_base": 13346,
+        "status_base": 200,
+        "dom_hash": 6252482744155696902,
+        "resp_time_base": 0.5561211109161377
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/xss_get.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_get.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_get.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xss_post.php",
+      "baseline": {
+        "resp_length_base": 13351,
+        "status_base": 200,
+        "dom_hash": 3918823267615239708,
+        "resp_time_base": 0.5372529029846191
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_post.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_post.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_post.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xss_stored_1.php",
+      "baseline": {
+        "resp_length_base": 14425,
+        "status_base": 200,
+        "dom_hash": -5969441356478240293,
+        "resp_time_base": 0.5451312065124512
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_stored_1.php",
+          "inputs": [
+            {
+              "name": "entry",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "entry_add",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            },
+            {
+              "name": "entry_all",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            },
+            {
+              "name": "entry_delete",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_stored_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xss_stored_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/commandi.php",
+      "baseline": {
+        "resp_length_base": 12969,
+        "status_base": 200,
+        "dom_hash": 5395309143676681293,
+        "resp_time_base": 0.5493617057800293
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi.php",
+          "inputs": [
+            {
+              "name": "target",
+              "default": "www.nsa.gov",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/commandi_blind.php",
+      "baseline": {
+        "resp_length_base": 12993,
+        "status_base": 200,
+        "dom_hash": -1958212049164545429,
+        "resp_time_base": 0.5418305397033691
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi_blind.php",
+          "inputs": [
+            {
+              "name": "target",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi_blind.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/commandi_blind.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/fi_local.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5335800647735596
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/fi_remote.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5296573638916016
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/unrestricted_file_upload.php",
+      "baseline": {
+        "resp_length_base": 13402,
+        "status_base": 200,
+        "dom_hash": -1175691308506084758,
+        "resp_time_base": 0.5466163158416748
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/unrestricted_file_upload.php",
+          "inputs": [
+            {
+              "name": "file",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "MAX_FILE_SIZE",
+              "default": "10",
+              "type": "hidden",
+              "risk_level": "high"
+            },
+            {
+              "name": "form",
+              "default": "Upload",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/unrestricted_file_upload.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/unrestricted_file_upload.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xmli_1.php",
+      "baseline": {
+        "resp_length_base": 13165,
+        "status_base": 200,
+        "dom_hash": -5662597398547037241,
+        "resp_time_base": 0.5471398830413818
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/xmli_1.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/xmli_2.php",
+      "baseline": {
+        "resp_length_base": 13715,
+        "status_base": 200,
+        "dom_hash": 6743112999116540549,
+        "resp_time_base": 0.5702307224273682
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/xmli_2.php",
+          "inputs": [
+            {
+              "name": "genre",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_2.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/xmli_2.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/phpi.php",
+      "baseline": {
+        "resp_length_base": 12777,
+        "status_base": 200,
+        "dom_hash": 4031859604706149268,
+        "resp_time_base": 0.5539305210113525
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/phpi.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/phpi.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/csrf_1.php",
+      "baseline": {
+        "resp_length_base": 13401,
+        "status_base": 200,
+        "dom_hash": -6390039926003358528,
+        "resp_time_base": 0.5575377941131592
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/csrf_1.php",
+          "inputs": [
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_1.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_1.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/csrf_2.php",
+      "baseline": {
+        "resp_length_base": 13388,
+        "status_base": 200,
+        "dom_hash": 7569235211068281080,
+        "resp_time_base": 0.5460517406463623
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/csrf_2.php",
+          "inputs": [
+            {
+              "name": "account",
+              "default": "123-45678-90",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "amount",
+              "default": "0",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_2.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/csrf_2.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/ssrf_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.5248286724090576
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/htmli_get.php",
+      "baseline": {
+        "resp_length_base": 13274,
+        "status_base": 200,
+        "dom_hash": -2342705826660791747,
+        "resp_time_base": 0.547278642654419
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "/bWAPP/app/htmli_get.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_get.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_get.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/htmli_post.php",
+      "baseline": {
+        "resp_length_base": 13362,
+        "status_base": 200,
+        "dom_hash": -405536050745753766,
+        "resp_time_base": 0.55338454246521
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_post.php",
+          "inputs": [
+            {
+              "name": "firstname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "lastname",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_post.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/htmli_post.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/portal.php",
+      "baseline": {
+        "resp_length_base": 23450,
+        "status_base": 200,
+        "dom_hash": -2586515880765611232,
+        "resp_time_base": 0.5744187831878662
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/index.php",
+      "baseline": {
+        "resp_length_base": 23450,
+        "status_base": 200,
+        "dom_hash": -2586515880765611232,
+        "resp_time_base": 0.5587677955627441
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/admin/",
+      "baseline": {
+        "resp_length_base": 3178,
+        "status_base": 200,
+        "dom_hash": -4083088423273780570,
+        "resp_time_base": 0.5383479595184326
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/login.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": -3302000748671707235,
+        "resp_time_base": 0.5725839138031006
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/login.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 2998821001813420113,
+        "resp_time_base": 0.534928560256958
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/password_change.php",
+      "baseline": {
+        "resp_length_base": 13594,
+        "status_base": 200,
+        "dom_hash": 3514194489998756509,
+        "resp_time_base": 0.5594761371612549
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/password_change.php",
+          "inputs": [
+            {
+              "name": "password_curr",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/password_change.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/password_change.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/user_extra.php",
+      "baseline": {
+        "resp_length_base": 13959,
+        "status_base": 200,
+        "dom_hash": 379810335500817715,
+        "resp_time_base": 0.5446665287017822
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_extra.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "email",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "secret",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mail_activation",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_extra.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_extra.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/security_level_set.php",
+      "baseline": {
+        "resp_length_base": 13435,
+        "status_base": 200,
+        "dom_hash": -5409193815924076633,
+        "resp_time_base": 0.5394353866577148
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/security_level_set.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/security_level_set.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/security_level_set.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/reset.php",
+      "baseline": {
+        "resp_length_base": 12611,
+        "status_base": 200,
+        "dom_hash": -6481739146040999371,
+        "resp_time_base": 0.5615072250366211
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/reset.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/reset.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/credits.php",
+      "baseline": {
+        "resp_length_base": 14102,
+        "status_base": 200,
+        "dom_hash": -4986256471522944518,
+        "resp_time_base": 0.5633499622344971
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/credits.php",
+          "inputs": [
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/credits.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/logout.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": -3302000748671707235,
+        "resp_time_base": 0.5465810298919678
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/login.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/phpi.php?message=test",
+      "baseline": {
+        "resp_length_base": 1633,
+        "status_base": 500,
+        "dom_hash": 6222105850358975379,
+        "resp_time_base": 0.532261848449707
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/bWAPP/app/phpi.php",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "test",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/user_new.php",
+      "baseline": {
+        "resp_length_base": 3428,
+        "status_base": 200,
+        "dom_hash": -532459657451045657,
+        "resp_time_base": 0.5453605651855469
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/user_new.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "email",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "secret",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mail_activation",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "checkbox",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/info.php",
+      "baseline": {
+        "resp_length_base": 3332,
+        "status_base": 200,
+        "dom_hash": 2822513894795085548,
+        "resp_time_base": 0.5324094295501709
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/training.php",
+      "baseline": {
+        "resp_length_base": 3764,
+        "status_base": 200,
+        "dom_hash": 4425253860518479632,
+        "resp_time_base": 0.5354404449462891
+      },
+      "injection_points": [],
+      "security_level": "high"
+    }
+  ]
+}

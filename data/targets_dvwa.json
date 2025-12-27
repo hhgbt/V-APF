@@ -1,0 +1,3923 @@
+{
+  "base_url": "http://127.0.0.1/dvwa",
+  "pages": [
+    {
+      "url": "http://127.0.0.1/dvwa/index.php",
+      "baseline": {
+        "resp_length_base": 5974,
+        "status_base": 200,
+        "dom_hash": -431831625318332008,
+        "resp_time_base": 0.5559113025665283
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/admin/",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 395533771970123711,
+        "resp_time_base": 0.5337717533111572
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/login.php",
+      "baseline": {
+        "resp_length_base": 1278,
+        "status_base": 200,
+        "dom_hash": 2169855338506877130,
+        "resp_time_base": 0.5336921215057373
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "58549e1523c96d77247055e35c0f095d",
+              "type": "hidden",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 395533771970123711,
+        "resp_time_base": 0.5320229530334473
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/",
+      "baseline": {
+        "resp_length_base": 5974,
+        "status_base": 200,
+        "dom_hash": -431831625318332008,
+        "resp_time_base": 0.5367579460144043
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php",
+      "baseline": {
+        "resp_length_base": 25707,
+        "status_base": 200,
+        "dom_hash": -3542414457917225841,
+        "resp_time_base": 2.8841891288757324
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/setup.php",
+      "baseline": {
+        "resp_length_base": 5197,
+        "status_base": 200,
+        "dom_hash": 2912225618308993573,
+        "resp_time_base": 0.5321495532989502
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "create_db",
+              "default": "Create / Reset Database",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "5ad8e5a60747fa5fa4947954003ba824",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+      "baseline": {
+        "resp_length_base": 4253,
+        "status_base": 200,
+        "dom_hash": -8996094711038164332,
+        "resp_time_base": 0.5316669940948486
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+      "baseline": {
+        "resp_length_base": 4149,
+        "status_base": 200,
+        "dom_hash": -6865773442359996889,
+        "resp_time_base": 0.5262205600738525
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "ip",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+      "baseline": {
+        "resp_length_base": 5378,
+        "status_base": 200,
+        "dom_hash": -2122947783025600881,
+        "resp_time_base": 0.5319375991821289
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Change",
+              "default": "Change",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=include.php",
+      "baseline": {
+        "resp_length_base": 4158,
+        "status_base": 200,
+        "dom_hash": -3902456428218018821,
+        "resp_time_base": 0.5247094631195068
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "include.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+      "baseline": {
+        "resp_length_base": 4030,
+        "status_base": 200,
+        "dom_hash": -6084145815791074683,
+        "resp_time_base": 0.524334192276001
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "MAX_FILE_SIZE",
+              "default": "100000",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "uploaded",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "Upload",
+              "default": "Upload",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+      "baseline": {
+        "resp_length_base": 4466,
+        "status_base": 200,
+        "dom_hash": 618327482670627750,
+        "resp_time_base": 21.561869144439697
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "step",
+              "default": "1",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Change",
+              "default": "Change",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+      "baseline": {
+        "resp_length_base": 4124,
+        "status_base": 200,
+        "dom_hash": 3615131838676596015,
+        "resp_time_base": 0.5401585102081299
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+      "baseline": {
+        "resp_length_base": 4189,
+        "status_base": 200,
+        "dom_hash": -571031233829069264,
+        "resp_time_base": 0.5329840183258057
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+      "baseline": {
+        "resp_length_base": 3493,
+        "status_base": 200,
+        "dom_hash": -3001472620746415447,
+        "resp_time_base": 0.5405757427215576
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+      "baseline": {
+        "resp_length_base": 4815,
+        "status_base": 200,
+        "dom_hash": 8423172674067994813,
+        "resp_time_base": 0.5311346054077148
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "default",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+      "baseline": {
+        "resp_length_base": 4273,
+        "status_base": 200,
+        "dom_hash": -5635618987602997581,
+        "resp_time_base": 0.5308682918548584
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+      "baseline": {
+        "resp_length_base": 4932,
+        "status_base": 200,
+        "dom_hash": 4685418755112111874,
+        "resp_time_base": 0.5367131233215332
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "txtName",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mtxMessage",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "btnSign",
+              "default": "Sign Guestbook",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "btnClear",
+              "default": "Clear Guestbook",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+      "baseline": {
+        "resp_length_base": 4207,
+        "status_base": 200,
+        "dom_hash": -6135348572086598028,
+        "resp_time_base": 0.5284500122070312
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "include",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+      "baseline": {
+        "resp_length_base": 8411,
+        "status_base": 200,
+        "dom_hash": -4963203310585766406,
+        "resp_time_base": 0.527857780456543
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "token",
+              "default": "8b479aefbd90795395b3e7089ae0dc09",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "phrase",
+              "default": "ChangeMe",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "send",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+      "baseline": {
+        "resp_length_base": 5505,
+        "status_base": 200,
+        "dom_hash": 7507189621503972965,
+        "resp_time_base": 0.5535757541656494
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+      "baseline": {
+        "resp_length_base": 4299,
+        "status_base": 200,
+        "dom_hash": -9040172476996396961,
+        "resp_time_base": 0.5270724296569824
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/security.php",
+      "baseline": {
+        "resp_length_base": 4517,
+        "status_base": 200,
+        "dom_hash": -5788188065809830656,
+        "resp_time_base": 0.5464019775390625
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "security",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "seclev_submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "b2106a0533f6c2c0702052a5836f499a",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/phpinfo.php",
+      "baseline": {
+        "resp_length_base": 83008,
+        "status_base": 200,
+        "dom_hash": 6910556399139790306,
+        "resp_time_base": 0.5278675556182861
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/about.php",
+      "baseline": {
+        "resp_length_base": 5220,
+        "status_base": 200,
+        "dom_hash": -2269230181934889231,
+        "resp_time_base": 0.5331640243530273
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/logout.php",
+      "baseline": {
+        "resp_length_base": 1324,
+        "status_base": 200,
+        "dom_hash": -4023168409779930251,
+        "resp_time_base": 0.5462009906768799
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "821d52590f35c24c8f9ba34b7b380df9",
+              "type": "hidden",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=readme",
+      "baseline": {
+        "resp_length_base": 25628,
+        "status_base": 200,
+        "dom_hash": 4302635806808726811,
+        "resp_time_base": 0.5535540580749512
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "readme",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=PDF",
+      "baseline": {
+        "resp_length_base": 3136,
+        "status_base": 200,
+        "dom_hash": 1136744181818887606,
+        "resp_time_base": 0.530402421951294
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "PDF",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=changelog",
+      "baseline": {
+        "resp_length_base": 11131,
+        "status_base": 200,
+        "dom_hash": -3894083092943470126,
+        "resp_time_base": 0.536383867263794
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "changelog",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=copying",
+      "baseline": {
+        "resp_length_base": 36102,
+        "status_base": 200,
+        "dom_hash": 3318160533240774986,
+        "resp_time_base": 0.5419249534606934
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "copying",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.ar.md",
+      "baseline": {
+        "resp_length_base": 25268,
+        "status_base": 200,
+        "dom_hash": -4535465256744084584,
+        "resp_time_base": 0.5321671962738037
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.zh.md",
+      "baseline": {
+        "resp_length_base": 17921,
+        "status_base": 200,
+        "dom_hash": 255534705355431889,
+        "resp_time_base": 0.5362472534179688
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.fr.md",
+      "baseline": {
+        "resp_length_base": 21085,
+        "status_base": 200,
+        "dom_hash": -1773046366892757040,
+        "resp_time_base": 0.5715892314910889
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.fa.md",
+      "baseline": {
+        "resp_length_base": 30827,
+        "status_base": 200,
+        "dom_hash": 6150063346323846012,
+        "resp_time_base": 0.5436363220214844
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.es.md",
+      "baseline": {
+        "resp_length_base": 22026,
+        "status_base": 200,
+        "dom_hash": -4946095823144956898,
+        "resp_time_base": 0.5588722229003906
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.tr.md",
+      "baseline": {
+        "resp_length_base": 20089,
+        "status_base": 200,
+        "dom_hash": 6518912055132956326,
+        "resp_time_base": 0.5256228446960449
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file1.php",
+      "baseline": {
+        "resp_length_base": 4063,
+        "status_base": 200,
+        "dom_hash": -67758391358939560,
+        "resp_time_base": 0.5372471809387207
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file1.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file2.php",
+      "baseline": {
+        "resp_length_base": 4105,
+        "status_base": 200,
+        "dom_hash": -6267736628836034386,
+        "resp_time_base": 0.533149242401123
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file2.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file3.php",
+      "baseline": {
+        "resp_length_base": 4257,
+        "status_base": 200,
+        "dom_hash": -5551534551966760207,
+        "resp_time_base": 0.5569822788238525
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file3.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/source/low.php?redirect=info.php?id=1",
+      "baseline": {
+        "resp_length_base": 4275,
+        "status_base": 200,
+        "dom_hash": 8034820339126640976,
+        "resp_time_base": 0.5362639427185059
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/open_redirect/source/info.php",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "1",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/source/low.php?redirect=info.php?id=2",
+      "baseline": {
+        "resp_length_base": 4163,
+        "status_base": 200,
+        "dom_hash": -1556000761943689525,
+        "resp_time_base": 0.5424184799194336
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/open_redirect/source/info.php",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "2",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/index.php",
+      "baseline": {
+        "resp_length_base": 5977,
+        "status_base": 200,
+        "dom_hash": 6606802236729439402,
+        "resp_time_base": 0.5567057132720947
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/admin/",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 395533771970123711,
+        "resp_time_base": 0.5291049480438232
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/login.php",
+      "baseline": {
+        "resp_length_base": 1278,
+        "status_base": 200,
+        "dom_hash": -2173265804702560357,
+        "resp_time_base": 0.5296287536621094
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "3a8856b1ebbe8c75ca58954f85c20ac5",
+              "type": "hidden",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 395533771970123711,
+        "resp_time_base": 0.5273852348327637
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/",
+      "baseline": {
+        "resp_length_base": 5977,
+        "status_base": 200,
+        "dom_hash": 6606802236729439402,
+        "resp_time_base": 0.5278677940368652
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php",
+      "baseline": {
+        "resp_length_base": 25710,
+        "status_base": 200,
+        "dom_hash": 8092374357028194739,
+        "resp_time_base": 4.700635194778442
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/setup.php",
+      "baseline": {
+        "resp_length_base": 5200,
+        "status_base": 200,
+        "dom_hash": 2031597948347779923,
+        "resp_time_base": 0.5261807441711426
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "create_db",
+              "default": "Create / Reset Database",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "71abc44fed92bfd4d5b2907a23d83298",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+      "baseline": {
+        "resp_length_base": 4262,
+        "status_base": 200,
+        "dom_hash": 2578180511346549695,
+        "resp_time_base": 0.5317959785461426
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+      "baseline": {
+        "resp_length_base": 4158,
+        "status_base": 200,
+        "dom_hash": -1670814519905301083,
+        "resp_time_base": 0.5424065589904785
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "ip",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+      "baseline": {
+        "resp_length_base": 5387,
+        "status_base": 200,
+        "dom_hash": -1397334435461588671,
+        "resp_time_base": 0.537747859954834
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Change",
+              "default": "Change",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=include.php",
+      "baseline": {
+        "resp_length_base": 4167,
+        "status_base": 200,
+        "dom_hash": 2150481620211626927,
+        "resp_time_base": 0.525428056716919
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "include.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+      "baseline": {
+        "resp_length_base": 4039,
+        "status_base": 200,
+        "dom_hash": 3307687663270203371,
+        "resp_time_base": 0.5302975177764893
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "MAX_FILE_SIZE",
+              "default": "100000",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "uploaded",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "Upload",
+              "default": "Upload",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+      "baseline": {
+        "resp_length_base": 4475,
+        "status_base": 200,
+        "dom_hash": 9141491568836016702,
+        "resp_time_base": 21.588289976119995
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "step",
+              "default": "1",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Change",
+              "default": "Change",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+      "baseline": {
+        "resp_length_base": 4262,
+        "status_base": 200,
+        "dom_hash": -8788051857737968456,
+        "resp_time_base": 0.5274796485900879
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+      "baseline": {
+        "resp_length_base": 4327,
+        "status_base": 200,
+        "dom_hash": -5946625757555986114,
+        "resp_time_base": 0.5283315181732178
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+      "baseline": {
+        "resp_length_base": 3502,
+        "status_base": 200,
+        "dom_hash": -6472953244446511723,
+        "resp_time_base": 0.540926456451416
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+      "baseline": {
+        "resp_length_base": 4824,
+        "status_base": 200,
+        "dom_hash": -5835054415143608948,
+        "resp_time_base": 0.5347764492034912
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "default",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+      "baseline": {
+        "resp_length_base": 4282,
+        "status_base": 200,
+        "dom_hash": 649636441347578328,
+        "resp_time_base": 0.5602607727050781
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+      "baseline": {
+        "resp_length_base": 4941,
+        "status_base": 200,
+        "dom_hash": 6927896607427743436,
+        "resp_time_base": 0.523627519607544
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "txtName",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mtxMessage",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "btnSign",
+              "default": "Sign Guestbook",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "btnClear",
+              "default": "Clear Guestbook",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+      "baseline": {
+        "resp_length_base": 4204,
+        "status_base": 200,
+        "dom_hash": 594247865382197105,
+        "resp_time_base": 0.5381343364715576
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "include",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+      "baseline": {
+        "resp_length_base": 4332,
+        "status_base": 200,
+        "dom_hash": -423891368437731330,
+        "resp_time_base": 0.5341455936431885
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "token",
+              "default": "XXeMegnahCXX",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "phrase",
+              "default": "ChangeMe",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "send",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+      "baseline": {
+        "resp_length_base": 5514,
+        "status_base": 200,
+        "dom_hash": 3253556449171386883,
+        "resp_time_base": 0.5406732559204102
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+      "baseline": {
+        "resp_length_base": 4314,
+        "status_base": 200,
+        "dom_hash": 7978326227492734013,
+        "resp_time_base": 0.5430498123168945
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/security.php",
+      "baseline": {
+        "resp_length_base": 4523,
+        "status_base": 200,
+        "dom_hash": 6121958574221051720,
+        "resp_time_base": 0.568568229675293
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "security",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "seclev_submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "930612162daab3c93fc9ed33c3b41bfd",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/phpinfo.php",
+      "baseline": {
+        "resp_length_base": 83022,
+        "status_base": 200,
+        "dom_hash": -1576025023422453162,
+        "resp_time_base": 0.5339407920837402
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/about.php",
+      "baseline": {
+        "resp_length_base": 5223,
+        "status_base": 200,
+        "dom_hash": 3931736353217062347,
+        "resp_time_base": 0.5292274951934814
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/logout.php",
+      "baseline": {
+        "resp_length_base": 1324,
+        "status_base": 200,
+        "dom_hash": -7603536881634366783,
+        "resp_time_base": 0.5478382110595703
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "3b5d9edf25a8b16c1fd125547aa78f3a",
+              "type": "hidden",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=readme",
+      "baseline": {
+        "resp_length_base": 25631,
+        "status_base": 200,
+        "dom_hash": -3958591317155375176,
+        "resp_time_base": 0.5717113018035889
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "readme",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=PDF",
+      "baseline": {
+        "resp_length_base": 3139,
+        "status_base": 200,
+        "dom_hash": 4779576167301795939,
+        "resp_time_base": 0.5276784896850586
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "PDF",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=changelog",
+      "baseline": {
+        "resp_length_base": 11134,
+        "status_base": 200,
+        "dom_hash": 2180782595563053185,
+        "resp_time_base": 0.5369126796722412
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "changelog",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=copying",
+      "baseline": {
+        "resp_length_base": 36105,
+        "status_base": 200,
+        "dom_hash": -3703441283893455883,
+        "resp_time_base": 0.5315802097320557
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "copying",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.ar.md",
+      "baseline": {
+        "resp_length_base": 25268,
+        "status_base": 200,
+        "dom_hash": -4535465256744084584,
+        "resp_time_base": 0.544123649597168
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.zh.md",
+      "baseline": {
+        "resp_length_base": 17921,
+        "status_base": 200,
+        "dom_hash": 255534705355431889,
+        "resp_time_base": 0.5590097904205322
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.fr.md",
+      "baseline": {
+        "resp_length_base": 21085,
+        "status_base": 200,
+        "dom_hash": -1773046366892757040,
+        "resp_time_base": 0.533545970916748
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.fa.md",
+      "baseline": {
+        "resp_length_base": 30827,
+        "status_base": 200,
+        "dom_hash": 6150063346323846012,
+        "resp_time_base": 0.5366766452789307
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.es.md",
+      "baseline": {
+        "resp_length_base": 22026,
+        "status_base": 200,
+        "dom_hash": -4946095823144956898,
+        "resp_time_base": 0.5309267044067383
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.tr.md",
+      "baseline": {
+        "resp_length_base": 20089,
+        "status_base": 200,
+        "dom_hash": 6518912055132956326,
+        "resp_time_base": 0.5337238311767578
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file1.php",
+      "baseline": {
+        "resp_length_base": 4072,
+        "status_base": 200,
+        "dom_hash": -931562673330006404,
+        "resp_time_base": 0.5324981212615967
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file1.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file2.php",
+      "baseline": {
+        "resp_length_base": 4114,
+        "status_base": 200,
+        "dom_hash": 8468393784194418180,
+        "resp_time_base": 0.5586357116699219
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file2.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file3.php",
+      "baseline": {
+        "resp_length_base": 4266,
+        "status_base": 200,
+        "dom_hash": -1517623187191479455,
+        "resp_time_base": 0.5499012470245361
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file3.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/source/medium.php?redirect=info.php?id=1",
+      "baseline": {
+        "resp_length_base": 4284,
+        "status_base": 200,
+        "dom_hash": 7811348464678021917,
+        "resp_time_base": 0.5422203540802002
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/open_redirect/source/info.php",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "1",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/source/medium.php?redirect=info.php?id=2",
+      "baseline": {
+        "resp_length_base": 4172,
+        "status_base": 200,
+        "dom_hash": 5308853158088141610,
+        "resp_time_base": 0.5487940311431885
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/open_redirect/source/info.php",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "2",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/index.php",
+      "baseline": {
+        "resp_length_base": 5975,
+        "status_base": 200,
+        "dom_hash": 6995542055752553973,
+        "resp_time_base": 0.5488567352294922
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/admin/",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 395533771970123711,
+        "resp_time_base": 0.5276203155517578
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/login.php",
+      "baseline": {
+        "resp_length_base": 1278,
+        "status_base": 200,
+        "dom_hash": 4538299663664467435,
+        "resp_time_base": 0.5378735065460205
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "15bea9a7efc426d764daa0f29182b9e2",
+              "type": "hidden",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 395533771970123711,
+        "resp_time_base": 0.5256147384643555
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/",
+      "baseline": {
+        "resp_length_base": 5975,
+        "status_base": 200,
+        "dom_hash": 6995542055752553973,
+        "resp_time_base": 0.5423550605773926
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php",
+      "baseline": {
+        "resp_length_base": 25708,
+        "status_base": 200,
+        "dom_hash": 1818360996645365000,
+        "resp_time_base": 2.108241081237793
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/setup.php",
+      "baseline": {
+        "resp_length_base": 5198,
+        "status_base": 200,
+        "dom_hash": 5558451547383948567,
+        "resp_time_base": 0.5415432453155518
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "create_db",
+              "default": "Create / Reset Database",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "a752751da763beba078139f73ed72bc6",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+      "baseline": {
+        "resp_length_base": 4339,
+        "status_base": 200,
+        "dom_hash": 8723187771051040991,
+        "resp_time_base": 0.5280570983886719
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "b9c61e2d19c041daa540d38cf3704556",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+      "baseline": {
+        "resp_length_base": 4152,
+        "status_base": 200,
+        "dom_hash": 7763092941220378248,
+        "resp_time_base": 0.5251064300537109
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "ip",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+      "baseline": {
+        "resp_length_base": 5464,
+        "status_base": 200,
+        "dom_hash": 5065825439870920049,
+        "resp_time_base": 0.5299980640411377
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Change",
+              "default": "Change",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "5b532671e0e934b23395997f5c5558f1",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=include.php",
+      "baseline": {
+        "resp_length_base": 4161,
+        "status_base": 200,
+        "dom_hash": -4006410993427567944,
+        "resp_time_base": 0.5354447364807129
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "include.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+      "baseline": {
+        "resp_length_base": 4033,
+        "status_base": 200,
+        "dom_hash": 5334762143835166879,
+        "resp_time_base": 0.5384767055511475
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "MAX_FILE_SIZE",
+              "default": "100000",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "uploaded",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "Upload",
+              "default": "Upload",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+      "baseline": {
+        "resp_length_base": 4654,
+        "status_base": 200,
+        "dom_hash": 5272218826267224367,
+        "resp_time_base": 21.56471824645996
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "step",
+              "default": "1",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "2686375545458277505ef461d153406a",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Change",
+              "default": "Change",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+      "baseline": {
+        "resp_length_base": 4063,
+        "status_base": 200,
+        "dom_hash": 7442534659699382858,
+        "resp_time_base": 0.5479505062103271
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+      "baseline": {
+        "resp_length_base": 4127,
+        "status_base": 200,
+        "dom_hash": 3461711207705999541,
+        "resp_time_base": 0.5263042449951172
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+      "baseline": {
+        "resp_length_base": 3496,
+        "status_base": 200,
+        "dom_hash": 1579396174678607538,
+        "resp_time_base": 0.5338115692138672
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+      "baseline": {
+        "resp_length_base": 4818,
+        "status_base": 200,
+        "dom_hash": 5737200101080350926,
+        "resp_time_base": 0.5291788578033447
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "default",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+      "baseline": {
+        "resp_length_base": 4276,
+        "status_base": 200,
+        "dom_hash": 6433523691053957302,
+        "resp_time_base": 0.5261483192443848
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+      "baseline": {
+        "resp_length_base": 4935,
+        "status_base": 200,
+        "dom_hash": 568918295367011287,
+        "resp_time_base": 0.5317485332489014
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "txtName",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mtxMessage",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "btnSign",
+              "default": "Sign Guestbook",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "btnClear",
+              "default": "Clear Guestbook",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+      "baseline": {
+        "resp_length_base": 4254,
+        "status_base": 200,
+        "dom_hash": -5319748978589111775,
+        "resp_time_base": 0.5388329029083252
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+      "baseline": {
+        "resp_length_base": 4376,
+        "status_base": 200,
+        "dom_hash": -2848035360693862305,
+        "resp_time_base": 0.5301666259765625
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "token",
+              "default": "ecc76c19c9f3c5108773d6c3a18a6c25c9bf1131c4e250b71213274e3b2b5d08",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "phrase",
+              "default": "ChangeMe",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "send",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+      "baseline": {
+        "resp_length_base": 5508,
+        "status_base": 200,
+        "dom_hash": 938239107914935839,
+        "resp_time_base": 0.5444269180297852
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+      "baseline": {
+        "resp_length_base": 4304,
+        "status_base": 200,
+        "dom_hash": -312804965816737584,
+        "resp_time_base": 0.5282735824584961
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/security.php",
+      "baseline": {
+        "resp_length_base": 4519,
+        "status_base": 200,
+        "dom_hash": -8339549629471398589,
+        "resp_time_base": 0.5386209487915039
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "security",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "seclev_submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "05e2519963ac29026b9e48bb87978bb3",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/phpinfo.php",
+      "baseline": {
+        "resp_length_base": 83013,
+        "status_base": 200,
+        "dom_hash": 2710853450315869544,
+        "resp_time_base": 0.5308539867401123
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/about.php",
+      "baseline": {
+        "resp_length_base": 5221,
+        "status_base": 200,
+        "dom_hash": 2420883071093141216,
+        "resp_time_base": 0.531536340713501
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/logout.php",
+      "baseline": {
+        "resp_length_base": 1324,
+        "status_base": 200,
+        "dom_hash": 1519671015920551054,
+        "resp_time_base": 0.5279140472412109
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "065b3de2bfc5272a636db7fc1dc5d345",
+              "type": "hidden",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=readme",
+      "baseline": {
+        "resp_length_base": 25629,
+        "status_base": 200,
+        "dom_hash": 6676350354602468939,
+        "resp_time_base": 0.5438938140869141
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "readme",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=PDF",
+      "baseline": {
+        "resp_length_base": 3137,
+        "status_base": 200,
+        "dom_hash": -3317793135260052341,
+        "resp_time_base": 0.5270793437957764
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "PDF",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=changelog",
+      "baseline": {
+        "resp_length_base": 11132,
+        "status_base": 200,
+        "dom_hash": 1816408128186892639,
+        "resp_time_base": 0.5318570137023926
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "changelog",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=copying",
+      "baseline": {
+        "resp_length_base": 36103,
+        "status_base": 200,
+        "dom_hash": -8149705244779443493,
+        "resp_time_base": 0.5387279987335205
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "copying",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.ar.md",
+      "baseline": {
+        "resp_length_base": 25268,
+        "status_base": 200,
+        "dom_hash": -4535465256744084584,
+        "resp_time_base": 0.5357265472412109
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.zh.md",
+      "baseline": {
+        "resp_length_base": 17921,
+        "status_base": 200,
+        "dom_hash": 255534705355431889,
+        "resp_time_base": 0.5233945846557617
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.fr.md",
+      "baseline": {
+        "resp_length_base": 21085,
+        "status_base": 200,
+        "dom_hash": -1773046366892757040,
+        "resp_time_base": 0.525876522064209
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.fa.md",
+      "baseline": {
+        "resp_length_base": 30827,
+        "status_base": 200,
+        "dom_hash": 6150063346323846012,
+        "resp_time_base": 0.5332694053649902
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.es.md",
+      "baseline": {
+        "resp_length_base": 22026,
+        "status_base": 200,
+        "dom_hash": -4946095823144956898,
+        "resp_time_base": 0.5489120483398438
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.tr.md",
+      "baseline": {
+        "resp_length_base": 20089,
+        "status_base": 200,
+        "dom_hash": 6518912055132956326,
+        "resp_time_base": 0.5271170139312744
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file1.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": 2235017354565661327,
+        "resp_time_base": 0.5325944423675537
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file1.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file2.php",
+      "baseline": {
+        "resp_length_base": 4108,
+        "status_base": 200,
+        "dom_hash": -5598620261158946821,
+        "resp_time_base": 0.5323452949523926
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file2.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file3.php",
+      "baseline": {
+        "resp_length_base": 4260,
+        "status_base": 200,
+        "dom_hash": -3218936369736907128,
+        "resp_time_base": 0.5781137943267822
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file3.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/source/high.php?redirect=info.php?id=1",
+      "baseline": {
+        "resp_length_base": 4278,
+        "status_base": 200,
+        "dom_hash": 6355619668952207385,
+        "resp_time_base": 0.5311017036437988
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/open_redirect/source/info.php",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "1",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/source/high.php?redirect=info.php?id=2",
+      "baseline": {
+        "resp_length_base": 4166,
+        "status_base": 200,
+        "dom_hash": 2344500457012562499,
+        "resp_time_base": 0.5355212688446045
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/open_redirect/source/info.php",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "2",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/index.php",
+      "baseline": {
+        "resp_length_base": 5981,
+        "status_base": 200,
+        "dom_hash": 9187767798761132120,
+        "resp_time_base": 0.5561528205871582
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/admin/",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 395533771970123711,
+        "resp_time_base": 0.5324873924255371
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/login.php",
+      "baseline": {
+        "resp_length_base": 1278,
+        "status_base": 200,
+        "dom_hash": 8656490978199929318,
+        "resp_time_base": 0.5350842475891113
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "18994412ce8f781b7e6e73526a20f212",
+              "type": "hidden",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 395533771970123711,
+        "resp_time_base": 0.5230400562286377
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/",
+      "baseline": {
+        "resp_length_base": 5981,
+        "status_base": 200,
+        "dom_hash": 9187767798761132120,
+        "resp_time_base": 0.5398690700531006
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php",
+      "baseline": {
+        "resp_length_base": 25714,
+        "status_base": 200,
+        "dom_hash": 7663286786697622745,
+        "resp_time_base": 6.302214622497559
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/setup.php",
+      "baseline": {
+        "resp_length_base": 5204,
+        "status_base": 200,
+        "dom_hash": -3968689574032531583,
+        "resp_time_base": 0.5312669277191162
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "create_db",
+              "default": "Create / Reset Database",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "ec41fdaeaf9d568bc637d2bc128d58db",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+      "baseline": {
+        "resp_length_base": 4358,
+        "status_base": 200,
+        "dom_hash": 1729336133097907118,
+        "resp_time_base": 0.5357377529144287
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "580e20cc9241ccfb3f99a5da419b9929",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+      "baseline": {
+        "resp_length_base": 4253,
+        "status_base": 200,
+        "dom_hash": 3614952002915084475,
+        "resp_time_base": 0.5389270782470703
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "ip",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "afd3fcff37d4a9cfbf1fc04b64a6b831",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+      "baseline": {
+        "resp_length_base": 5581,
+        "status_base": 200,
+        "dom_hash": -8196608225573068824,
+        "resp_time_base": 0.5335581302642822
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "password_current",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Change",
+              "default": "Change",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "08c8d5c080eec03175d5f58b63bf3567",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=include.php",
+      "baseline": {
+        "resp_length_base": 4179,
+        "status_base": 200,
+        "dom_hash": -1279853471682537476,
+        "resp_time_base": 0.544241189956665
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "include.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+      "baseline": {
+        "resp_length_base": 4134,
+        "status_base": 200,
+        "dom_hash": -8521076062424546202,
+        "resp_time_base": 0.5294535160064697
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "MAX_FILE_SIZE",
+              "default": "100000",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "uploaded",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "Upload",
+              "default": "Upload",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "9e7ece59d3b39ee57b9a105b49198cde",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+      "baseline": {
+        "resp_length_base": 4670,
+        "status_base": 200,
+        "dom_hash": 8041221564462421783,
+        "resp_time_base": 21.57300329208374
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "step",
+              "default": "1",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password_current",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_new",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "password_conf",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "771fe3461936b90d95ff787de0710741",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Change",
+              "default": "Change",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+      "baseline": {
+        "resp_length_base": 4228,
+        "status_base": 200,
+        "dom_hash": -2370495077136513412,
+        "resp_time_base": 0.5474634170532227
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "81d7ccbd014dd33af071f752760dd4ea",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+      "baseline": {
+        "resp_length_base": 4293,
+        "status_base": 200,
+        "dom_hash": -5595165575481901667,
+        "resp_time_base": 0.5299475193023682
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "Submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "b7b7bb0a4f3d5e1155324c3a097f4b7b",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+      "baseline": {
+        "resp_length_base": 3514,
+        "status_base": 200,
+        "dom_hash": -5098722428954106650,
+        "resp_time_base": 0.5311694145202637
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+      "baseline": {
+        "resp_length_base": 4827,
+        "status_base": 200,
+        "dom_hash": -2602068617417987062,
+        "resp_time_base": 0.5233087539672852
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "default",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+      "baseline": {
+        "resp_length_base": 4377,
+        "status_base": 200,
+        "dom_hash": -5201403070646031274,
+        "resp_time_base": 0.5326447486877441
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "9b18e29615c2c72420329aed57261ddb",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+      "baseline": {
+        "resp_length_base": 5036,
+        "status_base": 200,
+        "dom_hash": -280824035589803874,
+        "resp_time_base": 0.5391392707824707
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "txtName",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "mtxMessage",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "btnSign",
+              "default": "Sign Guestbook",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "btnClear",
+              "default": "Clear Guestbook",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "43166e849558048e03526e1b7539466a",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+      "baseline": {
+        "resp_length_base": 4363,
+        "status_base": 200,
+        "dom_hash": 8786498302165553431,
+        "resp_time_base": 0.5433163642883301
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+      "baseline": {
+        "resp_length_base": 4086,
+        "status_base": 200,
+        "dom_hash": -8578453558259547418,
+        "resp_time_base": 0.5255112648010254
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+      "baseline": {
+        "resp_length_base": 5526,
+        "status_base": 200,
+        "dom_hash": 192166809958856818,
+        "resp_time_base": 0.5447304248809814
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+      "baseline": {
+        "resp_length_base": 4310,
+        "status_base": 200,
+        "dom_hash": 903222599474874598,
+        "resp_time_base": 0.5476787090301514
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/security.php",
+      "baseline": {
+        "resp_length_base": 4531,
+        "status_base": 200,
+        "dom_hash": -1140915375474531201,
+        "resp_time_base": 0.5407037734985352
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "#",
+          "inputs": [
+            {
+              "name": "security",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "seclev_submit",
+              "default": "Submit",
+              "type": "submit",
+              "risk_level": "normal"
+            },
+            {
+              "name": "user_token",
+              "default": "38ca851089adcfe8b2d2effeb8482279",
+              "type": "hidden",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/phpinfo.php",
+      "baseline": {
+        "resp_length_base": 83023,
+        "status_base": 200,
+        "dom_hash": 4171692814774078315,
+        "resp_time_base": 0.583543062210083
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/about.php",
+      "baseline": {
+        "resp_length_base": 5227,
+        "status_base": 200,
+        "dom_hash": 4026666790323790979,
+        "resp_time_base": 0.5427477359771729
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/logout.php",
+      "baseline": {
+        "resp_length_base": 1324,
+        "status_base": 200,
+        "dom_hash": 3005205351119265265,
+        "resp_time_base": 0.5671858787536621
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "Login",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            },
+            {
+              "name": "user_token",
+              "default": "7905b0ecf9426108202db0807c833c1f",
+              "type": "hidden",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=readme",
+      "baseline": {
+        "resp_length_base": 25635,
+        "status_base": 200,
+        "dom_hash": 4416126646453098878,
+        "resp_time_base": 0.5536608695983887
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "readme",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=PDF",
+      "baseline": {
+        "resp_length_base": 3143,
+        "status_base": 200,
+        "dom_hash": 1228509723369838532,
+        "resp_time_base": 0.5426511764526367
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "PDF",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=changelog",
+      "baseline": {
+        "resp_length_base": 11138,
+        "status_base": 200,
+        "dom_hash": -6607652986008153569,
+        "resp_time_base": 0.5289340019226074
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "changelog",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php?doc=copying",
+      "baseline": {
+        "resp_length_base": 36109,
+        "status_base": 200,
+        "dom_hash": 2689352426177127815,
+        "resp_time_base": 0.5435879230499268
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/instructions.php",
+          "inputs": [
+            {
+              "name": "doc",
+              "default": "copying",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.ar.md",
+      "baseline": {
+        "resp_length_base": 25268,
+        "status_base": 200,
+        "dom_hash": -4535465256744084584,
+        "resp_time_base": 0.5289115905761719
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.zh.md",
+      "baseline": {
+        "resp_length_base": 17921,
+        "status_base": 200,
+        "dom_hash": 255534705355431889,
+        "resp_time_base": 0.5244808197021484
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.fr.md",
+      "baseline": {
+        "resp_length_base": 21085,
+        "status_base": 200,
+        "dom_hash": -1773046366892757040,
+        "resp_time_base": 0.5472054481506348
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.fa.md",
+      "baseline": {
+        "resp_length_base": 30827,
+        "status_base": 200,
+        "dom_hash": 6150063346323846012,
+        "resp_time_base": 0.5428464412689209
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.es.md",
+      "baseline": {
+        "resp_length_base": 22026,
+        "status_base": 200,
+        "dom_hash": -4946095823144956898,
+        "resp_time_base": 0.5273153781890869
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/README.tr.md",
+      "baseline": {
+        "resp_length_base": 20089,
+        "status_base": 200,
+        "dom_hash": 6518912055132956326,
+        "resp_time_base": 0.5451781749725342
+      },
+      "injection_points": [],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file1.php",
+      "baseline": {
+        "resp_length_base": 4084,
+        "status_base": 200,
+        "dom_hash": 8804716530946696566,
+        "resp_time_base": 0.5256907939910889
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file1.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file2.php",
+      "baseline": {
+        "resp_length_base": 4126,
+        "status_base": 200,
+        "dom_hash": 6439318779142498557,
+        "resp_time_base": 0.5338373184204102
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file2.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/?page=file3.php",
+      "baseline": {
+        "resp_length_base": 4278,
+        "status_base": 200,
+        "dom_hash": 5831237839782339184,
+        "resp_time_base": 0.5350341796875
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/fi/",
+          "inputs": [
+            {
+              "name": "page",
+              "default": "file3.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/source/impossible.php?redirect=1",
+      "baseline": {
+        "resp_length_base": 4296,
+        "status_base": 200,
+        "dom_hash": -4671812574049878839,
+        "resp_time_base": 0.5493288040161133
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/open_redirect/source/info.php",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "1",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/source/impossible.php?redirect=2",
+      "baseline": {
+        "resp_length_base": 4184,
+        "status_base": 200,
+        "dom_hash": 322333135042228959,
+        "resp_time_base": 0.5512244701385498
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/dvwa/vulnerabilities/open_redirect/source/info.php",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "2",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "impossible"
+    }
+  ]
+}

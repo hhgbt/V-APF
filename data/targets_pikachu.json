@@ -1,0 +1,1741 @@
+{
+  "base_url": "http://127.0.0.1/pikachu",
+  "pages": [
+    {
+      "url": "http://127.0.0.1/pikachu/index.php",
+      "baseline": {
+        "resp_length_base": 35321,
+        "status_base": 200,
+        "dom_hash": 2018917421128647918,
+        "resp_time_base": 0.6131901741027832
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/admin/",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": -915348590152105837,
+        "resp_time_base": 0.5280964374542236
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/login.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": -915348590152105837,
+        "resp_time_base": 0.5348122119903564
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": -915348590152105837,
+        "resp_time_base": 0.5314900875091553
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/burteforce/burteforce.php",
+      "baseline": {
+        "resp_length_base": 35047,
+        "status_base": 200,
+        "dom_hash": 6488868341855860944,
+        "resp_time_base": 0.5600926876068115
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/burteforce/bf_form.php",
+      "baseline": {
+        "resp_length_base": 35652,
+        "status_base": 200,
+        "dom_hash": -1347571052351744439,
+        "resp_time_base": 0.5581939220428467
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "bf_form.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/burteforce/bf_server.php",
+      "baseline": {
+        "resp_length_base": 35883,
+        "status_base": 200,
+        "dom_hash": -5055082727041320252,
+        "resp_time_base": 0.5599229335784912
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "bf_server.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "vcode",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/burteforce/bf_client.php",
+      "baseline": {
+        "resp_length_base": 36965,
+        "status_base": 200,
+        "dom_hash": -7766621009464313316,
+        "resp_time_base": 0.5501916408538818
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "bf_client.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "vcode",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/burteforce/bf_token.php",
+      "baseline": {
+        "resp_length_base": 35435,
+        "status_base": 200,
+        "dom_hash": -7694023861669609298,
+        "resp_time_base": 0.5517077445983887
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "bf_token.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "token",
+              "default": "50824694fc28ad4920057698122",
+              "type": "hidden",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xss.php",
+      "baseline": {
+        "resp_length_base": 35263,
+        "status_base": 200,
+        "dom_hash": 2724012762805832364,
+        "resp_time_base": 0.582930326461792
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xss_reflected_get.php",
+      "baseline": {
+        "resp_length_base": 34650,
+        "status_base": 200,
+        "dom_hash": 7439012166126716787,
+        "resp_time_base": 0.5748691558837891
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xsspost/post_login.php",
+      "baseline": {
+        "resp_length_base": 36267,
+        "status_base": 200,
+        "dom_hash": -4796520607198686603,
+        "resp_time_base": 0.5595378875732422
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "post_login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xss_stored.php",
+      "baseline": {
+        "resp_length_base": 34786,
+        "status_base": 200,
+        "dom_hash": 1686000420177142179,
+        "resp_time_base": 0.5500156879425049
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xss_dom.php",
+      "baseline": {
+        "resp_length_base": 35012,
+        "status_base": 200,
+        "dom_hash": 631169566780466980,
+        "resp_time_base": 0.5539369583129883
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xss_dom_x.php",
+      "baseline": {
+        "resp_length_base": 35183,
+        "status_base": 200,
+        "dom_hash": -8678693759654250659,
+        "resp_time_base": 0.550147533416748
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "text",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xssblind/xss_blind.php",
+      "baseline": {
+        "resp_length_base": 35096,
+        "status_base": 200,
+        "dom_hash": 5123841465257193914,
+        "resp_time_base": 0.5596997737884521
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "content",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "提交",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xss_01.php",
+      "baseline": {
+        "resp_length_base": 34604,
+        "status_base": 200,
+        "dom_hash": 112459037037902105,
+        "resp_time_base": 0.554816722869873
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xss_02.php",
+      "baseline": {
+        "resp_length_base": 34638,
+        "status_base": 200,
+        "dom_hash": 2284722734979399114,
+        "resp_time_base": 0.552767276763916
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xss_03.php",
+      "baseline": {
+        "resp_length_base": 34634,
+        "status_base": 200,
+        "dom_hash": 3480297191280637672,
+        "resp_time_base": 0.5504357814788818
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xss/xss_04.php",
+      "baseline": {
+        "resp_length_base": 34976,
+        "status_base": 200,
+        "dom_hash": 3487909111305022812,
+        "resp_time_base": 0.5497274398803711
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/csrf/csrf.php",
+      "baseline": {
+        "resp_length_base": 36543,
+        "status_base": 200,
+        "dom_hash": 5658200148902657933,
+        "resp_time_base": 0.5640206336975098
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/csrf/csrfget/csrf_get_login.php",
+      "baseline": {
+        "resp_length_base": 35868,
+        "status_base": 200,
+        "dom_hash": -34299975663062675,
+        "resp_time_base": 0.5474200248718262
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "csrf_get_login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/csrf/csrfpost/csrf_post_login.php",
+      "baseline": {
+        "resp_length_base": 35870,
+        "status_base": 200,
+        "dom_hash": -321976411815015414,
+        "resp_time_base": 0.5518949031829834
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "csrf_post_login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/csrf/csrftoken/token_get_login.php",
+      "baseline": {
+        "resp_length_base": 35870,
+        "status_base": 200,
+        "dom_hash": -4106806048839888192,
+        "resp_time_base": 0.5536937713623047
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "token_get_login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli.php",
+      "baseline": {
+        "resp_length_base": 35276,
+        "status_base": 200,
+        "dom_hash": 5220670507991408376,
+        "resp_time_base": 0.5633635520935059
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_id.php",
+      "baseline": {
+        "resp_length_base": 34992,
+        "status_base": 200,
+        "dom_hash": -3375521867598997164,
+        "resp_time_base": 0.5729610919952393
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "id",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "查询",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_str.php",
+      "baseline": {
+        "resp_length_base": 34600,
+        "status_base": 200,
+        "dom_hash": -2866720552904792441,
+        "resp_time_base": 0.5812773704528809
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "查询",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_search.php",
+      "baseline": {
+        "resp_length_base": 34611,
+        "status_base": 200,
+        "dom_hash": -2130256555638606498,
+        "resp_time_base": 0.5526108741760254
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "搜索",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_x.php",
+      "baseline": {
+        "resp_length_base": 34607,
+        "status_base": 200,
+        "dom_hash": 6330701979450133854,
+        "resp_time_base": 0.5485589504241943
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "查询",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_iu/sqli_login.php",
+      "baseline": {
+        "resp_length_base": 35876,
+        "status_base": 200,
+        "dom_hash": -6152542623422029873,
+        "resp_time_base": 0.5544722080230713
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "sqli_login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_del.php",
+      "baseline": {
+        "resp_length_base": 34787,
+        "status_base": 200,
+        "dom_hash": -1383470554345479239,
+        "resp_time_base": 0.5584220886230469
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "message",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_header/sqli_header_login.php",
+      "baseline": {
+        "resp_length_base": 35818,
+        "status_base": 200,
+        "dom_hash": 1638400042588725460,
+        "resp_time_base": 0.5560386180877686
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "sqli_header_login.php",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_blind_b.php",
+      "baseline": {
+        "resp_length_base": 34613,
+        "status_base": 200,
+        "dom_hash": 2915657876479480874,
+        "resp_time_base": 0.5472626686096191
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "查询",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_blind_t.php",
+      "baseline": {
+        "resp_length_base": 34608,
+        "status_base": 200,
+        "dom_hash": 1408728061453673302,
+        "resp_time_base": 0.5681710243225098
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "查询",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_widebyte.php",
+      "baseline": {
+        "resp_length_base": 34633,
+        "status_base": 200,
+        "dom_hash": 6612749428963141471,
+        "resp_time_base": 0.5797677040100098
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "name",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "查询",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/rce/rce.php",
+      "baseline": {
+        "resp_length_base": 35550,
+        "status_base": 200,
+        "dom_hash": 9078606298113975053,
+        "resp_time_base": 0.5751197338104248
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/rce/rce_ping.php",
+      "baseline": {
+        "resp_length_base": 34634,
+        "status_base": 200,
+        "dom_hash": 4053511734287661504,
+        "resp_time_base": 0.5642552375793457
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "ipaddress",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "ping",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/rce/rce_eval.php",
+      "baseline": {
+        "resp_length_base": 34595,
+        "status_base": 200,
+        "dom_hash": -6572849904915915249,
+        "resp_time_base": 0.5517723560333252
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "txt",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "提交",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/fileinclude/fileinclude.php",
+      "baseline": {
+        "resp_length_base": 35492,
+        "status_base": 200,
+        "dom_hash": 6528780514924187950,
+        "resp_time_base": 0.5446631908416748
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/fileinclude/fi_local.php",
+      "baseline": {
+        "resp_length_base": 35038,
+        "status_base": 200,
+        "dom_hash": 4325153844726844053,
+        "resp_time_base": 0.5410833358764648
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "filename",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/fileinclude/fi_remote.php",
+      "baseline": {
+        "resp_length_base": 35078,
+        "status_base": 200,
+        "dom_hash": -1350698584917054010,
+        "resp_time_base": 0.5440504550933838
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "filename",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/unsafedownload/unsafedownload.php",
+      "baseline": {
+        "resp_length_base": 35019,
+        "status_base": 200,
+        "dom_hash": -9103165248789358579,
+        "resp_time_base": 0.5542213916778564
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/unsafedownload/down_nba.php",
+      "baseline": {
+        "resp_length_base": 37026,
+        "status_base": 200,
+        "dom_hash": -8956708516151337581,
+        "resp_time_base": 0.6294651031494141
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/unsafeupload/upload.php",
+      "baseline": {
+        "resp_length_base": 35016,
+        "status_base": 200,
+        "dom_hash": 4228158865932151998,
+        "resp_time_base": 0.5503942966461182
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/unsafeupload/clientcheck.php",
+      "baseline": {
+        "resp_length_base": 35285,
+        "status_base": 200,
+        "dom_hash": 3856957794750522256,
+        "resp_time_base": 0.5542914867401123
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "uploadfile",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "开始上传",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/unsafeupload/servercheck.php",
+      "baseline": {
+        "resp_length_base": 34673,
+        "status_base": 200,
+        "dom_hash": 6711753425337878005,
+        "resp_time_base": 0.5644519329071045
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "uploadfile",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "开始上传",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/unsafeupload/getimagesize.php",
+      "baseline": {
+        "resp_length_base": 34684,
+        "status_base": 200,
+        "dom_hash": 5186005009597885672,
+        "resp_time_base": 0.5635859966278076
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "uploadfile",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "file",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "开始上传",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/overpermission/op.php",
+      "baseline": {
+        "resp_length_base": 34886,
+        "status_base": 200,
+        "dom_hash": -1513731274105155017,
+        "resp_time_base": 0.5612509250640869
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/overpermission/op1/op1_login.php",
+      "baseline": {
+        "resp_length_base": 35805,
+        "status_base": 200,
+        "dom_hash": 7572789456612036831,
+        "resp_time_base": 0.5444579124450684
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/overpermission/op2/op2_login.php",
+      "baseline": {
+        "resp_length_base": 35817,
+        "status_base": 200,
+        "dom_hash": 1530786483094358774,
+        "resp_time_base": 0.5623064041137695
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/dir/dir.php",
+      "baseline": {
+        "resp_length_base": 35188,
+        "status_base": 200,
+        "dom_hash": -3035851770652652440,
+        "resp_time_base": 0.5675723552703857
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/dir/dir_list.php",
+      "baseline": {
+        "resp_length_base": 34713,
+        "status_base": 200,
+        "dom_hash": -5928378737565202924,
+        "resp_time_base": 0.5541410446166992
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/infoleak/infoleak.php",
+      "baseline": {
+        "resp_length_base": 34943,
+        "status_base": 200,
+        "dom_hash": -2540657497213418215,
+        "resp_time_base": 0.6168487071990967
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/infoleak/findabc.php",
+      "baseline": {
+        "resp_length_base": 35495,
+        "status_base": 200,
+        "dom_hash": 2938007944857437582,
+        "resp_time_base": 0.5723600387573242
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "GET",
+          "action": "",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "Login",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/unserilization/unserilization.php",
+      "baseline": {
+        "resp_length_base": 35384,
+        "status_base": 200,
+        "dom_hash": 2719345213382452667,
+        "resp_time_base": 0.5521461963653564
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/unserilization/unser.php",
+      "baseline": {
+        "resp_length_base": 34453,
+        "status_base": 200,
+        "dom_hash": -442730144994996268,
+        "resp_time_base": 0.5485067367553711
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "o",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xxe/xxe.php",
+      "baseline": {
+        "resp_length_base": 34616,
+        "status_base": 200,
+        "dom_hash": -768499638397143834,
+        "resp_time_base": 0.5514540672302246
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xxe/xxe_1.php",
+      "baseline": {
+        "resp_length_base": 34468,
+        "status_base": 200,
+        "dom_hash": -1957394512730240326,
+        "resp_time_base": 0.5587551593780518
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "xml",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "提交",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/urlredirect/unsafere.php",
+      "baseline": {
+        "resp_length_base": 34500,
+        "status_base": 200,
+        "dom_hash": 3427031268121396797,
+        "resp_time_base": 0.55837082862854
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/urlredirect/urlredirect.php",
+      "baseline": {
+        "resp_length_base": 34651,
+        "status_base": 200,
+        "dom_hash": 692059634033206650,
+        "resp_time_base": 0.5491595268249512
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/ssrf/ssrf.php",
+      "baseline": {
+        "resp_length_base": 34575,
+        "status_base": 200,
+        "dom_hash": 4547238171022286316,
+        "resp_time_base": 0.562204122543335
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/ssrf/ssrf_curl.php",
+      "baseline": {
+        "resp_length_base": 34336,
+        "status_base": 200,
+        "dom_hash": 2724141018877954296,
+        "resp_time_base": 0.5500893592834473
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/ssrf/ssrf_fgc.php",
+      "baseline": {
+        "resp_length_base": 34353,
+        "status_base": 200,
+        "dom_hash": -902690062703527734,
+        "resp_time_base": 0.5817112922668457
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/pkxss/index.php",
+      "baseline": {
+        "resp_length_base": 641,
+        "status_base": 200,
+        "dom_hash": -3420694892485893604,
+        "resp_time_base": 0.5563399791717529
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "submit",
+              "default": "login",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli/sqli_iu/sqli_reg.php",
+      "baseline": {
+        "resp_length_base": 35394,
+        "status_base": 200,
+        "dom_hash": -5081804682739062849,
+        "resp_time_base": 0.5613179206848145
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "",
+          "inputs": [
+            {
+              "name": "username",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "sex",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "phonenum",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "email",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "add",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
+            },
+            {
+              "name": "submit",
+              "default": "submit",
+              "type": "submit",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/sqli.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": -915348590152105837,
+        "resp_time_base": 0.5292038917541504
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/dir/dir_list.php?title=jarheads.php",
+      "baseline": {
+        "resp_length_base": 35527,
+        "status_base": 200,
+        "dom_hash": -3700557405035893939,
+        "resp_time_base": 0.5586862564086914
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/pikachu/vul/dir/dir_list.php",
+          "inputs": [
+            {
+              "name": "title",
+              "default": "jarheads.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/dir/dir_list.php?title=truman.php",
+      "baseline": {
+        "resp_length_base": 34815,
+        "status_base": 200,
+        "dom_hash": -7562972588144344265,
+        "resp_time_base": 0.552802562713623
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/pikachu/vul/dir/dir_list.php",
+          "inputs": [
+            {
+              "name": "title",
+              "default": "truman.php",
+              "type": "query",
+              "risk_level": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/xxe/xee.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": -915348590152105837,
+        "resp_time_base": 0.533252477645874
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/urlredirect/unsafere.php.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": -915348590152105837,
+        "resp_time_base": 0.5328569412231445
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/urlredirect/urlredirect.php?url=unsafere.php",
+      "baseline": {
+        "resp_length_base": 34500,
+        "status_base": 200,
+        "dom_hash": 3427031268121396797,
+        "resp_time_base": 0.5617132186889648
+      },
+      "injection_points": []
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/urlredirect/urlredirect.php?url=i",
+      "baseline": {
+        "resp_length_base": 34672,
+        "status_base": 200,
+        "dom_hash": -7669060455262864845,
+        "resp_time_base": 0.5679926872253418
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/pikachu/vul/urlredirect/urlredirect.php",
+          "inputs": [
+            {
+              "name": "url",
+              "default": "i",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/ssrf/ssrf_curl.php?url=http://127.0.0.1/pikachu/vul/ssrf/ssrf_info/info1.php",
+      "baseline": {
+        "resp_length_base": 31237,
+        "status_base": 500,
+        "dom_hash": 7000005512541322030,
+        "resp_time_base": 0.5459916591644287
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/pikachu/vul/ssrf/ssrf_curl.php",
+          "inputs": [
+            {
+              "name": "url",
+              "default": "http://127.0.0.1/pikachu/vul/ssrf/ssrf_info/info1.php",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/pikachu/vul/ssrf/ssrf_fgc.php?file=http://127.0.0.1/pikachu/vul/ssrf/ssrf_info/info2.php",
+      "baseline": {
+        "resp_length_base": 34516,
+        "status_base": 200,
+        "dom_hash": 323160480655848088,
+        "resp_time_base": 0.5656535625457764
+      },
+      "injection_points": [
+        {
+          "type": "query",
+          "method": "GET",
+          "action": "/pikachu/vul/ssrf/ssrf_fgc.php",
+          "inputs": [
+            {
+              "name": "file",
+              "default": "http://127.0.0.1/pikachu/vul/ssrf/ssrf_info/info2.php",
+              "type": "query",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
