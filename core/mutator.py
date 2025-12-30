@@ -4,7 +4,7 @@ import re
 
 class SAFSMutator:
     """
-    SAFS-Scanner 高级变异引擎
+    V-APF 高级变异引擎
     功能：根据漏洞类型 (SQLi, XSS, Generic) 进行针对性的 Payload 混淆与变异。
     """
     def __init__(self):

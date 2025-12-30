@@ -183,7 +183,7 @@ class AutoLabeler:
         print(f"    - 结果已保存至: {output_path}")
 
 def main():
-    parser = argparse.ArgumentParser(description="SAFS-Scanner 自动打标器")
+    parser = argparse.ArgumentParser(description="V-APF 自动打标器")
     parser.add_argument("--input", default="data/features.json", help="输入特征文件")
     parser.add_argument("--output", default="data/train_dataset.csv", help="输出 CSV 数据集")
     args = parser.parse_args()

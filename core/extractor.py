@@ -451,7 +451,7 @@ class FeatureExtractor:
         print(f"[+] 结果已保存至: {output_file}")
 
 async def main():
-    parser = argparse.ArgumentParser(description="SAFS-Scanner 特征提取器")
+    parser = argparse.ArgumentParser(description="V-APF 特征提取器")
     parser.add_argument("--targets", nargs="+", help="目标 JSON 文件列表", required=True)
     parser.add_argument("--output", default="data/features.json", help="输出特征文件")
     parser.add_argument("--cookie", default="", help="登录 Cookie 字符串")

@@ -10,7 +10,7 @@ from playwright.async_api import async_playwright, Page, Browser, BrowserContext
 
 
 class UniversalSpider:
-    """通用 Web 爬虫 (SAFS-Scanner)，专为 bWAPP、DVWA、Pikachu 等多靶场设计。
+    """通用 Web 爬虫 (V-APF)，专为 bWAPP、DVWA、Pikachu 等多靶场设计。
 
     功能特性:
     - 通用 Cookie 注入 (替代硬编码登录)
@@ -597,7 +597,7 @@ class PikachuSpider(UniversalSpider):
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="SAFS-Scanner 通用爬虫")
+    parser = argparse.ArgumentParser(description="V-APF 通用爬虫")
     parser.add_argument("--base", "-b", required=True, help="目标基础 URL (例如 http://127.0.0.1/dvwa)")
     parser.add_argument("--cookie", "-c", default="", help="登录 Cookie 字符串 (例如 'PHPSESSID=xxx; security=low')")
     parser.add_argument("--start", "-s", default="/", help="起始爬取路径 (默认 /)")

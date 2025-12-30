@@ -9,7 +9,7 @@ import os
 
 class SAFSTrainer:
     """
-    SAFS AI 训练引擎
+    V-APF AI 训练引擎
     功能：
     1. 加载标注好的数据集 (data/train_dataset.csv)
     2. 执行特征工程 (Log Scaling, Z-score Normalization)

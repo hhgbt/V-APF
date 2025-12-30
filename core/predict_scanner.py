@@ -24,7 +24,7 @@ FEATURE_NAMES = [f"v{i+1}" for i in range(13)]
 
 class SAFSPredictScanner:
     def __init__(self, model_path="models/safs_rf_model.pkl", scaler_path="models/scaler.pkl", default_headers=None):
-        print("[*] 正在加载 SAFS AI 引擎...")
+        print("[*] 正在加载 V-APF AI 引擎...")
         self.model = joblib.load(model_path)
         self.scaler = joblib.load(scaler_path)
         # 实例化提取器，仅用于复用它的 compute_13_vector 逻辑
@@ -220,11 +220,11 @@ class SAFSPredictScanner:
         
         if not params:
             print("    [!] 无参数可注入，将生成空报告以记录本次扫描。")
-            from core.report_generator import SAFSReportGenerator, SAFSPDFGenerator
-            html_reporter = SAFSReportGenerator(self.final_results, critical_threshold=self.current_critical_threshold)
+            from core.report_generator import VAPFReportGenerator, VAPFPDFGenerator
+            html_reporter = VAPFReportGenerator(self.final_results, critical_threshold=self.current_critical_threshold)
             html_reporter.generate_html(html_path)
             print("\n[*] 正在生成空 PDF 报告...")
-            pdf_reporter = SAFSPDFGenerator(self.final_results, critical_threshold=self.current_critical_threshold)
+            pdf_reporter = VAPFPDFGenerator(self.final_results, critical_threshold=self.current_critical_threshold)
             await pdf_reporter.generate(pdf_path)
             return
 
@@ -426,14 +426,14 @@ class SAFSPredictScanner:
                                           beef_xss_path, msfconsole_path, commix_path)
 
                 # 生成报告（即便发生异常也尽力生成可用报告）
-                from core.report_generator import SAFSReportGenerator, SAFSPDFGenerator
+                from core.report_generator import VAPFReportGenerator, VAPFPDFGenerator
                 fmt = (report_format or "both").lower()
                 if fmt in ("both", "html"):
-                    html_reporter = SAFSReportGenerator(self.final_results, critical_threshold=self.current_critical_threshold)
+                    html_reporter = VAPFReportGenerator(self.final_results, critical_threshold=self.current_critical_threshold)
                     html_reporter.generate_html(html_path)
                 if fmt in ("both", "pdf"):
                     print("\n[*] 正在汇总数据并生成 PDF 报告...")
-                    pdf_reporter = SAFSPDFGenerator(self.final_results, critical_threshold=self.current_critical_threshold)
+                    pdf_reporter = VAPFPDFGenerator(self.final_results, critical_threshold=self.current_critical_threshold)
                     await pdf_reporter.generate(pdf_path)
 
     async def _auto_exploit_logic(self, url, param, payload, vector, score, sqlmap_path, exploit_timeout, beef_xss_path, commix_path):
@@ -622,7 +622,7 @@ if __name__ == "__main__":
             params[k] = v
         return params
 
-    parser = argparse.ArgumentParser(description="SAFS-Scanner 预测扫描器")
+    parser = argparse.ArgumentParser(description="V-APF 预测扫描器")
     parser.add_argument("--url", required=True, help="目标 URL，GET 可直接包含查询参数")
     parser.add_argument("--method", default="GET", choices=["GET", "POST"], help="HTTP 方法")
     parser.add_argument("--param", action="append", help="参数对，格式 key=value，可重复传入")
