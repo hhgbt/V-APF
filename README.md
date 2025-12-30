@@ -32,6 +32,39 @@ python -m playwright install
 ```
 可选：安装 sqlmap、commix、beef-xss、msfconsole 并确保在 PATH 中。
 
+流程图（训练链路 + 扫描链路）
+
+```mermaid
+flowchart LR
+  %% ========== 训练阶段 ==========
+  subgraph 训练阶段 [模型训练阶段]
+    direction LR
+    A[目标站点/靶场<br/><small>DVWA/bWAPP/Pikachu/自定义</small>]
+    B[spider.py<br/><small>通用/专用爬虫</small>]
+    C[extractor.py<br/><small>特征提取</small>]
+    D[auto_labeler.py<br/><small>自动打标</small>]
+    E[train_model.py<br/><small>模型训练</small>]
+    F[模型文件<br/>safs_rf_model.pkl]
+    A --> B --> C --> D --> E --> F
+  end
+
+  %% ========== 扫描阶段 ==========
+  subgraph 扫描阶段 [安全扫描阶段]
+    direction LR
+    G[main.py scan CLI<br/><small>输入URL/参数</small>]
+    H[predict_scanner.py<br/><small>AI扫描引擎</small>]
+    I[自动利用链<br/><small>sqlmap/commix/beef/msfconsole</small>]
+    J[report_generator.py<br/><small>报告生成</small>]
+    G --> H
+    H --> I
+    H --> J
+    I --> J
+  end
+
+  %% ========== 模型加载 ==========
+  F -.->|模型加载| H
+```
+
 2) 一键训练（提取 → 合并 → 打标 → 训练）
 ```
 python main.py train
