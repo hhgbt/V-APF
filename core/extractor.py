@@ -15,8 +15,15 @@ from playwright.async_api import async_playwright, Page, BrowserContext
 # Ensure core is in path if running from root
 import sys
 import os
+import difflib
+import re
+import asyncio
+import httpx
+import random
 sys.path.append(os.getcwd())
+from playwright.async_api import async_playwright, Page, BrowserContext
 from core.spider import DVWASpider, BWAPPSpider, PikachuSpider, UniversalSpider
+from core.mutator import SAFSMutator
 
 class FeatureExtractor:
     """
@@ -29,13 +36,40 @@ class FeatureExtractor:
     4. 对比 Probe 与 Baseline，生成 13 维特征向量
     """
 
-    def __init__(self, payloads_file: str = "data/payloads.txt"):
+    def __init__(self, payloads_file: str = "data/payloads.txt", cookies: str = "", default_headers: Dict[str, str] | None = None):
         self.payloads = self._load_payloads(payloads_file)
+        self.mutator = SAFSMutator()
+        self.cookies = cookies
+        self.default_headers = default_headers or {}
+        # [Optimization] 预先生成变异 Payload，扩充攻击向量库
+        # 为了避免数量爆炸，我们这里只对前 5 个基础 Payload 进行变异演示
+        # 实际生产中可以全量变异
+        mutated_payloads = []
+        for p in self.payloads[:5]:
+            mutated_payloads.extend(self.mutator.mutate(p, count=3))
+        
+        # 将变异后的 Payload 加入到主列表（去重）
+        self.payloads = sorted(list(set(self.payloads + mutated_payloads)))
+        print(f"[*] Payload 库加载完成: 基础 {len(self.payloads)-len(mutated_payloads)} + 变异 {len(mutated_payloads)} -> 总计 {len(self.payloads)}")
+
         self.vectors = []
         self.error_keywords = [
             "SQL syntax", "mysql_fetch", "syntax error", "Warning", "Fatal error",
             "Unclosed quotation", "not found", "404", "denied", "root:", "admin"
         ]
+        
+        # [Optimization] HTTP Client for Fast Probing
+        self.http_client = httpx.AsyncClient(verify=False, timeout=10.0, follow_redirects=True, headers=self.default_headers)
+        # [Optimization] Concurrency Semaphore
+        self.sem = asyncio.Semaphore(5)
+
+    def set_default_headers(self, headers: Dict[str, str] | None):
+        """更新默认请求头，应用于 httpx 与后续 Playwright 创建的上下文。"""
+        self.default_headers = headers or {}
+        try:
+            self.http_client.headers.update(self.default_headers)
+        except Exception:
+            pass
 
     def _load_payloads(self, path: str) -> List[str]:
         if not os.path.exists(path):
@@ -66,253 +100,349 @@ class FeatureExtractor:
         }
 
     def compute_13_vector(self, base_data: Dict, probe_data: Dict, payload: str) -> List[float]:
-        """核心：计算 13 维特征向量"""
-        # 1. Length_Diff
-        len_base = base_data.get("length", 1)
-        len_probe = probe_data.get("length", 0)
-        v1 = (len_probe - len_base) / len_base
+        """
+        计算 13 维特征向量 (优化版)
+        """
+        vector = []
 
-        # 2. Status_Change
-        v2 = 1.0 if base_data.get("status") != probe_data.get("status") else 0.0
+        # 1. 响应长度变化 (归一化到 -1 ~ 1)
+        len_base = base_data.get('length', 0)
+        len_probe = probe_data.get('length', 0)
+        # 避免除以零
+        len_diff = (len_probe - len_base) / max(len_base, 1)
+        # 截断极端值
+        vector.append(max(min(len_diff, 1.0), -1.0)) 
 
-        # 3. Time_Delay (seconds) - [Fix] 修复负值问题
-        v3 = max(0.0, probe_data.get("time", 0) - base_data.get("time", 0))
+        # 2. 状态码变化 (0 或 1)
+        vector.append(1.0 if base_data.get('status') != probe_data.get('status') else 0.0)
 
-        # 4. Keyword_Match (Error Keywords) - [Fix] 改为加权评分
-        probe_text = probe_data.get("text", "")
-        # v4 = sum(1.0 for k in self.error_keywords if k.lower() in probe_text.lower())
-        # 权重表: 强特征给高分
-        keyword_scores = {
-            "SQL syntax": 1.0, "mysql_fetch": 1.0, "Unclosed quotation": 1.0,
-            "syntax error": 0.8, "Fatal error": 0.8, 
-            "Warning": 0.5, "denied": 0.3, "404": 0.1, "not found": 0.1
-        }
-        v4 = 0.0
-        lower_text = probe_text.lower()
-        for k, score in keyword_scores.items():
-            if k.lower() in lower_text:
-                v4 += score
-        # 简单的归一化，避免无限大
-        v4 = min(5.0, v4) 
+        # 3. 响应时间延迟 (秒, 归一化)
+        time_diff = probe_data.get('time', 0) - base_data.get('time', 0)
+        # 假设超过 5 秒为严重延迟
+        vector.append(max(min(time_diff / 5.0, 1.0), 0.0))
 
-        # 5. DOM_Sim (Similarity Ratio) - [Fix] 使用 difflib.SequenceMatcher 计算编辑距离相似度
-        # 注意：这里对比的是 probe 和 base 的相似度
-        # 如果页面崩了，相似度会降低
-        base_text = base_data.get("text", "")
-        v5 = difflib.SequenceMatcher(None, base_text, probe_text).quick_ratio()
+        # 4. 关键词匹配评分 (归一化)
+        error_score = 0
+        p_text_lower = probe_data.get('text', '').lower()
+        for kw in self.error_keywords:
+            if kw in p_text_lower:
+                error_score += 1
+        # 假设匹配 5 个关键词即为满分
+        vector.append(min(error_score / 5.0, 1.0))
 
-        # 6. Reflection_Score (Payload Reflection) - [Fix] Normalization
-        v6 = float(probe_text.count(payload))
-        if len(payload) > 0:
-             v6 = v6 / len(payload) # 简单的归一化尝试，或者使用反射比例
-        # 更好的归一化：count / (len(text) / len(payload)) ? 
-        # 暂时使用相对值： count / 10 (假设很少超过 10 次)
-        v6 = min(1.0, v6 / 10.0)
+        # 5. DOM 结构相似度 (0 ~ 1)
+        sim = difflib.SequenceMatcher(None, base_data.get('text', ''), probe_data.get('text', '')).quick_ratio()
+        vector.append(sim)
 
-        # 7. Header_Change (Placeholder -> Implemented if headers available)
-        # 目前 _fetch 返回结果还没包含 headers，暂时保留为 0.0 或改为随机微扰动以避免全0
-        # 为了让模型能跑通，我们这里暂时先填 0，后续优化 _fetch 返回 headers
-        v7 = 0.0 
+        # 6. 反射性 (0 或 1)
+        # 简单判断 Payload 是否在响应中出现
+        # 注意：Payload 可能被编码，这里只做简单字符串匹配
+        is_reflected = payload in probe_data.get('text', '')
+        vector.append(1.0 if is_reflected else 0.0)
 
-        # --- NLP / Semantic Features (Difference) ---
-        base_nlp = base_data.get("nlp", {})
-        probe_nlp = probe_data.get("nlp", {})
+        # 7. Header 变化 (Set-Cookie / Server / Location)
+        # 重点关注安全相关的 Header 变动
+        header_diff_score = 0
+        base_headers = base_data.get('headers', {})
+        probe_headers = probe_data.get('headers', {})
+        
+        def _count_set_cookie(val):
+            if isinstance(val, list):
+                return len(val)
+            return 1 if val else 0
+        if _count_set_cookie(base_headers.get('set-cookie')) != _count_set_cookie(probe_headers.get('set-cookie')):
+            header_diff_score += 0.5
+            
+        # 检查 Location 跳转变化
+        if base_headers.get('location') != probe_headers.get('location'):
+             header_diff_score += 0.5
+             
+        vector.append(min(header_diff_score, 1.0))
 
-        # 8. Tag Count Diff (Normalized)
-        base_tags = base_nlp.get("tag_count", 1)
-        if base_tags == 0: base_tags = 1
-        v8 = abs(probe_nlp.get("tag_count", 0) - base_nlp.get("tag_count", 0)) / base_tags
+        # 8-12. 占位符 (保留给未来特征，如 TF-IDF 距离等)
+        # 暂时填充 0.0
+        for _ in range(5):
+            vector.append(0.0)
 
-        # 9. Text Length Diff (Normalized)
-        base_txt_len = base_nlp.get("text_len", 1)
-        if base_txt_len == 0: base_txt_len = 1
-        v9 = abs(probe_nlp.get("text_len", 0) - base_nlp.get("text_len", 0)) / base_txt_len
+        # 13. Content_Type 变化
+        ct_base = base_headers.get('content-type', '').split(';')[0]
+        ct_probe = probe_headers.get('content-type', '').split(';')[0]
+        vector.append(1.0 if ct_base != ct_probe else 0.0)
 
-        # 10. Entropy Diff
-        v10 = abs(probe_nlp.get("entropy", 0) - base_nlp.get("entropy", 0))
+        return vector
 
-        # 11. Tag_Count_Change (Ratio Diff)
-        # 计算比率变化：abs(probe / base - 1.0)
-        base_tags = base_nlp.get("tag_count", 1)
-        if base_tags == 0: base_tags = 1
-        probe_tags = probe_nlp.get("tag_count", 0)
-        v11 = abs(probe_tags / base_tags - 1.0)
-
-        # 12. Hidden_Field_Consistency (Currently Proxy by Special Char Ratio)
-        # 如果未来有专门的 hidden field count，这里替换为 abs(probe_hidden - base_hidden)
-        # 暂时保持 Special Char Ratio 逻辑，因为这也能反映结构一致性
-        base_spec = base_nlp.get("special_chars", 1)
-        if base_spec == 0: base_spec = 1
-        v12 = abs(probe_nlp.get("special_chars", 0) - base_nlp.get("special_chars", 0)) / base_spec
-
-        # 13. Content_Type_Consistency (Placeholder -> Check Headers)
-        # 暂时用 Line Count 变化率填充
-        base_lines = base_nlp.get("lines", 1)
-        if base_lines == 0: base_lines = 1
-        v13 = abs(probe_nlp.get("lines", 0) - base_nlp.get("lines", 0)) / base_lines
-
-        return [v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13]
-
-    async def _fetch(self, page: Page, url: str, method: str = "GET", data: Dict = None) -> Dict:
-        """发送请求并获取完整特征数据"""
-        start = time.time()
+    async def fetch_page_features(self, page: Page, url: str, method: str = "GET", data: Dict = None, use_playwright: bool = True) -> Dict:
+        """
+        [Core] 发送请求并提取原始特征 (Raw Features)
+        支持 Playwright (全功能) 和 httpx (快速) 混合模式
+        """
         try:
-            if method == "POST":
-                # Playwright POST 需要使用 page.request 或者 form fill
-                # 这里为了模拟真实表单，我们尽量用 page.goto (GET) 或 page.request (POST)
-                # 为了保持 session，最好用 page 里的上下文
-                # 简单起见，对于 POST，我们使用 page.evaluate fetch 或者 requests
-                # 但 page.evaluate fetch 受同源策略限制，且难以获取 full response
-                # 最佳方案：使用 page.request (APIRequestContext)
-                response = await page.request.post(url, form=data)
-                content = await response.text() # bytes to string
-                status = response.status
-            else:
-                # GET: 构造 URL Query
-                full_url = url
-                if data:
-                    sep = "&" if "?" in url else "?"
-                    full_url = f"{url}{sep}{urlencode(data)}"
-                response = await page.goto(full_url)
-                # page.goto 返回的是 Response 对象
-                content = await page.content() # 获取渲染后的 DOM
-                status = response.status if response else 0
+            # 记录请求开始时间
+            start_time = time.time()
+            
+            response = None
+            method_upper = method.upper()
+            if use_playwright and page:
+                # 对 prompt.ml / xss-game 这类页面：networkidle 可能永远不满足（长连接/轮询）
+                # 采用更宽容的策略：domcontentloaded(20s) -> 尝试等待 networkidle(20s, 可超时忽略) -> 短暂停留给 JS 渲染
+                async def _goto_then_settle(target: str):
+                    resp = await page.goto(target, wait_until="domcontentloaded", timeout=20000)
+                    try:
+                        await page.wait_for_load_state("networkidle", timeout=20000)
+                    except Exception:
+                        pass
+                    await asyncio.sleep(1)
+                    return resp
 
-            duration = time.time() - start
+                if method_upper == "GET":
+                    if data:
+                        from urllib.parse import urlparse, urlencode, parse_qsl, urlunparse
+                        parts = list(urlparse(url))
+                        query = dict(parse_qsl(parts[4]))
+                        query.update(data)
+                        parts[4] = urlencode(query)
+                        final_url = urlunparse(parts)
+                        response = await _goto_then_settle(final_url)
+                    else:
+                        response = await _goto_then_settle(url)
+                elif method_upper == "POST":
+                    response = await _goto_then_settle(url)
+            else:
+                # 使用 httpx 进行快速协议层探测（不渲染 DOM）
+                if method_upper == "GET":
+                    r = await self.http_client.get(url, params=data or {}, headers=self.default_headers or None)
+                else:
+                    r = await self.http_client.post(url, data=data or {}, headers=self.default_headers or None)
+                # 仿造 Playwright 返回结构
+                end_time = time.time()
+                text = r.text
+                # 保留 set-cookie 的列表计数能力
+                try:
+                    set_cookie_list = r.headers.get_list('set-cookie')
+                except Exception:
+                    set_cookie_list = []
+                headers = {k.lower(): v for k, v in r.headers.items()}
+                if set_cookie_list:
+                    headers['set-cookie'] = set_cookie_list
+                return {
+                    "status": r.status_code,
+                    "length": len(text),
+                    "time": end_time - start_time,
+                    "text": text,
+                    "headers": headers
+                }
+
+            end_time = time.time()
+            
+            if not response:
+                return {"status": 0, "length": 0, "time": 0, "text": "", "headers": {}}
+
+            # 提取基础数据
+            text = await response.text()
+            headers = response.headers
+            # 将 headers key 转为小写，且规范化 set-cookie 为计数友好的形式
+            headers = {k.lower(): v for k, v in headers.items()}
+            if 'set-cookie' in headers and not isinstance(headers['set-cookie'], list):
+                headers['set-cookie'] = [headers['set-cookie']]
             
             return {
-                "length": len(content),
-                "status": status,
-                "time": duration,
-                "text": content,
-                "nlp": self._extract_nlp_features(content)
+                "status": response.status,
+                "length": len(text),
+                "time": end_time - start_time,
+                "text": text,
+                "headers": headers
             }
+            
         except Exception as e:
-            print(f"[-] 请求失败 {url}: {e}")
-            return {
-                "length": 0, "status": 0, "time": 0, "text": "", "nlp": {}
-            }
+            # print(f"[Debug] Fetch Error: {e}")
+            return {"status": 0, "length": 0, "time": 0, "text": "", "headers": {}}
 
-    async def process_file(self, json_path: str):
-        """处理单个 targets.json 文件"""
-        print(f"\n[*] 正在处理目标文件: {json_path}")
+        # Fallback: 如果 Playwright 返回空响应，补打一发 httpx 获取原始文本，避免报告空白
+        try:
+            if result := locals().get("response"):
+                pass
+        except Exception:
+            result = None
+        # 如果 text 为空或 status 为 0，则尝试 httpx 再取一次
+        try:
+            need_fallback = False
+            if 'text' in locals() and (not text or len(text.strip()) == 0):
+                need_fallback = True
+            if 'response' in locals() and response and getattr(response, 'status', 0) == 0:
+                need_fallback = True
+            if need_fallback:
+                method_upper = (method or "GET").upper()
+                start_time_fb = time.time()
+                if method_upper == "GET":
+                    r_fb = await self.http_client.get(url, params=data or {})
+                else:
+                    r_fb = await self.http_client.post(url, data=data or {})
+                end_time_fb = time.time()
+                try:
+                    set_cookie_list = r_fb.headers.get_list('set-cookie')
+                except Exception:
+                    set_cookie_list = []
+                headers_fb = {k.lower(): v for k, v in r_fb.headers.items()}
+                if set_cookie_list:
+                    headers_fb['set-cookie'] = set_cookie_list
+                return {
+                    "status": r_fb.status_code,
+                    "length": len(r_fb.text),
+                    "time": end_time_fb - start_time_fb,
+                    "text": r_fb.text,
+                    "headers": headers_fb,
+                }
+        except Exception:
+            pass
+
+    async def probe_and_get_vector(self, page: Page, url: str, method: str, base_params: Dict, param_name: str, payload: str, base_data: Dict = None, use_playwright: bool = True) -> tuple[List[float], Dict]:
+        """
+        单次探测并获取 (13 维向量, Probe Data)
+        """
+        if base_data is None:
+             base_data = await self.fetch_page_features(page, url, method, base_params, use_playwright=use_playwright)
+        
+        probe_params = base_params.copy()
+        probe_params[param_name] = payload
+        
+        probe_data = await self.fetch_page_features(page, url, method, probe_params, use_playwright=use_playwright)
+        
+        vector = self.compute_13_vector(base_data, probe_data, payload)
+        return vector, probe_data
+
+    async def _process_page_concurrent(self, context: BrowserContext, page_info: Dict):
+        """
+        并发处理单个页面的所有注入点
+        """
+        async with self.sem: # 限制页面级并发
+            page = await context.new_page()
+            try:
+                url = page_info['url']
+                print(f"[+] Processing: {url}")
+                
+                # 获取基准数据 (使用 Playwright 确保准确性)
+                base_data = await self.fetch_page_features(page, url, method="GET", use_playwright=True)
+                if not base_data['text']:
+                    return
+
+                injection_points = page_info.get('injection_points', [])
+                # [Debug]
+                print(f"    [Debug] Injection Points for {url}: {len(injection_points)}")
+                
+                for point in injection_points:
+                    # [Debug]
+                    print(f"        [Debug] Point Type: {point['type']}, Method: {point.get('method')}")
+                    
+                    if point['type'] == 'query' or point['type'] == 'form': # 支持 URL 参数和 Form 表单
+                        # 注意：Form 表单的参数列表 key 是 'inputs'，Query 是 'params'
+                        # 需要做适配
+                        params_list = point.get('params') or point.get('inputs') or []
+                        
+                        for param in params_list:
+                            p_name = param['name']
+                            print(f"            [Debug] Testing Param: {p_name}")
+                            
+                            # [Optimization] 快速筛选 (Quick Check)
+                            # 先用一个简单的单引号探测
+                            seed = "'"
+                            v_seed, _ = await self.probe_and_get_vector(
+                                None, url, "GET", {p_name: ""}, p_name, seed, base_data, use_playwright=False
+                            )
+                            # 如果 V1(长度), V2(状态), V5(DOM) 几乎无变化，且 V4(报错) 为 0
+                            # 则认为该参数可能是死参数，跳过后续重型探测
+                            # [Debug] 暂时禁用快速筛选，并打印调试信息
+                            # print(f"    [Debug] Quick Check ({p_name}): v_seed={v_seed}")
+                            # if abs(v_seed[0]) < 0.05 and v_seed[1] == 0 and v_seed[4] > 0.99 and v_seed[3] == 0:
+                            #    # print(f"    [-] Skipping dead param: {p_name}")
+                            #    continue
+
+                            # 否则进行全量探测
+                            for payload in self.payloads:
+                                # [Optimization] 混合模式：XSS 用 Playwright，其他用 httpx
+                                use_pw = "<script" in payload or "javascript:" in payload
+                                
+                                # 同步 Cookie (简单实现：从 context 获取)
+                                # cookies = await context.cookies()
+                                # httpx_cookies = {c['name']: c['value'] for c in cookies}
+                                # self.http_client.cookies.update(httpx_cookies)
+                                
+                                # 注意：probe_and_get_vector 参数顺序需要调整，因为之前签名改了
+                                vector, _ = await self.probe_and_get_vector(
+                                    page if use_pw else None, 
+                                    url, "GET", {p_name: ""}, p_name, payload, base_data, 
+                                    use_playwright=use_pw
+                                )
+                                
+                                self.vectors.append({
+                                    "url": url,
+                                    "param": p_name,
+                                    "payload": payload,
+                                    "security_level": page_info.get('security_level', ''),
+                                    "risk_level": param.get('risk_level', 'normal'),
+                                    "vector": vector
+                                })
+            except Exception as e:
+                print(f"[!] Error processing {page_info['url']}: {e}")
+            finally:
+                await page.close()
+
+    async def process_file(self, json_path: str, headless: bool = True):
+        """
+        处理单个 Target JSON 文件 (并发版)
+        """
         with open(json_path, 'r') as f:
             data = json.load(f)
+            
+        base_url = data['base_url']
+        pages = data['pages']
         
-        base_url = data.get("base_url", "")
-        pages = data.get("pages", [])
-
-        # 1. 确定 Target 类型并初始化 Spider 以获取 Session
-        spider = None
-        if "dvwa" in base_url.lower():
-            spider = DVWASpider(base_url, "")
-        elif "pikachu" in base_url.lower():
-            spider = PikachuSpider(base_url, "")
-        elif "bwapp" in base_url.lower():
-            spider = BWAPPSpider(base_url, "")
-        else:
-            spider = UniversalSpider(base_url, "")
+        # [Optimization] 数据采样 (针对训练阶段)
+        # 如果页面过多，随机抽取 50 个进行训练数据采集
+        if len(pages) > 50:
+            print(f"[*] Pages count {len(pages)} > 50, sampling 50 pages for training...")
+            pages = random.sample(pages, 50)
 
         async with async_playwright() as p:
-            # [Optimization] 使用 asyncio.Semaphore 限制并发 (例如同时只处理 5 个)
-            # 但这里我们是单页面顺序处理，实际上瓶颈在于页面加载
-            # 这里的改进是：不在每个 process_file 里都开浏览器，而是如果能复用更好
-            # 不过目前的架构是每个文件一个 Context，这对于隔离 Session 比较安全
-            
-            browser = await p.chromium.launch(headless=True)
+            browser = await p.chromium.launch(headless=headless)
+            # 创建 Context 并执行自动登录 (复用 Spider 逻辑或手动登录)
             context = await browser.new_context()
+            
+            # 简单起见，这里针对 DVWA/Pikachu 做简单登录
             page = await context.new_page()
-
-            # 2. 执行自动登录 (复用 Spider 逻辑)
-            # 注意：Spider 的 auto_login 可能需要调整，因为它通常不接受参数
-            # 这里我们尝试尽力而为
-            if hasattr(spider, 'auto_login'):
-                print(f"[+] 执行自动登录 ({type(spider).__name__})...")
-                # 对于 bWAPP A.I.M. 模式，我们需要先访问 aim.php
-                if isinstance(spider, BWAPPSpider):
-                     await page.goto(f"{base_url}/aim.php")
-                     if await page.query_selector('button[type="submit"]'):
-                         await page.click('button[type="submit"]')
-                else:
-                    await spider.auto_login(page)
+            if "dvwa" in base_url:
+                await DVWASpider(base_url, "").auto_login(page)
+            elif "pikachu" in base_url:
+                await PikachuSpider(base_url, "").auto_login(page)
+            # --- 新增 bWAPP A.I.M 激活逻辑 ---
+            elif "bwapp" in base_url.lower():
+                print("[*] 检测到 bWAPP 目标，正在通过 A.I.M. 模式激活上下文...")
+                spider = BWAPPSpider(base_url, getattr(self, "cookies", ""))
+                await spider.init_browser(context)
+                # 即使不需要登录，也必须访问一次 aim.php 以确保后续页面可以直接访问
+                aim_url = f"{base_url}/aim.php" if not base_url.endswith("aim.php") else base_url
+                try:
+                    await page.goto(aim_url, wait_until="domcontentloaded", timeout=20000)
+                    try:
+                        await page.wait_for_load_state("networkidle", timeout=20000)
+                    except Exception:
+                        pass
+                    await asyncio.sleep(1)
+                except Exception as e:
+                    print(f"[!] bWAPP A.I.M 激活失败: {e}")
+            # ------------------------------
+            await page.close()
             
-            # [Optimization] 增加并发控制
-            sem = asyncio.Semaphore(5)
-
-            async def process_page_entry(page_entry):
-                url = page_entry['url']
-                points = page_entry.get('injection_points', [])
-                if not points: return
-
-                # print(f"[+] 分析页面: {url} ({len(points)} 个注入点)")
-                
-                # 为了并发安全，我们不能共享同一个 page 对象进行 fetch
-                # 因为 page.goto 是会改变当前页面状态的
-                # 所以必须：要么顺序执行，要么每个任务开一个新的 page
-                # 开新 page 开销大，所以这里我们在文件内部还是保持顺序，
-                # 但对于 points 循环可以尝试并发？不行，同一个 Context 下并发操作 page 会冲突。
-                # 结论：Playwright 单 Context 下必须串行操作 Page。
-                # 只有多 Context 才能并发。
-                
-                # 因此，针对 Session 重用风险，我们已经在上面复用了 browser/context/page
-                # 只要不 close，就能一直用。
-                # 这里的瓶颈是：每次 fetch 都要 goto，这很慢。
-                # 唯一的优化是：减少不必要的 fetch。
-                
-                # 下面的代码保持串行即可，无需 Semaphore，因为我们只有一个 Page
-                
-                for point in points:
-                    method = point['method']
-                    inputs = point['inputs']
-                    
-                    # 构造 Base Data (使用默认值)
-                    base_params = {i['name']: i['default'] for i in inputs}
-                    
-                    # print(f"    -> 获取基准 ({method})...")
-                    base_resp = await self._fetch(page, url, method, base_params)
-                    
-                    # 3.2 Fuzzing: 对每个参数轮询测试
-                    for inp in inputs:
-                        param_name = inp['name']
-                        risk = inp.get('risk_level', 'normal')
-                        
-                        if inp['type'] == 'hidden' or 'token' in param_name.lower():
-                            continue
-
-                        # 选取 Payload (这里简单选取前 2 个作为演示，以免太慢)
-                        # 实际生产中应根据 risk_level 动态调整 payload 数量
-                        # [Optimized] 使用全部新 Payloads (约 20 个)，虽然慢但数据质量高
-                        test_payloads = self.payloads 
-                        
-                        for payload in test_payloads:
-                            probe_params = base_params.copy()
-                            probe_params[param_name] = payload
-                            
-                            probe_resp = await self._fetch(page, url, method, probe_params)
-                            vector = self.compute_13_vector(base_resp, probe_resp, payload)
-                            
-                            record = {
-                                "url": url,
-                                "param": param_name,
-                                "payload": payload,
-                                "method": method,
-                                "risk_level": risk,
-                                "vector": vector
-                            }
-                            self.vectors.append(record)
-
-            # 3. 遍历每个页面和注入点
-            # 鉴于 Playwright 单 Page 限制，我们只能顺序执行
-            # 这里的优化点：已经复用了 Context 和 Page，避免了重复登录
-            total_points = sum(len(p.get('injection_points', [])) for p in pages)
-            print(f"[+] 开始扫描 {len(pages)} 个页面，共 {total_points} 个注入点...")
+            cookies = await context.cookies()
+            httpx_cookies = {c['name']: c['value'] for c in cookies}
+            self.http_client.cookies.update(httpx_cookies)
             
-            for i, page_entry in enumerate(pages):
-                if i % 5 == 0:
-                    print(f"    -> 进度: {i}/{len(pages)}")
-                await process_page_entry(page_entry)
+            # 并发执行页面探测
+            tasks = [self._process_page_concurrent(context, page_info) for page_info in pages]
+            await asyncio.gather(*tasks)
             
             await browser.close()
+        
+        await self.http_client.aclose()
 
     def save_vectors(self, output_file: str = "data/features.json"):
         with open(output_file, 'w') as f:
@@ -324,15 +454,17 @@ async def main():
     parser = argparse.ArgumentParser(description="SAFS-Scanner 特征提取器")
     parser.add_argument("--targets", nargs="+", help="目标 JSON 文件列表", required=True)
     parser.add_argument("--output", default="data/features.json", help="输出特征文件")
+    parser.add_argument("--cookie", default="", help="登录 Cookie 字符串")
+    parser.add_argument("--no-headless", dest="headless", action="store_false", default=True, help="运行可见浏览器")
     args = parser.parse_args()
 
-    extractor = FeatureExtractor()
+    extractor = FeatureExtractor(cookies=args.cookie)
     
     # 也可以自动扫描 data/ 目录下的所有 targets_*.json
     targets = args.targets
     
     for target_file in targets:
-        await extractor.process_file(target_file)
+        await extractor.process_file(target_file, headless=args.headless)
         
     extractor.save_vectors(args.output)
 
