@@ -256,7 +256,8 @@ class UniversalSpider:
             if not full_start_url.startswith("http"):
                  full_start_url = f"{self.base_url}/{start_path.lstrip('/')}"
 
-            await self.crawl(page, full_start_url)
+            # 传入列表以避免把字符串当作可迭代逐字符处理
+            await self.crawl(page, [full_start_url])
 
             # 保存结果
             # 如果 output 包含目录，先创建目录
@@ -341,7 +342,8 @@ class DVWASpider(UniversalSpider):
                      full_start_url = f"{self.base_url}/{start_path.lstrip('/')}"
 
                 # 调用父类的 crawl
-                await self.crawl(page, full_start_url)
+                # 传入列表，避免把字符串拆成字符导致异常导航
+                await self.crawl(page, [full_start_url])
                 
                 # 将结果标记等级并合并
                 for page_entry in self.results["pages"]:
@@ -370,6 +372,54 @@ class BWAPPSpider(UniversalSpider):
         self.levels = ['0', '1', '2']  # 0=low, 1=medium, 2=high
         self.level_names = {'0': 'low', '1': 'medium', '2': 'high'}
         self.all_results = {"base_url": base_url, "pages": []}
+
+    async def auto_login(self, page: Page, level_code: str):
+        """使用默认凭据登录 bWAPP 并设置安全等级"""
+        login_url = f"{self.base_url}/login.php"
+        print(f"[+] 尝试自动登录 bWAPP: {login_url}")
+
+        try:
+            await page.goto(login_url)
+            await page.wait_for_load_state("networkidle")
+
+            # 登录表单字段名为 login/password/security_level
+            if await page.query_selector('input[name="login"]'):
+                await page.fill('input[name="login"]', 'bee')
+                await page.fill('input[name="password"]', 'bug')
+
+                # 登录页也可以直接选择安全等级
+                if await page.query_selector('select[name="security_level"]'):
+                    await page.select_option('select[name="security_level"]', level_code)
+
+                # 提交按钮有时是 input[type=submit]，有时是 button[type=submit]
+                if await page.query_selector('input[type="submit"]'):
+                    await page.click('input[type="submit"]')
+                elif await page.query_selector('button[type="submit"]'):
+                    await page.click('button[type="submit"]')
+                elif await page.query_selector('input[name="form"]'):
+                    await page.click('input[name="form"]')
+                else:
+                    raise RuntimeError("未找到 bWAPP 登录提交按钮")
+
+                await page.wait_for_load_state("networkidle")
+            else:
+                print("[!] 未找到登录表单，可能已经登录")
+
+            # 登录后通常跳转到 portal.php，如果没有则手动访问
+            if "portal.php" not in page.url:
+                await page.goto(f"{self.base_url}/portal.php")
+                await page.wait_for_load_state("networkidle")
+
+            # 再次确认安全等级被设置（门户页顶部仍有选择器）
+            if await page.query_selector('select[name="security_level"]'):
+                await page.select_option('select[name="security_level"]', level_code)
+                if await page.query_selector('input[name="security_level_set"]'):
+                    await page.click('input[name="security_level_set"]')
+                    await page.wait_for_load_state("networkidle")
+
+            print("[+] bWAPP 登录并设置安全等级成功")
+        except Exception as e:
+            print(f"[-] bWAPP 自动登录失败: {e}")
 
     async def fetch_bwapp_entries(self, page: Page, portal_url: str) -> List[str]:
         """从 bWAPP portal.php 或内置列表获取漏洞入口 (A.I.M. 模式优化版)"""
@@ -400,12 +450,15 @@ class BWAPPSpider(UniversalSpider):
             base_dir = portal_url.rstrip("/")
 
         for page_name in fallback_pages:
+            # 1) 常规路径: /bWAPP/<page>.php
             urls.append(f"{base_dir}/{page_name}")
+            # 2) 兼容路径: /bWAPP/app/<page>.php（部分部署将漏洞页置于 app 子目录）
+            urls.append(f"{base_dir}/app/{page_name}")
         
         print(f"[+] 已加载 {len(urls)} 个目标页面")
         return urls
 
-    async def run_batch(self, start_path: str = "/", headless: bool = True, output: str = "data/targets_bwapp.json"):
+    async def run_batch(self, start_path: str = "/portal.php", headless: bool = True, output: str = "data/targets_bwapp.json"):
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=headless)
             
@@ -418,43 +471,37 @@ class BWAPPSpider(UniversalSpider):
             
             for level in self.levels:
                 level_name = self.level_names[level]
-                print(f"\n[+] === 开始爬取 bWAPP (A.I.M. Mode) Level: {level_name} ({level}) ===")
+                print(f"\n[+] === 开始爬取 bWAPP Level: {level_name} ({level}) ===")
                 
                 context = await browser.new_context()
                 await self.init_browser(context)
                 
                 page = await context.new_page()
                 
-                # [关键修改] A.I.M. 模式下跳过 auto_login
-                # 并且起始页应该是 aim.php (由命令行参数传入)
-                # await self.auto_login(page) 
+                # 登录并按需设置安全等级，确保后续漏洞页可访问
+                await self.auto_login(page, level)
                 
                 # 重置 self.results 以便通过 crawl 收集当前等级的数据
                 self.results = {"base_url": self.base_url, "pages": []}
                 
-                # 构造完整的 start_url
-                full_start_url = f"{self.base_url}{start_path}" if start_path.startswith("/") else start_path
-                if not full_start_url.startswith("http"):
-                     full_start_url = f"{self.base_url}/{start_path.lstrip('/')}"
-                
-                # 1. 访问起始页 (通常是 aim.php) 以触发授权
-                print(f"[+] 访问 A.I.M. 入口: {full_start_url}")
-                try:
-                    await page.goto(full_start_url)
-                    # 可能需要点击按钮？ bWAPP 的 aim.php 通常有一个 "Set A.I.M." 按钮或自动生效
-                    # 检查是否有表单提交
-                    if await page.query_selector('form'):
-                         print("[+] 发现 A.I.M. 表单，尝试提交...")
-                         # 这里的按钮名称可能不同，通常是 update 或 aim
-                         # 简单的策略：如果有按钮就点击第一个 submit
-                         await page.click('button[type="submit"]')
-                         await page.wait_for_load_state("networkidle")
-                         print("[+] A.I.M. 授权触发完成")
-                except Exception as e:
-                    print(f"[-] A.I.M. 入口访问异常: {e}")
+                # 决定用于构造漏洞列表的门户页面
+                if start_path and start_path not in ("/", "/portal.php"):
+                    if start_path.startswith("http"):
+                        portal_url = start_path
+                    elif start_path.startswith("/"):
+                        portal_url = f"{self.base_url}{start_path}"
+                    else:
+                        portal_url = f"{self.base_url}/{start_path}"
+                    await page.goto(portal_url)
+                    await page.wait_for_load_state("networkidle")
+                else:
+                    portal_url = f"{self.base_url}/portal.php"
+                    if not page.url.endswith("portal.php"):
+                        await page.goto(portal_url)
+                        await page.wait_for_load_state("networkidle")
 
                 # 2. 直接构造漏洞页面列表
-                entry_urls = await self.fetch_bwapp_entries(page, full_start_url)
+                entry_urls = await self.fetch_bwapp_entries(page, portal_url)
                 
                 # 3. 将所有目标页面加入爬取队列
                 all_start_urls = entry_urls # 不再包含 start_url 因为 aim.php 本身没漏洞

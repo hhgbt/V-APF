@@ -6,8 +6,8 @@
       "baseline": {
         "resp_length_base": 5974,
         "status_base": 200,
-        "dom_hash": -431831625318332008,
-        "resp_time_base": 0.5559113025665283
+        "dom_hash": -1611870965974276341,
+        "resp_time_base": 0.5284852981567383
       },
       "injection_points": [],
       "security_level": "low"
@@ -17,8 +17,8 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 395533771970123711,
-        "resp_time_base": 0.5337717533111572
+        "dom_hash": -4863830220930910034,
+        "resp_time_base": 0.5228068828582764
       },
       "injection_points": [],
       "security_level": "low"
@@ -28,8 +28,8 @@
       "baseline": {
         "resp_length_base": 1278,
         "status_base": 200,
-        "dom_hash": 2169855338506877130,
-        "resp_time_base": 0.5336921215057373
+        "dom_hash": -1083699902144334039,
+        "resp_time_base": 0.520301342010498
       },
       "injection_points": [
         {
@@ -57,7 +57,7 @@
             },
             {
               "name": "user_token",
-              "default": "58549e1523c96d77247055e35c0f095d",
+              "default": "b8edca9014394a8dbb843acd8b5b4c39",
               "type": "hidden",
               "risk_level": "high"
             }
@@ -71,8 +71,8 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 395533771970123711,
-        "resp_time_base": 0.5320229530334473
+        "dom_hash": -4863830220930910034,
+        "resp_time_base": 0.526660680770874
       },
       "injection_points": [],
       "security_level": "low"
@@ -82,8 +82,8 @@
       "baseline": {
         "resp_length_base": 5974,
         "status_base": 200,
-        "dom_hash": -431831625318332008,
-        "resp_time_base": 0.5367579460144043
+        "dom_hash": -1611870965974276341,
+        "resp_time_base": 0.5277805328369141
       },
       "injection_points": [],
       "security_level": "low"
@@ -93,8 +93,8 @@
       "baseline": {
         "resp_length_base": 25707,
         "status_base": 200,
-        "dom_hash": -3542414457917225841,
-        "resp_time_base": 2.8841891288757324
+        "dom_hash": 8007392098253567603,
+        "resp_time_base": 4.880499601364136
       },
       "injection_points": [],
       "security_level": "low"
@@ -104,8 +104,8 @@
       "baseline": {
         "resp_length_base": 5197,
         "status_base": 200,
-        "dom_hash": 2912225618308993573,
-        "resp_time_base": 0.5321495532989502
+        "dom_hash": -4406933105078790436,
+        "resp_time_base": 0.5324325561523438
       },
       "injection_points": [
         {
@@ -121,7 +121,7 @@
             },
             {
               "name": "user_token",
-              "default": "5ad8e5a60747fa5fa4947954003ba824",
+              "default": "588fd7e70c3374296a7793782b27200b",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -135,8 +135,8 @@
       "baseline": {
         "resp_length_base": 4253,
         "status_base": 200,
-        "dom_hash": -8996094711038164332,
-        "resp_time_base": 0.5316669940948486
+        "dom_hash": 8277650915527456088,
+        "resp_time_base": 0.5316264629364014
       },
       "injection_points": [
         {
@@ -172,8 +172,8 @@
       "baseline": {
         "resp_length_base": 4149,
         "status_base": 200,
-        "dom_hash": -6865773442359996889,
-        "resp_time_base": 0.5262205600738525
+        "dom_hash": 5619809835398917378,
+        "resp_time_base": 0.5304069519042969
       },
       "injection_points": [
         {
@@ -203,8 +203,8 @@
       "baseline": {
         "resp_length_base": 5378,
         "status_base": 200,
-        "dom_hash": -2122947783025600881,
-        "resp_time_base": 0.5319375991821289
+        "dom_hash": 4126056656575493979,
+        "resp_time_base": 0.5264058113098145
       },
       "injection_points": [
         {
@@ -240,8 +240,8 @@
       "baseline": {
         "resp_length_base": 4158,
         "status_base": 200,
-        "dom_hash": -3902456428218018821,
-        "resp_time_base": 0.5247094631195068
+        "dom_hash": 1940538302827734346,
+        "resp_time_base": 0.5271635055541992
       },
       "injection_points": [
         {
@@ -265,8 +265,8 @@
       "baseline": {
         "resp_length_base": 4030,
         "status_base": 200,
-        "dom_hash": -6084145815791074683,
-        "resp_time_base": 0.524334192276001
+        "dom_hash": -307837076423086013,
+        "resp_time_base": 0.5230014324188232
       },
       "injection_points": [
         {
@@ -302,8 +302,8 @@
       "baseline": {
         "resp_length_base": 4466,
         "status_base": 200,
-        "dom_hash": 618327482670627750,
-        "resp_time_base": 21.561869144439697
+        "dom_hash": 4237872141798401829,
+        "resp_time_base": 21.578604698181152
       },
       "injection_points": [
         {
@@ -345,8 +345,8 @@
       "baseline": {
         "resp_length_base": 4124,
         "status_base": 200,
-        "dom_hash": 3615131838676596015,
-        "resp_time_base": 0.5401585102081299
+        "dom_hash": -8978165542182578341,
+        "resp_time_base": 0.5230405330657959
       },
       "injection_points": [
         {
@@ -376,8 +376,8 @@
       "baseline": {
         "resp_length_base": 4189,
         "status_base": 200,
-        "dom_hash": -571031233829069264,
-        "resp_time_base": 0.5329840183258057
+        "dom_hash": 587461316051372421,
+        "resp_time_base": 0.5263328552246094
       },
       "injection_points": [
         {
@@ -407,8 +407,8 @@
       "baseline": {
         "resp_length_base": 3493,
         "status_base": 200,
-        "dom_hash": -3001472620746415447,
-        "resp_time_base": 0.5405757427215576
+        "dom_hash": 9135602277994941715,
+        "resp_time_base": 0.5401594638824463
       },
       "injection_points": [],
       "security_level": "low"
@@ -418,8 +418,8 @@
       "baseline": {
         "resp_length_base": 4815,
         "status_base": 200,
-        "dom_hash": 8423172674067994813,
-        "resp_time_base": 0.5311346054077148
+        "dom_hash": 8678459794837344113,
+        "resp_time_base": 0.5318994522094727
       },
       "injection_points": [
         {
@@ -443,8 +443,8 @@
       "baseline": {
         "resp_length_base": 4273,
         "status_base": 200,
-        "dom_hash": -5635618987602997581,
-        "resp_time_base": 0.5308682918548584
+        "dom_hash": -1478495165367547701,
+        "resp_time_base": 0.5300991535186768
       },
       "injection_points": [
         {
@@ -466,10 +466,10 @@
     {
       "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
       "baseline": {
-        "resp_length_base": 4932,
+        "resp_length_base": 4922,
         "status_base": 200,
-        "dom_hash": 4685418755112111874,
-        "resp_time_base": 0.5367131233215332
+        "dom_hash": 6120803315670180002,
+        "resp_time_base": 0.5494482517242432
       },
       "injection_points": [
         {
@@ -511,8 +511,8 @@
       "baseline": {
         "resp_length_base": 4207,
         "status_base": 200,
-        "dom_hash": -6135348572086598028,
-        "resp_time_base": 0.5284500122070312
+        "dom_hash": -2887454554600453303,
+        "resp_time_base": 0.5249688625335693
       },
       "injection_points": [
         {
@@ -536,8 +536,8 @@
       "baseline": {
         "resp_length_base": 8411,
         "status_base": 200,
-        "dom_hash": -4963203310585766406,
-        "resp_time_base": 0.527857780456543
+        "dom_hash": -5504759406270946025,
+        "resp_time_base": 0.5360872745513916
       },
       "injection_points": [
         {
@@ -573,8 +573,8 @@
       "baseline": {
         "resp_length_base": 5505,
         "status_base": 200,
-        "dom_hash": 7507189621503972965,
-        "resp_time_base": 0.5535757541656494
+        "dom_hash": 8645117324633087115,
+        "resp_time_base": 0.540097713470459
       },
       "injection_points": [],
       "security_level": "low"
@@ -584,8 +584,8 @@
       "baseline": {
         "resp_length_base": 4299,
         "status_base": 200,
-        "dom_hash": -9040172476996396961,
-        "resp_time_base": 0.5270724296569824
+        "dom_hash": 1500624124417022643,
+        "resp_time_base": 0.5290236473083496
       },
       "injection_points": [],
       "security_level": "low"
@@ -595,8 +595,8 @@
       "baseline": {
         "resp_length_base": 4517,
         "status_base": 200,
-        "dom_hash": -5788188065809830656,
-        "resp_time_base": 0.5464019775390625
+        "dom_hash": 1712978418983216566,
+        "resp_time_base": 0.5245022773742676
       },
       "injection_points": [
         {
@@ -618,7 +618,7 @@
             },
             {
               "name": "user_token",
-              "default": "b2106a0533f6c2c0702052a5836f499a",
+              "default": "b27e33ec9fccdd7aefed8368d028a41f",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -630,10 +630,10 @@
     {
       "url": "http://127.0.0.1/dvwa/phpinfo.php",
       "baseline": {
-        "resp_length_base": 83008,
+        "resp_length_base": 83016,
         "status_base": 200,
-        "dom_hash": 6910556399139790306,
-        "resp_time_base": 0.5278675556182861
+        "dom_hash": -1274649610153596848,
+        "resp_time_base": 0.5350260734558105
       },
       "injection_points": [],
       "security_level": "low"
@@ -643,8 +643,8 @@
       "baseline": {
         "resp_length_base": 5220,
         "status_base": 200,
-        "dom_hash": -2269230181934889231,
-        "resp_time_base": 0.5331640243530273
+        "dom_hash": -7697313548552174237,
+        "resp_time_base": 0.5257558822631836
       },
       "injection_points": [],
       "security_level": "low"
@@ -654,8 +654,8 @@
       "baseline": {
         "resp_length_base": 1324,
         "status_base": 200,
-        "dom_hash": -4023168409779930251,
-        "resp_time_base": 0.5462009906768799
+        "dom_hash": 1205369251304225291,
+        "resp_time_base": 0.5294651985168457
       },
       "injection_points": [
         {
@@ -683,7 +683,7 @@
             },
             {
               "name": "user_token",
-              "default": "821d52590f35c24c8f9ba34b7b380df9",
+              "default": "13863819b289ccd35eefed5edd19f6d2",
               "type": "hidden",
               "risk_level": "high"
             }
@@ -697,8 +697,8 @@
       "baseline": {
         "resp_length_base": 25628,
         "status_base": 200,
-        "dom_hash": 4302635806808726811,
-        "resp_time_base": 0.5535540580749512
+        "dom_hash": 2207230384299209590,
+        "resp_time_base": 0.5358681678771973
       },
       "injection_points": [
         {
@@ -722,8 +722,8 @@
       "baseline": {
         "resp_length_base": 3136,
         "status_base": 200,
-        "dom_hash": 1136744181818887606,
-        "resp_time_base": 0.530402421951294
+        "dom_hash": -5265205856571368679,
+        "resp_time_base": 0.5283541679382324
       },
       "injection_points": [
         {
@@ -747,8 +747,8 @@
       "baseline": {
         "resp_length_base": 11131,
         "status_base": 200,
-        "dom_hash": -3894083092943470126,
-        "resp_time_base": 0.536383867263794
+        "dom_hash": 6078912842710544365,
+        "resp_time_base": 0.5263481140136719
       },
       "injection_points": [
         {
@@ -772,8 +772,8 @@
       "baseline": {
         "resp_length_base": 36102,
         "status_base": 200,
-        "dom_hash": 3318160533240774986,
-        "resp_time_base": 0.5419249534606934
+        "dom_hash": -7280461141207109696,
+        "resp_time_base": 0.526315450668335
       },
       "injection_points": [
         {
@@ -797,8 +797,8 @@
       "baseline": {
         "resp_length_base": 25268,
         "status_base": 200,
-        "dom_hash": -4535465256744084584,
-        "resp_time_base": 0.5321671962738037
+        "dom_hash": -7996153436241119249,
+        "resp_time_base": 0.5319399833679199
       },
       "injection_points": [],
       "security_level": "low"
@@ -808,8 +808,8 @@
       "baseline": {
         "resp_length_base": 17921,
         "status_base": 200,
-        "dom_hash": 255534705355431889,
-        "resp_time_base": 0.5362472534179688
+        "dom_hash": -8422883431596708202,
+        "resp_time_base": 0.5366823673248291
       },
       "injection_points": [],
       "security_level": "low"
@@ -819,8 +819,8 @@
       "baseline": {
         "resp_length_base": 21085,
         "status_base": 200,
-        "dom_hash": -1773046366892757040,
-        "resp_time_base": 0.5715892314910889
+        "dom_hash": 4266716619836126773,
+        "resp_time_base": 0.5314667224884033
       },
       "injection_points": [],
       "security_level": "low"
@@ -830,8 +830,8 @@
       "baseline": {
         "resp_length_base": 30827,
         "status_base": 200,
-        "dom_hash": 6150063346323846012,
-        "resp_time_base": 0.5436363220214844
+        "dom_hash": 7816061854047539208,
+        "resp_time_base": 0.5253221988677979
       },
       "injection_points": [],
       "security_level": "low"
@@ -841,8 +841,8 @@
       "baseline": {
         "resp_length_base": 22026,
         "status_base": 200,
-        "dom_hash": -4946095823144956898,
-        "resp_time_base": 0.5588722229003906
+        "dom_hash": 1642659598011321215,
+        "resp_time_base": 0.5316603183746338
       },
       "injection_points": [],
       "security_level": "low"
@@ -852,8 +852,8 @@
       "baseline": {
         "resp_length_base": 20089,
         "status_base": 200,
-        "dom_hash": 6518912055132956326,
-        "resp_time_base": 0.5256228446960449
+        "dom_hash": -4527537159496596655,
+        "resp_time_base": 0.524907112121582
       },
       "injection_points": [],
       "security_level": "low"
@@ -863,8 +863,8 @@
       "baseline": {
         "resp_length_base": 4063,
         "status_base": 200,
-        "dom_hash": -67758391358939560,
-        "resp_time_base": 0.5372471809387207
+        "dom_hash": 1122862727606617396,
+        "resp_time_base": 0.5270404815673828
       },
       "injection_points": [
         {
@@ -888,8 +888,8 @@
       "baseline": {
         "resp_length_base": 4105,
         "status_base": 200,
-        "dom_hash": -6267736628836034386,
-        "resp_time_base": 0.533149242401123
+        "dom_hash": 1678104914717807143,
+        "resp_time_base": 0.530564546585083
       },
       "injection_points": [
         {
@@ -913,8 +913,8 @@
       "baseline": {
         "resp_length_base": 4257,
         "status_base": 200,
-        "dom_hash": -5551534551966760207,
-        "resp_time_base": 0.5569822788238525
+        "dom_hash": -8638633362306591851,
+        "resp_time_base": 0.5258827209472656
       },
       "injection_points": [
         {
@@ -938,8 +938,8 @@
       "baseline": {
         "resp_length_base": 4275,
         "status_base": 200,
-        "dom_hash": 8034820339126640976,
-        "resp_time_base": 0.5362639427185059
+        "dom_hash": -5256521130015942899,
+        "resp_time_base": 0.5357472896575928
       },
       "injection_points": [
         {
@@ -963,8 +963,8 @@
       "baseline": {
         "resp_length_base": 4163,
         "status_base": 200,
-        "dom_hash": -1556000761943689525,
-        "resp_time_base": 0.5424184799194336
+        "dom_hash": -3196081404200275127,
+        "resp_time_base": 0.5443744659423828
       },
       "injection_points": [
         {
@@ -988,8 +988,8 @@
       "baseline": {
         "resp_length_base": 5977,
         "status_base": 200,
-        "dom_hash": 6606802236729439402,
-        "resp_time_base": 0.5567057132720947
+        "dom_hash": -5332089956062434344,
+        "resp_time_base": 0.5346379280090332
       },
       "injection_points": [],
       "security_level": "medium"
@@ -999,8 +999,8 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 395533771970123711,
-        "resp_time_base": 0.5291049480438232
+        "dom_hash": -4863830220930910034,
+        "resp_time_base": 0.5252442359924316
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1010,8 +1010,8 @@
       "baseline": {
         "resp_length_base": 1278,
         "status_base": 200,
-        "dom_hash": -2173265804702560357,
-        "resp_time_base": 0.5296287536621094
+        "dom_hash": 1830459609587951523,
+        "resp_time_base": 0.5287361145019531
       },
       "injection_points": [
         {
@@ -1039,7 +1039,7 @@
             },
             {
               "name": "user_token",
-              "default": "3a8856b1ebbe8c75ca58954f85c20ac5",
+              "default": "10998b2c3ae51b8c384d2560f1d720a1",
               "type": "hidden",
               "risk_level": "high"
             }
@@ -1053,8 +1053,8 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 395533771970123711,
-        "resp_time_base": 0.5273852348327637
+        "dom_hash": -4863830220930910034,
+        "resp_time_base": 0.5304219722747803
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1064,8 +1064,8 @@
       "baseline": {
         "resp_length_base": 5977,
         "status_base": 200,
-        "dom_hash": 6606802236729439402,
-        "resp_time_base": 0.5278677940368652
+        "dom_hash": -5332089956062434344,
+        "resp_time_base": 0.5217351913452148
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1075,8 +1075,8 @@
       "baseline": {
         "resp_length_base": 25710,
         "status_base": 200,
-        "dom_hash": 8092374357028194739,
-        "resp_time_base": 4.700635194778442
+        "dom_hash": -3643706532454443976,
+        "resp_time_base": 9.990199327468872
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1086,8 +1086,8 @@
       "baseline": {
         "resp_length_base": 5200,
         "status_base": 200,
-        "dom_hash": 2031597948347779923,
-        "resp_time_base": 0.5261807441711426
+        "dom_hash": 6664814239631533930,
+        "resp_time_base": 0.5284886360168457
       },
       "injection_points": [
         {
@@ -1103,7 +1103,7 @@
             },
             {
               "name": "user_token",
-              "default": "71abc44fed92bfd4d5b2907a23d83298",
+              "default": "972ffb4a4e17e2aeeee5b54267ea58c4",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -1117,8 +1117,8 @@
       "baseline": {
         "resp_length_base": 4262,
         "status_base": 200,
-        "dom_hash": 2578180511346549695,
-        "resp_time_base": 0.5317959785461426
+        "dom_hash": -5780880540677014734,
+        "resp_time_base": 0.541395902633667
       },
       "injection_points": [
         {
@@ -1154,8 +1154,8 @@
       "baseline": {
         "resp_length_base": 4158,
         "status_base": 200,
-        "dom_hash": -1670814519905301083,
-        "resp_time_base": 0.5424065589904785
+        "dom_hash": -5197972762810608159,
+        "resp_time_base": 0.5347867012023926
       },
       "injection_points": [
         {
@@ -1185,8 +1185,8 @@
       "baseline": {
         "resp_length_base": 5387,
         "status_base": 200,
-        "dom_hash": -1397334435461588671,
-        "resp_time_base": 0.537747859954834
+        "dom_hash": 3850351859587380244,
+        "resp_time_base": 0.5239205360412598
       },
       "injection_points": [
         {
@@ -1222,8 +1222,8 @@
       "baseline": {
         "resp_length_base": 4167,
         "status_base": 200,
-        "dom_hash": 2150481620211626927,
-        "resp_time_base": 0.525428056716919
+        "dom_hash": 4632172593148932128,
+        "resp_time_base": 0.524660587310791
       },
       "injection_points": [
         {
@@ -1247,8 +1247,8 @@
       "baseline": {
         "resp_length_base": 4039,
         "status_base": 200,
-        "dom_hash": 3307687663270203371,
-        "resp_time_base": 0.5302975177764893
+        "dom_hash": 7092021488173597812,
+        "resp_time_base": 0.5283899307250977
       },
       "injection_points": [
         {
@@ -1284,8 +1284,8 @@
       "baseline": {
         "resp_length_base": 4475,
         "status_base": 200,
-        "dom_hash": 9141491568836016702,
-        "resp_time_base": 21.588289976119995
+        "dom_hash": 7991340598900526898,
+        "resp_time_base": 21.561856508255005
       },
       "injection_points": [
         {
@@ -1327,8 +1327,8 @@
       "baseline": {
         "resp_length_base": 4262,
         "status_base": 200,
-        "dom_hash": -8788051857737968456,
-        "resp_time_base": 0.5274796485900879
+        "dom_hash": -6600479975119205643,
+        "resp_time_base": 0.5363614559173584
       },
       "injection_points": [
         {
@@ -1358,8 +1358,8 @@
       "baseline": {
         "resp_length_base": 4327,
         "status_base": 200,
-        "dom_hash": -5946625757555986114,
-        "resp_time_base": 0.5283315181732178
+        "dom_hash": -1306973801853665012,
+        "resp_time_base": 0.523101806640625
       },
       "injection_points": [
         {
@@ -1389,8 +1389,8 @@
       "baseline": {
         "resp_length_base": 3502,
         "status_base": 200,
-        "dom_hash": -6472953244446511723,
-        "resp_time_base": 0.540926456451416
+        "dom_hash": -464218831044843813,
+        "resp_time_base": 0.530078649520874
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1400,8 +1400,8 @@
       "baseline": {
         "resp_length_base": 4824,
         "status_base": 200,
-        "dom_hash": -5835054415143608948,
-        "resp_time_base": 0.5347764492034912
+        "dom_hash": -8093319880980756957,
+        "resp_time_base": 0.5226860046386719
       },
       "injection_points": [
         {
@@ -1425,8 +1425,8 @@
       "baseline": {
         "resp_length_base": 4282,
         "status_base": 200,
-        "dom_hash": 649636441347578328,
-        "resp_time_base": 0.5602607727050781
+        "dom_hash": 7142235634848575269,
+        "resp_time_base": 0.5285563468933105
       },
       "injection_points": [
         {
@@ -1448,10 +1448,10 @@
     {
       "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
       "baseline": {
-        "resp_length_base": 4941,
+        "resp_length_base": 4931,
         "status_base": 200,
-        "dom_hash": 6927896607427743436,
-        "resp_time_base": 0.523627519607544
+        "dom_hash": -7544174552663926279,
+        "resp_time_base": 0.5196120738983154
       },
       "injection_points": [
         {
@@ -1493,8 +1493,8 @@
       "baseline": {
         "resp_length_base": 4204,
         "status_base": 200,
-        "dom_hash": 594247865382197105,
-        "resp_time_base": 0.5381343364715576
+        "dom_hash": 5256402663123864319,
+        "resp_time_base": 0.5367989540100098
       },
       "injection_points": [
         {
@@ -1518,8 +1518,8 @@
       "baseline": {
         "resp_length_base": 4332,
         "status_base": 200,
-        "dom_hash": -423891368437731330,
-        "resp_time_base": 0.5341455936431885
+        "dom_hash": -4081945218356658756,
+        "resp_time_base": 0.5355088710784912
       },
       "injection_points": [
         {
@@ -1555,8 +1555,8 @@
       "baseline": {
         "resp_length_base": 5514,
         "status_base": 200,
-        "dom_hash": 3253556449171386883,
-        "resp_time_base": 0.5406732559204102
+        "dom_hash": -6507044370274974605,
+        "resp_time_base": 0.5445804595947266
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1566,8 +1566,8 @@
       "baseline": {
         "resp_length_base": 4314,
         "status_base": 200,
-        "dom_hash": 7978326227492734013,
-        "resp_time_base": 0.5430498123168945
+        "dom_hash": -3852030740650398592,
+        "resp_time_base": 0.5266580581665039
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1577,8 +1577,8 @@
       "baseline": {
         "resp_length_base": 4523,
         "status_base": 200,
-        "dom_hash": 6121958574221051720,
-        "resp_time_base": 0.568568229675293
+        "dom_hash": -2818138108016157627,
+        "resp_time_base": 0.5305845737457275
       },
       "injection_points": [
         {
@@ -1600,7 +1600,7 @@
             },
             {
               "name": "user_token",
-              "default": "930612162daab3c93fc9ed33c3b41bfd",
+              "default": "eac22892a0f422b969497360adea045f",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -1612,10 +1612,10 @@
     {
       "url": "http://127.0.0.1/dvwa/phpinfo.php",
       "baseline": {
-        "resp_length_base": 83022,
+        "resp_length_base": 83028,
         "status_base": 200,
-        "dom_hash": -1576025023422453162,
-        "resp_time_base": 0.5339407920837402
+        "dom_hash": -3941465408884308766,
+        "resp_time_base": 0.5374312400817871
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1625,8 +1625,8 @@
       "baseline": {
         "resp_length_base": 5223,
         "status_base": 200,
-        "dom_hash": 3931736353217062347,
-        "resp_time_base": 0.5292274951934814
+        "dom_hash": -4080603076102249215,
+        "resp_time_base": 0.5210316181182861
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1636,8 +1636,8 @@
       "baseline": {
         "resp_length_base": 1324,
         "status_base": 200,
-        "dom_hash": -7603536881634366783,
-        "resp_time_base": 0.5478382110595703
+        "dom_hash": 7678771249895196522,
+        "resp_time_base": 0.5270450115203857
       },
       "injection_points": [
         {
@@ -1665,7 +1665,7 @@
             },
             {
               "name": "user_token",
-              "default": "3b5d9edf25a8b16c1fd125547aa78f3a",
+              "default": "4fa81505ae634b6d3b66ff5bfb0bd467",
               "type": "hidden",
               "risk_level": "high"
             }
@@ -1679,8 +1679,8 @@
       "baseline": {
         "resp_length_base": 25631,
         "status_base": 200,
-        "dom_hash": -3958591317155375176,
-        "resp_time_base": 0.5717113018035889
+        "dom_hash": 1229751205229894034,
+        "resp_time_base": 0.5510942935943604
       },
       "injection_points": [
         {
@@ -1704,8 +1704,8 @@
       "baseline": {
         "resp_length_base": 3139,
         "status_base": 200,
-        "dom_hash": 4779576167301795939,
-        "resp_time_base": 0.5276784896850586
+        "dom_hash": -8955208010937597814,
+        "resp_time_base": 0.5393059253692627
       },
       "injection_points": [
         {
@@ -1729,8 +1729,8 @@
       "baseline": {
         "resp_length_base": 11134,
         "status_base": 200,
-        "dom_hash": 2180782595563053185,
-        "resp_time_base": 0.5369126796722412
+        "dom_hash": 5419979171739908757,
+        "resp_time_base": 0.5191135406494141
       },
       "injection_points": [
         {
@@ -1754,8 +1754,8 @@
       "baseline": {
         "resp_length_base": 36105,
         "status_base": 200,
-        "dom_hash": -3703441283893455883,
-        "resp_time_base": 0.5315802097320557
+        "dom_hash": 5614835183136732120,
+        "resp_time_base": 0.5260965824127197
       },
       "injection_points": [
         {
@@ -1779,8 +1779,8 @@
       "baseline": {
         "resp_length_base": 25268,
         "status_base": 200,
-        "dom_hash": -4535465256744084584,
-        "resp_time_base": 0.544123649597168
+        "dom_hash": -7996153436241119249,
+        "resp_time_base": 0.5233778953552246
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1790,8 +1790,8 @@
       "baseline": {
         "resp_length_base": 17921,
         "status_base": 200,
-        "dom_hash": 255534705355431889,
-        "resp_time_base": 0.5590097904205322
+        "dom_hash": -8422883431596708202,
+        "resp_time_base": 0.5218441486358643
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1801,8 +1801,8 @@
       "baseline": {
         "resp_length_base": 21085,
         "status_base": 200,
-        "dom_hash": -1773046366892757040,
-        "resp_time_base": 0.533545970916748
+        "dom_hash": 4266716619836126773,
+        "resp_time_base": 0.5205419063568115
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1812,8 +1812,8 @@
       "baseline": {
         "resp_length_base": 30827,
         "status_base": 200,
-        "dom_hash": 6150063346323846012,
-        "resp_time_base": 0.5366766452789307
+        "dom_hash": 7816061854047539208,
+        "resp_time_base": 0.5265276432037354
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1823,8 +1823,8 @@
       "baseline": {
         "resp_length_base": 22026,
         "status_base": 200,
-        "dom_hash": -4946095823144956898,
-        "resp_time_base": 0.5309267044067383
+        "dom_hash": 1642659598011321215,
+        "resp_time_base": 0.5264158248901367
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1834,8 +1834,8 @@
       "baseline": {
         "resp_length_base": 20089,
         "status_base": 200,
-        "dom_hash": 6518912055132956326,
-        "resp_time_base": 0.5337238311767578
+        "dom_hash": -4527537159496596655,
+        "resp_time_base": 0.52935791015625
       },
       "injection_points": [],
       "security_level": "medium"
@@ -1845,8 +1845,8 @@
       "baseline": {
         "resp_length_base": 4072,
         "status_base": 200,
-        "dom_hash": -931562673330006404,
-        "resp_time_base": 0.5324981212615967
+        "dom_hash": -8668218765293638702,
+        "resp_time_base": 0.5338637828826904
       },
       "injection_points": [
         {
@@ -1870,8 +1870,8 @@
       "baseline": {
         "resp_length_base": 4114,
         "status_base": 200,
-        "dom_hash": 8468393784194418180,
-        "resp_time_base": 0.5586357116699219
+        "dom_hash": -2376656977089939821,
+        "resp_time_base": 0.5299179553985596
       },
       "injection_points": [
         {
@@ -1895,8 +1895,8 @@
       "baseline": {
         "resp_length_base": 4266,
         "status_base": 200,
-        "dom_hash": -1517623187191479455,
-        "resp_time_base": 0.5499012470245361
+        "dom_hash": 5047121763261467947,
+        "resp_time_base": 0.5327591896057129
       },
       "injection_points": [
         {
@@ -1920,8 +1920,8 @@
       "baseline": {
         "resp_length_base": 4284,
         "status_base": 200,
-        "dom_hash": 7811348464678021917,
-        "resp_time_base": 0.5422203540802002
+        "dom_hash": -2590798788182087717,
+        "resp_time_base": 0.5294361114501953
       },
       "injection_points": [
         {
@@ -1945,8 +1945,8 @@
       "baseline": {
         "resp_length_base": 4172,
         "status_base": 200,
-        "dom_hash": 5308853158088141610,
-        "resp_time_base": 0.5487940311431885
+        "dom_hash": 7138157994245472655,
+        "resp_time_base": 0.5331048965454102
       },
       "injection_points": [
         {
@@ -1970,8 +1970,8 @@
       "baseline": {
         "resp_length_base": 5975,
         "status_base": 200,
-        "dom_hash": 6995542055752553973,
-        "resp_time_base": 0.5488567352294922
+        "dom_hash": 7678066612571062775,
+        "resp_time_base": 0.5249669551849365
       },
       "injection_points": [],
       "security_level": "high"
@@ -1981,8 +1981,8 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 395533771970123711,
-        "resp_time_base": 0.5276203155517578
+        "dom_hash": -4863830220930910034,
+        "resp_time_base": 0.5232796669006348
       },
       "injection_points": [],
       "security_level": "high"
@@ -1992,8 +1992,8 @@
       "baseline": {
         "resp_length_base": 1278,
         "status_base": 200,
-        "dom_hash": 4538299663664467435,
-        "resp_time_base": 0.5378735065460205
+        "dom_hash": 8596898337209446312,
+        "resp_time_base": 0.5280745029449463
       },
       "injection_points": [
         {
@@ -2021,7 +2021,7 @@
             },
             {
               "name": "user_token",
-              "default": "15bea9a7efc426d764daa0f29182b9e2",
+              "default": "c674fbee60a7f4ee5b9c4b4c2f8ea2b3",
               "type": "hidden",
               "risk_level": "high"
             }
@@ -2035,8 +2035,8 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 395533771970123711,
-        "resp_time_base": 0.5256147384643555
+        "dom_hash": -4863830220930910034,
+        "resp_time_base": 0.5283958911895752
       },
       "injection_points": [],
       "security_level": "high"
@@ -2046,8 +2046,8 @@
       "baseline": {
         "resp_length_base": 5975,
         "status_base": 200,
-        "dom_hash": 6995542055752553973,
-        "resp_time_base": 0.5423550605773926
+        "dom_hash": 7678066612571062775,
+        "resp_time_base": 0.5248982906341553
       },
       "injection_points": [],
       "security_level": "high"
@@ -2057,8 +2057,8 @@
       "baseline": {
         "resp_length_base": 25708,
         "status_base": 200,
-        "dom_hash": 1818360996645365000,
-        "resp_time_base": 2.108241081237793
+        "dom_hash": -5532221514671721510,
+        "resp_time_base": 17.976303815841675
       },
       "injection_points": [],
       "security_level": "high"
@@ -2068,8 +2068,8 @@
       "baseline": {
         "resp_length_base": 5198,
         "status_base": 200,
-        "dom_hash": 5558451547383948567,
-        "resp_time_base": 0.5415432453155518
+        "dom_hash": 2999630545765696751,
+        "resp_time_base": 0.5304930210113525
       },
       "injection_points": [
         {
@@ -2085,7 +2085,7 @@
             },
             {
               "name": "user_token",
-              "default": "a752751da763beba078139f73ed72bc6",
+              "default": "c51b79275d81a0d4b393d4290b1b8d98",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -2099,8 +2099,8 @@
       "baseline": {
         "resp_length_base": 4339,
         "status_base": 200,
-        "dom_hash": 8723187771051040991,
-        "resp_time_base": 0.5280570983886719
+        "dom_hash": -7438073049663854907,
+        "resp_time_base": 0.5269508361816406
       },
       "injection_points": [
         {
@@ -2128,7 +2128,7 @@
             },
             {
               "name": "user_token",
-              "default": "b9c61e2d19c041daa540d38cf3704556",
+              "default": "00eb8175752e629fcb6c91de9b2ef41d",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -2142,8 +2142,8 @@
       "baseline": {
         "resp_length_base": 4152,
         "status_base": 200,
-        "dom_hash": 7763092941220378248,
-        "resp_time_base": 0.5251064300537109
+        "dom_hash": -6955127887578381828,
+        "resp_time_base": 0.5225074291229248
       },
       "injection_points": [
         {
@@ -2173,8 +2173,8 @@
       "baseline": {
         "resp_length_base": 5464,
         "status_base": 200,
-        "dom_hash": 5065825439870920049,
-        "resp_time_base": 0.5299980640411377
+        "dom_hash": -1168856905453070137,
+        "resp_time_base": 0.5296578407287598
       },
       "injection_points": [
         {
@@ -2202,7 +2202,7 @@
             },
             {
               "name": "user_token",
-              "default": "5b532671e0e934b23395997f5c5558f1",
+              "default": "7e0c892bd855e7a8534aa44963a05cc7",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -2216,8 +2216,8 @@
       "baseline": {
         "resp_length_base": 4161,
         "status_base": 200,
-        "dom_hash": -4006410993427567944,
-        "resp_time_base": 0.5354447364807129
+        "dom_hash": -3832725949544535831,
+        "resp_time_base": 0.5352029800415039
       },
       "injection_points": [
         {
@@ -2241,8 +2241,8 @@
       "baseline": {
         "resp_length_base": 4033,
         "status_base": 200,
-        "dom_hash": 5334762143835166879,
-        "resp_time_base": 0.5384767055511475
+        "dom_hash": 5361762664720918421,
+        "resp_time_base": 0.5263943672180176
       },
       "injection_points": [
         {
@@ -2278,8 +2278,8 @@
       "baseline": {
         "resp_length_base": 4654,
         "status_base": 200,
-        "dom_hash": 5272218826267224367,
-        "resp_time_base": 21.56471824645996
+        "dom_hash": 4071001506979352076,
+        "resp_time_base": 21.567056894302368
       },
       "injection_points": [
         {
@@ -2307,7 +2307,7 @@
             },
             {
               "name": "user_token",
-              "default": "2686375545458277505ef461d153406a",
+              "default": "621922f755776c704243627dc5c20aad",
               "type": "hidden",
               "risk_level": "normal"
             },
@@ -2327,8 +2327,8 @@
       "baseline": {
         "resp_length_base": 4063,
         "status_base": 200,
-        "dom_hash": 7442534659699382858,
-        "resp_time_base": 0.5479505062103271
+        "dom_hash": -8189512532663184500,
+        "resp_time_base": 0.5353305339813232
       },
       "injection_points": [],
       "security_level": "high"
@@ -2338,8 +2338,8 @@
       "baseline": {
         "resp_length_base": 4127,
         "status_base": 200,
-        "dom_hash": 3461711207705999541,
-        "resp_time_base": 0.5263042449951172
+        "dom_hash": -121404477318850432,
+        "resp_time_base": 0.531182050704956
       },
       "injection_points": [],
       "security_level": "high"
@@ -2349,8 +2349,8 @@
       "baseline": {
         "resp_length_base": 3496,
         "status_base": 200,
-        "dom_hash": 1579396174678607538,
-        "resp_time_base": 0.5338115692138672
+        "dom_hash": 2683154205952423192,
+        "resp_time_base": 0.5466439723968506
       },
       "injection_points": [],
       "security_level": "high"
@@ -2360,8 +2360,8 @@
       "baseline": {
         "resp_length_base": 4818,
         "status_base": 200,
-        "dom_hash": 5737200101080350926,
-        "resp_time_base": 0.5291788578033447
+        "dom_hash": -4291761405457945578,
+        "resp_time_base": 0.5373828411102295
       },
       "injection_points": [
         {
@@ -2385,8 +2385,8 @@
       "baseline": {
         "resp_length_base": 4276,
         "status_base": 200,
-        "dom_hash": 6433523691053957302,
-        "resp_time_base": 0.5261483192443848
+        "dom_hash": -2277943566840738038,
+        "resp_time_base": 0.5241317749023438
       },
       "injection_points": [
         {
@@ -2408,10 +2408,10 @@
     {
       "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
       "baseline": {
-        "resp_length_base": 4935,
+        "resp_length_base": 4925,
         "status_base": 200,
-        "dom_hash": 568918295367011287,
-        "resp_time_base": 0.5317485332489014
+        "dom_hash": 8633666837216234985,
+        "resp_time_base": 0.5353105068206787
       },
       "injection_points": [
         {
@@ -2453,8 +2453,8 @@
       "baseline": {
         "resp_length_base": 4254,
         "status_base": 200,
-        "dom_hash": -5319748978589111775,
-        "resp_time_base": 0.5388329029083252
+        "dom_hash": 557025801955255230,
+        "resp_time_base": 0.5347352027893066
       },
       "injection_points": [],
       "security_level": "high"
@@ -2464,8 +2464,8 @@
       "baseline": {
         "resp_length_base": 4376,
         "status_base": 200,
-        "dom_hash": -2848035360693862305,
-        "resp_time_base": 0.5301666259765625
+        "dom_hash": -4052373294072208432,
+        "resp_time_base": 0.539771556854248
       },
       "injection_points": [
         {
@@ -2501,8 +2501,8 @@
       "baseline": {
         "resp_length_base": 5508,
         "status_base": 200,
-        "dom_hash": 938239107914935839,
-        "resp_time_base": 0.5444269180297852
+        "dom_hash": 1906791884001708666,
+        "resp_time_base": 0.5477240085601807
       },
       "injection_points": [],
       "security_level": "high"
@@ -2512,8 +2512,8 @@
       "baseline": {
         "resp_length_base": 4304,
         "status_base": 200,
-        "dom_hash": -312804965816737584,
-        "resp_time_base": 0.5282735824584961
+        "dom_hash": 8384756632482651435,
+        "resp_time_base": 0.5375170707702637
       },
       "injection_points": [],
       "security_level": "high"
@@ -2523,8 +2523,8 @@
       "baseline": {
         "resp_length_base": 4519,
         "status_base": 200,
-        "dom_hash": -8339549629471398589,
-        "resp_time_base": 0.5386209487915039
+        "dom_hash": -3476471694958743451,
+        "resp_time_base": 0.5302975177764893
       },
       "injection_points": [
         {
@@ -2546,7 +2546,7 @@
             },
             {
               "name": "user_token",
-              "default": "05e2519963ac29026b9e48bb87978bb3",
+              "default": "a928032e17227fccbd7b21aa4111ca87",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -2558,10 +2558,10 @@
     {
       "url": "http://127.0.0.1/dvwa/phpinfo.php",
       "baseline": {
-        "resp_length_base": 83013,
+        "resp_length_base": 83019,
         "status_base": 200,
-        "dom_hash": 2710853450315869544,
-        "resp_time_base": 0.5308539867401123
+        "dom_hash": 7762437703458247177,
+        "resp_time_base": 0.5320627689361572
       },
       "injection_points": [],
       "security_level": "high"
@@ -2571,8 +2571,8 @@
       "baseline": {
         "resp_length_base": 5221,
         "status_base": 200,
-        "dom_hash": 2420883071093141216,
-        "resp_time_base": 0.531536340713501
+        "dom_hash": -4833430706526941080,
+        "resp_time_base": 0.5355582237243652
       },
       "injection_points": [],
       "security_level": "high"
@@ -2582,8 +2582,8 @@
       "baseline": {
         "resp_length_base": 1324,
         "status_base": 200,
-        "dom_hash": 1519671015920551054,
-        "resp_time_base": 0.5279140472412109
+        "dom_hash": -4459019121360427665,
+        "resp_time_base": 0.5298449993133545
       },
       "injection_points": [
         {
@@ -2611,7 +2611,7 @@
             },
             {
               "name": "user_token",
-              "default": "065b3de2bfc5272a636db7fc1dc5d345",
+              "default": "c5577d50cc070ca5d4a90df49bda232e",
               "type": "hidden",
               "risk_level": "high"
             }
@@ -2625,8 +2625,8 @@
       "baseline": {
         "resp_length_base": 25629,
         "status_base": 200,
-        "dom_hash": 6676350354602468939,
-        "resp_time_base": 0.5438938140869141
+        "dom_hash": -1722719266522640685,
+        "resp_time_base": 0.5370666980743408
       },
       "injection_points": [
         {
@@ -2650,8 +2650,8 @@
       "baseline": {
         "resp_length_base": 3137,
         "status_base": 200,
-        "dom_hash": -3317793135260052341,
-        "resp_time_base": 0.5270793437957764
+        "dom_hash": -4067455808392606401,
+        "resp_time_base": 0.525754451751709
       },
       "injection_points": [
         {
@@ -2675,8 +2675,8 @@
       "baseline": {
         "resp_length_base": 11132,
         "status_base": 200,
-        "dom_hash": 1816408128186892639,
-        "resp_time_base": 0.5318570137023926
+        "dom_hash": 5312857483381838959,
+        "resp_time_base": 0.5235469341278076
       },
       "injection_points": [
         {
@@ -2700,8 +2700,8 @@
       "baseline": {
         "resp_length_base": 36103,
         "status_base": 200,
-        "dom_hash": -8149705244779443493,
-        "resp_time_base": 0.5387279987335205
+        "dom_hash": 846816087099481905,
+        "resp_time_base": 0.5253193378448486
       },
       "injection_points": [
         {
@@ -2725,8 +2725,8 @@
       "baseline": {
         "resp_length_base": 25268,
         "status_base": 200,
-        "dom_hash": -4535465256744084584,
-        "resp_time_base": 0.5357265472412109
+        "dom_hash": -7996153436241119249,
+        "resp_time_base": 0.5206997394561768
       },
       "injection_points": [],
       "security_level": "high"
@@ -2736,8 +2736,8 @@
       "baseline": {
         "resp_length_base": 17921,
         "status_base": 200,
-        "dom_hash": 255534705355431889,
-        "resp_time_base": 0.5233945846557617
+        "dom_hash": -8422883431596708202,
+        "resp_time_base": 0.529104471206665
       },
       "injection_points": [],
       "security_level": "high"
@@ -2747,8 +2747,8 @@
       "baseline": {
         "resp_length_base": 21085,
         "status_base": 200,
-        "dom_hash": -1773046366892757040,
-        "resp_time_base": 0.525876522064209
+        "dom_hash": 4266716619836126773,
+        "resp_time_base": 0.5235195159912109
       },
       "injection_points": [],
       "security_level": "high"
@@ -2758,8 +2758,8 @@
       "baseline": {
         "resp_length_base": 30827,
         "status_base": 200,
-        "dom_hash": 6150063346323846012,
-        "resp_time_base": 0.5332694053649902
+        "dom_hash": 7816061854047539208,
+        "resp_time_base": 0.5301284790039062
       },
       "injection_points": [],
       "security_level": "high"
@@ -2769,8 +2769,8 @@
       "baseline": {
         "resp_length_base": 22026,
         "status_base": 200,
-        "dom_hash": -4946095823144956898,
-        "resp_time_base": 0.5489120483398438
+        "dom_hash": 1642659598011321215,
+        "resp_time_base": 0.5208265781402588
       },
       "injection_points": [],
       "security_level": "high"
@@ -2780,8 +2780,8 @@
       "baseline": {
         "resp_length_base": 20089,
         "status_base": 200,
-        "dom_hash": 6518912055132956326,
-        "resp_time_base": 0.5271170139312744
+        "dom_hash": -4527537159496596655,
+        "resp_time_base": 0.5258150100708008
       },
       "injection_points": [],
       "security_level": "high"
@@ -2791,8 +2791,8 @@
       "baseline": {
         "resp_length_base": 4066,
         "status_base": 200,
-        "dom_hash": 2235017354565661327,
-        "resp_time_base": 0.5325944423675537
+        "dom_hash": 3442359682505920381,
+        "resp_time_base": 0.529470682144165
       },
       "injection_points": [
         {
@@ -2816,8 +2816,8 @@
       "baseline": {
         "resp_length_base": 4108,
         "status_base": 200,
-        "dom_hash": -5598620261158946821,
-        "resp_time_base": 0.5323452949523926
+        "dom_hash": -3586569374089590733,
+        "resp_time_base": 0.5356063842773438
       },
       "injection_points": [
         {
@@ -2841,8 +2841,8 @@
       "baseline": {
         "resp_length_base": 4260,
         "status_base": 200,
-        "dom_hash": -3218936369736907128,
-        "resp_time_base": 0.5781137943267822
+        "dom_hash": 4452273665744953045,
+        "resp_time_base": 0.5254561901092529
       },
       "injection_points": [
         {
@@ -2866,8 +2866,8 @@
       "baseline": {
         "resp_length_base": 4278,
         "status_base": 200,
-        "dom_hash": 6355619668952207385,
-        "resp_time_base": 0.5311017036437988
+        "dom_hash": 6176482244451119160,
+        "resp_time_base": 0.5321364402770996
       },
       "injection_points": [
         {
@@ -2891,8 +2891,8 @@
       "baseline": {
         "resp_length_base": 4166,
         "status_base": 200,
-        "dom_hash": 2344500457012562499,
-        "resp_time_base": 0.5355212688446045
+        "dom_hash": 5083311654939577349,
+        "resp_time_base": 0.5331132411956787
       },
       "injection_points": [
         {
@@ -2916,8 +2916,8 @@
       "baseline": {
         "resp_length_base": 5981,
         "status_base": 200,
-        "dom_hash": 9187767798761132120,
-        "resp_time_base": 0.5561528205871582
+        "dom_hash": 7021920839573912416,
+        "resp_time_base": 0.525111198425293
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -2927,8 +2927,8 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 395533771970123711,
-        "resp_time_base": 0.5324873924255371
+        "dom_hash": -4863830220930910034,
+        "resp_time_base": 0.5210301876068115
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -2938,8 +2938,8 @@
       "baseline": {
         "resp_length_base": 1278,
         "status_base": 200,
-        "dom_hash": 8656490978199929318,
-        "resp_time_base": 0.5350842475891113
+        "dom_hash": 832326279162019917,
+        "resp_time_base": 0.5223579406738281
       },
       "injection_points": [
         {
@@ -2967,7 +2967,7 @@
             },
             {
               "name": "user_token",
-              "default": "18994412ce8f781b7e6e73526a20f212",
+              "default": "7bd806d1688ab04054b93d3359d06b3d",
               "type": "hidden",
               "risk_level": "high"
             }
@@ -2981,8 +2981,8 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 395533771970123711,
-        "resp_time_base": 0.5230400562286377
+        "dom_hash": -4863830220930910034,
+        "resp_time_base": 0.5206513404846191
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -2992,8 +2992,8 @@
       "baseline": {
         "resp_length_base": 5981,
         "status_base": 200,
-        "dom_hash": 9187767798761132120,
-        "resp_time_base": 0.5398690700531006
+        "dom_hash": 7021920839573912416,
+        "resp_time_base": 0.523672342300415
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3003,8 +3003,8 @@
       "baseline": {
         "resp_length_base": 25714,
         "status_base": 200,
-        "dom_hash": 7663286786697622745,
-        "resp_time_base": 6.302214622497559
+        "dom_hash": 6414960000246367476,
+        "resp_time_base": 6.257915496826172
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3014,8 +3014,8 @@
       "baseline": {
         "resp_length_base": 5204,
         "status_base": 200,
-        "dom_hash": -3968689574032531583,
-        "resp_time_base": 0.5312669277191162
+        "dom_hash": -1241711178977586349,
+        "resp_time_base": 0.5490200519561768
       },
       "injection_points": [
         {
@@ -3031,7 +3031,7 @@
             },
             {
               "name": "user_token",
-              "default": "ec41fdaeaf9d568bc637d2bc128d58db",
+              "default": "373d7bb27db5d2bc33b85f10ea28a662",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3045,8 +3045,8 @@
       "baseline": {
         "resp_length_base": 4358,
         "status_base": 200,
-        "dom_hash": 1729336133097907118,
-        "resp_time_base": 0.5357377529144287
+        "dom_hash": -6024955497492203650,
+        "resp_time_base": 0.5232367515563965
       },
       "injection_points": [
         {
@@ -3074,7 +3074,7 @@
             },
             {
               "name": "user_token",
-              "default": "580e20cc9241ccfb3f99a5da419b9929",
+              "default": "257af809f89c8f46ee4e384a29cd5154",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3088,8 +3088,8 @@
       "baseline": {
         "resp_length_base": 4253,
         "status_base": 200,
-        "dom_hash": 3614952002915084475,
-        "resp_time_base": 0.5389270782470703
+        "dom_hash": 2388933003336097287,
+        "resp_time_base": 0.5361058712005615
       },
       "injection_points": [
         {
@@ -3111,7 +3111,7 @@
             },
             {
               "name": "user_token",
-              "default": "afd3fcff37d4a9cfbf1fc04b64a6b831",
+              "default": "a7accbd268ebbcd5f341ff2af1619fe2",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3125,8 +3125,8 @@
       "baseline": {
         "resp_length_base": 5581,
         "status_base": 200,
-        "dom_hash": -8196608225573068824,
-        "resp_time_base": 0.5335581302642822
+        "dom_hash": 2129700308030510401,
+        "resp_time_base": 0.5273644924163818
       },
       "injection_points": [
         {
@@ -3160,7 +3160,7 @@
             },
             {
               "name": "user_token",
-              "default": "08c8d5c080eec03175d5f58b63bf3567",
+              "default": "db09eca3f599f39176a07c551db2f040",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3174,8 +3174,8 @@
       "baseline": {
         "resp_length_base": 4179,
         "status_base": 200,
-        "dom_hash": -1279853471682537476,
-        "resp_time_base": 0.544241189956665
+        "dom_hash": 7398985536205415873,
+        "resp_time_base": 0.5291738510131836
       },
       "injection_points": [
         {
@@ -3199,8 +3199,8 @@
       "baseline": {
         "resp_length_base": 4134,
         "status_base": 200,
-        "dom_hash": -8521076062424546202,
-        "resp_time_base": 0.5294535160064697
+        "dom_hash": -2909544306442249771,
+        "resp_time_base": 0.5276265144348145
       },
       "injection_points": [
         {
@@ -3228,7 +3228,7 @@
             },
             {
               "name": "user_token",
-              "default": "9e7ece59d3b39ee57b9a105b49198cde",
+              "default": "dfafa695ff90ea21bb11bdb0a00f3707",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3242,8 +3242,8 @@
       "baseline": {
         "resp_length_base": 4670,
         "status_base": 200,
-        "dom_hash": 8041221564462421783,
-        "resp_time_base": 21.57300329208374
+        "dom_hash": -5331851985599965508,
+        "resp_time_base": 21.577195644378662
       },
       "injection_points": [
         {
@@ -3277,7 +3277,7 @@
             },
             {
               "name": "user_token",
-              "default": "771fe3461936b90d95ff787de0710741",
+              "default": "da8512bdb08ff5a20ae325ada731854c",
               "type": "hidden",
               "risk_level": "normal"
             },
@@ -3297,8 +3297,8 @@
       "baseline": {
         "resp_length_base": 4228,
         "status_base": 200,
-        "dom_hash": -2370495077136513412,
-        "resp_time_base": 0.5474634170532227
+        "dom_hash": 7642854365783126662,
+        "resp_time_base": 0.5303382873535156
       },
       "injection_points": [
         {
@@ -3320,7 +3320,7 @@
             },
             {
               "name": "user_token",
-              "default": "81d7ccbd014dd33af071f752760dd4ea",
+              "default": "1b4c714b912cae887822c63f8ca41baa",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3334,8 +3334,8 @@
       "baseline": {
         "resp_length_base": 4293,
         "status_base": 200,
-        "dom_hash": -5595165575481901667,
-        "resp_time_base": 0.5299475193023682
+        "dom_hash": -5949443388409277858,
+        "resp_time_base": 0.5337543487548828
       },
       "injection_points": [
         {
@@ -3357,7 +3357,7 @@
             },
             {
               "name": "user_token",
-              "default": "b7b7bb0a4f3d5e1155324c3a097f4b7b",
+              "default": "c74680d9e6798c71baee80dfb1ee277b",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3371,8 +3371,8 @@
       "baseline": {
         "resp_length_base": 3514,
         "status_base": 200,
-        "dom_hash": -5098722428954106650,
-        "resp_time_base": 0.5311694145202637
+        "dom_hash": -8095556593965584239,
+        "resp_time_base": 0.5527055263519287
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3382,8 +3382,8 @@
       "baseline": {
         "resp_length_base": 4827,
         "status_base": 200,
-        "dom_hash": -2602068617417987062,
-        "resp_time_base": 0.5233087539672852
+        "dom_hash": -3518868079566432237,
+        "resp_time_base": 0.5268185138702393
       },
       "injection_points": [
         {
@@ -3407,8 +3407,8 @@
       "baseline": {
         "resp_length_base": 4377,
         "status_base": 200,
-        "dom_hash": -5201403070646031274,
-        "resp_time_base": 0.5326447486877441
+        "dom_hash": -3595198233888402729,
+        "resp_time_base": 0.5305678844451904
       },
       "injection_points": [
         {
@@ -3424,7 +3424,7 @@
             },
             {
               "name": "user_token",
-              "default": "9b18e29615c2c72420329aed57261ddb",
+              "default": "a1a8c787c7012b9eaeef147f37894d3d",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3436,10 +3436,10 @@
     {
       "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
       "baseline": {
-        "resp_length_base": 5036,
+        "resp_length_base": 5026,
         "status_base": 200,
-        "dom_hash": -280824035589803874,
-        "resp_time_base": 0.5391392707824707
+        "dom_hash": -1588258761985040082,
+        "resp_time_base": 0.5339257717132568
       },
       "injection_points": [
         {
@@ -3473,7 +3473,7 @@
             },
             {
               "name": "user_token",
-              "default": "43166e849558048e03526e1b7539466a",
+              "default": "14bc4451c7a0361530ab9a69004668a3",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3487,8 +3487,8 @@
       "baseline": {
         "resp_length_base": 4363,
         "status_base": 200,
-        "dom_hash": 8786498302165553431,
-        "resp_time_base": 0.5433163642883301
+        "dom_hash": -4270029933835068663,
+        "resp_time_base": 0.5391557216644287
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3498,8 +3498,8 @@
       "baseline": {
         "resp_length_base": 4086,
         "status_base": 200,
-        "dom_hash": -8578453558259547418,
-        "resp_time_base": 0.5255112648010254
+        "dom_hash": 8633970018005600832,
+        "resp_time_base": 0.530653715133667
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3509,8 +3509,8 @@
       "baseline": {
         "resp_length_base": 5526,
         "status_base": 200,
-        "dom_hash": 192166809958856818,
-        "resp_time_base": 0.5447304248809814
+        "dom_hash": -7893204922195390202,
+        "resp_time_base": 0.5468215942382812
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3520,8 +3520,8 @@
       "baseline": {
         "resp_length_base": 4310,
         "status_base": 200,
-        "dom_hash": 903222599474874598,
-        "resp_time_base": 0.5476787090301514
+        "dom_hash": 4559393674455832552,
+        "resp_time_base": 0.5337235927581787
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3531,8 +3531,8 @@
       "baseline": {
         "resp_length_base": 4531,
         "status_base": 200,
-        "dom_hash": -1140915375474531201,
-        "resp_time_base": 0.5407037734985352
+        "dom_hash": -618125831122414598,
+        "resp_time_base": 0.5417485237121582
       },
       "injection_points": [
         {
@@ -3554,7 +3554,7 @@
             },
             {
               "name": "user_token",
-              "default": "38ca851089adcfe8b2d2effeb8482279",
+              "default": "49751502929bfe71c0a9417229664852",
               "type": "hidden",
               "risk_level": "normal"
             }
@@ -3566,10 +3566,10 @@
     {
       "url": "http://127.0.0.1/dvwa/phpinfo.php",
       "baseline": {
-        "resp_length_base": 83023,
+        "resp_length_base": 83029,
         "status_base": 200,
-        "dom_hash": 4171692814774078315,
-        "resp_time_base": 0.583543062210083
+        "dom_hash": 1363843553479445952,
+        "resp_time_base": 0.5381064414978027
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3579,8 +3579,8 @@
       "baseline": {
         "resp_length_base": 5227,
         "status_base": 200,
-        "dom_hash": 4026666790323790979,
-        "resp_time_base": 0.5427477359771729
+        "dom_hash": 7781282981615958272,
+        "resp_time_base": 0.5267016887664795
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3590,8 +3590,8 @@
       "baseline": {
         "resp_length_base": 1324,
         "status_base": 200,
-        "dom_hash": 3005205351119265265,
-        "resp_time_base": 0.5671858787536621
+        "dom_hash": 7884226279193695391,
+        "resp_time_base": 0.538426399230957
       },
       "injection_points": [
         {
@@ -3619,7 +3619,7 @@
             },
             {
               "name": "user_token",
-              "default": "7905b0ecf9426108202db0807c833c1f",
+              "default": "91dc3d07636cf4407ed87fd4ff6a3ded",
               "type": "hidden",
               "risk_level": "high"
             }
@@ -3633,8 +3633,8 @@
       "baseline": {
         "resp_length_base": 25635,
         "status_base": 200,
-        "dom_hash": 4416126646453098878,
-        "resp_time_base": 0.5536608695983887
+        "dom_hash": 6913806047170434409,
+        "resp_time_base": 0.5809433460235596
       },
       "injection_points": [
         {
@@ -3658,8 +3658,8 @@
       "baseline": {
         "resp_length_base": 3143,
         "status_base": 200,
-        "dom_hash": 1228509723369838532,
-        "resp_time_base": 0.5426511764526367
+        "dom_hash": -8413000294400435216,
+        "resp_time_base": 0.5277154445648193
       },
       "injection_points": [
         {
@@ -3683,8 +3683,8 @@
       "baseline": {
         "resp_length_base": 11138,
         "status_base": 200,
-        "dom_hash": -6607652986008153569,
-        "resp_time_base": 0.5289340019226074
+        "dom_hash": -7595086597052449558,
+        "resp_time_base": 0.5307326316833496
       },
       "injection_points": [
         {
@@ -3708,8 +3708,8 @@
       "baseline": {
         "resp_length_base": 36109,
         "status_base": 200,
-        "dom_hash": 2689352426177127815,
-        "resp_time_base": 0.5435879230499268
+        "dom_hash": -7583273050385830210,
+        "resp_time_base": 0.530346155166626
       },
       "injection_points": [
         {
@@ -3733,8 +3733,8 @@
       "baseline": {
         "resp_length_base": 25268,
         "status_base": 200,
-        "dom_hash": -4535465256744084584,
-        "resp_time_base": 0.5289115905761719
+        "dom_hash": -7996153436241119249,
+        "resp_time_base": 0.5277724266052246
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3744,8 +3744,8 @@
       "baseline": {
         "resp_length_base": 17921,
         "status_base": 200,
-        "dom_hash": 255534705355431889,
-        "resp_time_base": 0.5244808197021484
+        "dom_hash": -8422883431596708202,
+        "resp_time_base": 0.521425724029541
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3755,8 +3755,8 @@
       "baseline": {
         "resp_length_base": 21085,
         "status_base": 200,
-        "dom_hash": -1773046366892757040,
-        "resp_time_base": 0.5472054481506348
+        "dom_hash": 4266716619836126773,
+        "resp_time_base": 0.525153398513794
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3766,8 +3766,8 @@
       "baseline": {
         "resp_length_base": 30827,
         "status_base": 200,
-        "dom_hash": 6150063346323846012,
-        "resp_time_base": 0.5428464412689209
+        "dom_hash": 7816061854047539208,
+        "resp_time_base": 0.5354025363922119
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3777,8 +3777,8 @@
       "baseline": {
         "resp_length_base": 22026,
         "status_base": 200,
-        "dom_hash": -4946095823144956898,
-        "resp_time_base": 0.5273153781890869
+        "dom_hash": 1642659598011321215,
+        "resp_time_base": 0.5252697467803955
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3788,8 +3788,8 @@
       "baseline": {
         "resp_length_base": 20089,
         "status_base": 200,
-        "dom_hash": 6518912055132956326,
-        "resp_time_base": 0.5451781749725342
+        "dom_hash": -4527537159496596655,
+        "resp_time_base": 0.5254919528961182
       },
       "injection_points": [],
       "security_level": "impossible"
@@ -3799,8 +3799,8 @@
       "baseline": {
         "resp_length_base": 4084,
         "status_base": 200,
-        "dom_hash": 8804716530946696566,
-        "resp_time_base": 0.5256907939910889
+        "dom_hash": -2059811716014499671,
+        "resp_time_base": 0.5212352275848389
       },
       "injection_points": [
         {
@@ -3824,8 +3824,8 @@
       "baseline": {
         "resp_length_base": 4126,
         "status_base": 200,
-        "dom_hash": 6439318779142498557,
-        "resp_time_base": 0.5338373184204102
+        "dom_hash": 8031222722328025228,
+        "resp_time_base": 0.5222005844116211
       },
       "injection_points": [
         {
@@ -3849,8 +3849,8 @@
       "baseline": {
         "resp_length_base": 4278,
         "status_base": 200,
-        "dom_hash": 5831237839782339184,
-        "resp_time_base": 0.5350341796875
+        "dom_hash": -7272945842888972268,
+        "resp_time_base": 0.5285296440124512
       },
       "injection_points": [
         {
@@ -3874,8 +3874,8 @@
       "baseline": {
         "resp_length_base": 4296,
         "status_base": 200,
-        "dom_hash": -4671812574049878839,
-        "resp_time_base": 0.5493288040161133
+        "dom_hash": 1540716057651152643,
+        "resp_time_base": 0.5365688800811768
       },
       "injection_points": [
         {
@@ -3899,8 +3899,8 @@
       "baseline": {
         "resp_length_base": 4184,
         "status_base": 200,
-        "dom_hash": 322333135042228959,
-        "resp_time_base": 0.5512244701385498
+        "dom_hash": 1716325090744494881,
+        "resp_time_base": 0.5302760601043701
       },
       "injection_points": [
         {

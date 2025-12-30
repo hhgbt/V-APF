@@ -1,13 +1,24 @@
 {
-  "base_url": "http://127.0.0.1/bWAPP/app",
+  "base_url": "http://127.0.0.1/bWAPP",
   "pages": [
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5262155532836914
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_1.php",
       "baseline": {
         "resp_length_base": 13529,
         "status_base": 200,
-        "dom_hash": 5961405513697415691,
-        "resp_time_base": 0.6310582160949707
+        "dom_hash": -4075086529263817657,
+        "resp_time_base": 0.5763270854949951
       },
       "injection_points": [
         {
@@ -53,12 +64,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_2.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5266485214233398
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_2.php",
       "baseline": {
         "resp_length_base": 14259,
         "status_base": 200,
-        "dom_hash": -2828755622464585556,
-        "resp_time_base": 0.5604300498962402
+        "dom_hash": 6215945397569202149,
+        "resp_time_base": 0.551154375076294
       },
       "injection_points": [
         {
@@ -104,12 +126,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_6.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5219736099243164
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_6.php",
       "baseline": {
         "resp_length_base": 13537,
         "status_base": 200,
-        "dom_hash": -9158946337655515125,
-        "resp_time_base": 0.5557436943054199
+        "dom_hash": -7530786022757808381,
+        "resp_time_base": 0.5428056716918945
       },
       "injection_points": [
         {
@@ -155,12 +188,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_16.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5233800411224365
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_16.php",
       "baseline": {
         "resp_length_base": 13146,
         "status_base": 200,
-        "dom_hash": 2676936492597737382,
-        "resp_time_base": 0.5518770217895508
+        "dom_hash": -5170072481510562122,
+        "resp_time_base": 0.5400376319885254
       },
       "injection_points": [
         {
@@ -212,12 +256,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xss_get.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5241241455078125
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xss_get.php",
       "baseline": {
         "resp_length_base": 13346,
         "status_base": 200,
-        "dom_hash": 6252482744155696902,
-        "resp_time_base": 0.5597946643829346
+        "dom_hash": 8523845228287833648,
+        "resp_time_base": 0.5348069667816162
       },
       "injection_points": [
         {
@@ -269,12 +324,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xss_post.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5307836532592773
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xss_post.php",
       "baseline": {
         "resp_length_base": 13351,
         "status_base": 200,
-        "dom_hash": 3918823267615239708,
-        "resp_time_base": 0.5551409721374512
+        "dom_hash": 999505407273021655,
+        "resp_time_base": 0.5357415676116943
       },
       "injection_points": [
         {
@@ -326,12 +392,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xss_stored_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.523186445236206
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xss_stored_1.php",
       "baseline": {
         "resp_length_base": 14425,
         "status_base": 200,
-        "dom_hash": -5969441356478240293,
-        "resp_time_base": 0.5667283535003662
+        "dom_hash": 3188748317346027523,
+        "resp_time_base": 0.5451946258544922
       },
       "injection_points": [
         {
@@ -395,12 +472,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/commandi.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5244596004486084
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/commandi.php",
       "baseline": {
         "resp_length_base": 12969,
         "status_base": 200,
-        "dom_hash": 5395309143676681293,
-        "resp_time_base": 0.5717649459838867
+        "dom_hash": 3410689750042301837,
+        "resp_time_base": 0.5336751937866211
       },
       "injection_points": [
         {
@@ -446,12 +534,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/commandi_blind.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5228912830352783
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/commandi_blind.php",
       "baseline": {
         "resp_length_base": 12993,
         "status_base": 200,
-        "dom_hash": -1958212049164545429,
-        "resp_time_base": 0.5636203289031982
+        "dom_hash": 6590709781982069379,
+        "resp_time_base": 0.5294032096862793
       },
       "injection_points": [
         {
@@ -497,12 +596,34 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/fi_local.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5323960781097412
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/fi_local.php",
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5261509418487549
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5182256698608398
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/fi_remote.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5319976806640625
       },
       "injection_points": [],
       "security_level": "low"
@@ -512,8 +633,19 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5348620414733887
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5240902900695801
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/unrestricted_file_upload.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5293591022491455
       },
       "injection_points": [],
       "security_level": "low"
@@ -523,8 +655,8 @@
       "baseline": {
         "resp_length_base": 13402,
         "status_base": 200,
-        "dom_hash": -1175691308506084758,
-        "resp_time_base": 0.5552899837493896
+        "dom_hash": -3273507454655683435,
+        "resp_time_base": 0.5357375144958496
       },
       "injection_points": [
         {
@@ -582,12 +714,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xmli_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.528066873550415
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xmli_1.php",
       "baseline": {
         "resp_length_base": 13165,
         "status_base": 200,
-        "dom_hash": -5662597398547037241,
-        "resp_time_base": 0.5607261657714844
+        "dom_hash": 4061491818368270028,
+        "resp_time_base": 0.5353384017944336
       },
       "injection_points": [
         {
@@ -639,12 +782,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xmli_2.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5225789546966553
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xmli_2.php",
       "baseline": {
         "resp_length_base": 13715,
         "status_base": 200,
-        "dom_hash": 6743112999116540549,
-        "resp_time_base": 0.5699143409729004
+        "dom_hash": -1276989803141895003,
+        "resp_time_base": 0.5374581813812256
       },
       "injection_points": [
         {
@@ -690,12 +844,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/phpi.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5243468284606934
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/phpi.php",
       "baseline": {
         "resp_length_base": 12777,
         "status_base": 200,
-        "dom_hash": 4031859604706149268,
-        "resp_time_base": 0.5458097457885742
+        "dom_hash": -8030918520134428690,
+        "resp_time_base": 0.5312917232513428
       },
       "injection_points": [
         {
@@ -728,12 +893,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/csrf_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.524789571762085
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/csrf_1.php",
       "baseline": {
         "resp_length_base": 13401,
         "status_base": 200,
-        "dom_hash": -6390039926003358528,
-        "resp_time_base": 0.5497808456420898
+        "dom_hash": -1612478652777532223,
+        "resp_time_base": 0.542473554611206
       },
       "injection_points": [
         {
@@ -785,12 +961,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/csrf_2.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5163402557373047
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/csrf_2.php",
       "baseline": {
         "resp_length_base": 13388,
         "status_base": 200,
-        "dom_hash": 7569235211068281080,
-        "resp_time_base": 0.5520226955413818
+        "dom_hash": -6083465977286112570,
+        "resp_time_base": 0.5344431400299072
       },
       "injection_points": [
         {
@@ -842,12 +1029,34 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/ssrf_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5285780429840088
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/ssrf_1.php",
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5255482196807861
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5282173156738281
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/htmli_get.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5205981731414795
       },
       "injection_points": [],
       "security_level": "low"
@@ -857,8 +1066,8 @@
       "baseline": {
         "resp_length_base": 13274,
         "status_base": 200,
-        "dom_hash": -2342705826660791747,
-        "resp_time_base": 0.5531883239746094
+        "dom_hash": -9067339033879910411,
+        "resp_time_base": 0.5416309833526611
       },
       "injection_points": [
         {
@@ -910,12 +1119,23 @@
       "security_level": "low"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/htmli_post.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5213570594787598
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/htmli_post.php",
       "baseline": {
         "resp_length_base": 13362,
         "status_base": 200,
-        "dom_hash": -405536050745753766,
-        "resp_time_base": 0.5558445453643799
+        "dom_hash": 7967316202642553598,
+        "resp_time_base": 0.5352776050567627
       },
       "injection_points": [
         {
@@ -967,149 +1187,61 @@
       "security_level": "low"
     },
     {
-      "url": "http://127.0.0.1/bWAPP/app/portal.php",
+      "url": "http://127.0.0.1/bWAPP/portal.php",
       "baseline": {
-        "resp_length_base": 23450,
-        "status_base": 200,
-        "dom_hash": -2586515880765611232,
-        "resp_time_base": 0.5853197574615479
-      },
-      "injection_points": [
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "security_level",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        }
-      ],
-      "security_level": "low"
-    },
-    {
-      "url": "http://127.0.0.1/bWAPP/app/index.php",
-      "baseline": {
-        "resp_length_base": 23450,
-        "status_base": 200,
-        "dom_hash": -2586515880765611232,
-        "resp_time_base": 0.5697736740112305
-      },
-      "injection_points": [
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "security_level",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        }
-      ],
-      "security_level": "low"
-    },
-    {
-      "url": "http://127.0.0.1/bWAPP/app/admin/",
-      "baseline": {
-        "resp_length_base": 3178,
-        "status_base": 200,
-        "dom_hash": -4083088423273780570,
-        "resp_time_base": 0.5483748912811279
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.522216796875
       },
       "injection_points": [],
       "security_level": "low"
     },
     {
-      "url": "http://127.0.0.1/bWAPP/app/login.php",
+      "url": "http://127.0.0.1/bWAPP/app/portal.php",
       "baseline": {
-        "resp_length_base": 4066,
+        "resp_length_base": 23450,
         "status_base": 200,
-        "dom_hash": -3302000748671707235,
-        "resp_time_base": 0.5797758102416992
+        "dom_hash": -397842106274281038,
+        "resp_time_base": 0.5513525009155273
       },
       "injection_points": [
         {
           "type": "form",
           "method": "POST",
-          "action": "/bWAPP/app/login.php",
+          "action": "/bWAPP/app/portal.php",
           "inputs": [
             {
-              "name": "login",
+              "name": "bug",
               "default": "SAFS_TEST_PAYLOAD",
               "type": "text",
-              "risk_level": "high"
-            },
-            {
-              "name": "password",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "password",
-              "risk_level": "high"
-            },
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
             {
               "name": "security_level",
               "default": "SAFS_TEST_PAYLOAD",
               "type": "text",
-              "risk_level": "high"
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
             }
           ]
         }
@@ -1117,12 +1249,45 @@
       "security_level": "low"
     },
     {
-      "url": "http://127.0.0.1/bWAPP/app/help.php",
+      "url": "http://127.0.0.1/bWAPP/index.php",
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5241193771362305
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.530442476272583
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/admin/",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5243575572967529
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/login.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5249800682067871
+      },
+      "injection_points": [],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5201766490936279
       },
       "injection_points": [],
       "security_level": "low"
@@ -1132,8 +1297,8 @@
       "baseline": {
         "resp_length_base": 13594,
         "status_base": 200,
-        "dom_hash": 3514194489998756509,
-        "resp_time_base": 0.5491933822631836
+        "dom_hash": 7576815599084953621,
+        "resp_time_base": 0.5386154651641846
       },
       "injection_points": [
         {
@@ -1195,8 +1360,8 @@
       "baseline": {
         "resp_length_base": 13959,
         "status_base": 200,
-        "dom_hash": 379810335500817715,
-        "resp_time_base": 0.5473747253417969
+        "dom_hash": -8610561154663982594,
+        "resp_time_base": 0.535358190536499
       },
       "injection_points": [
         {
@@ -1276,8 +1441,8 @@
       "baseline": {
         "resp_length_base": 13435,
         "status_base": 200,
-        "dom_hash": -5409193815924076633,
-        "resp_time_base": 0.5636577606201172
+        "dom_hash": 5980604245026779068,
+        "resp_time_base": 0.5335402488708496
       },
       "injection_points": [
         {
@@ -1327,8 +1492,8 @@
       "baseline": {
         "resp_length_base": 12611,
         "status_base": 200,
-        "dom_hash": -6481739146040999371,
-        "resp_time_base": 0.5715799331665039
+        "dom_hash": -3724409443283654502,
+        "resp_time_base": 0.5517070293426514
       },
       "injection_points": [
         {
@@ -1365,8 +1530,8 @@
       "baseline": {
         "resp_length_base": 14102,
         "status_base": 200,
-        "dom_hash": -4986256471522944518,
-        "resp_time_base": 0.552971363067627
+        "dom_hash": 3887594000672530395,
+        "resp_time_base": 0.5425331592559814
       },
       "injection_points": [
         {
@@ -1403,8 +1568,8 @@
       "baseline": {
         "resp_length_base": 4066,
         "status_base": 200,
-        "dom_hash": -3302000748671707235,
-        "resp_time_base": 0.5641739368438721
+        "dom_hash": 1154098549201151678,
+        "resp_time_base": 0.5360279083251953
       },
       "injection_points": [
         {
@@ -1440,8 +1605,8 @@
       "baseline": {
         "resp_length_base": 1633,
         "status_base": 500,
-        "dom_hash": 6222105850358975379,
-        "resp_time_base": 0.5383560657501221
+        "dom_hash": 6339051329739636892,
+        "resp_time_base": 0.5197837352752686
       },
       "injection_points": [
         {
@@ -1465,8 +1630,8 @@
       "baseline": {
         "resp_length_base": 3428,
         "status_base": 200,
-        "dom_hash": -532459657451045657,
-        "resp_time_base": 0.543095588684082
+        "dom_hash": -7956390383931559194,
+        "resp_time_base": 0.5352733135223389
       },
       "injection_points": [
         {
@@ -1520,8 +1685,8 @@
       "baseline": {
         "resp_length_base": 3332,
         "status_base": 200,
-        "dom_hash": 2822513894795085548,
-        "resp_time_base": 0.5492212772369385
+        "dom_hash": -2871781052198470693,
+        "resp_time_base": 0.5288465023040771
       },
       "injection_points": [],
       "security_level": "low"
@@ -1531,19 +1696,67 @@
       "baseline": {
         "resp_length_base": 3764,
         "status_base": 200,
-        "dom_hash": 4425253860518479632,
-        "resp_time_base": 0.5652346611022949
+        "dom_hash": 7347821363285007688,
+        "resp_time_base": 0.5281236171722412
       },
       "injection_points": [],
       "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/login.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": 1154098549201151678,
+        "resp_time_base": 0.5375568866729736
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/login.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "low"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/sqli_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.518164873123169
+      },
+      "injection_points": [],
+      "security_level": "medium"
     },
     {
       "url": "http://127.0.0.1/bWAPP/app/sqli_1.php",
       "baseline": {
         "resp_length_base": 13529,
         "status_base": 200,
-        "dom_hash": 5961405513697415691,
-        "resp_time_base": 0.5842649936676025
+        "dom_hash": -4075086529263817657,
+        "resp_time_base": 0.5681016445159912
       },
       "injection_points": [
         {
@@ -1589,12 +1802,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_2.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5227391719818115
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_2.php",
       "baseline": {
         "resp_length_base": 14259,
         "status_base": 200,
-        "dom_hash": -2828755622464585556,
-        "resp_time_base": 0.5518021583557129
+        "dom_hash": 6215945397569202149,
+        "resp_time_base": 0.535663366317749
       },
       "injection_points": [
         {
@@ -1640,12 +1864,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_6.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5173313617706299
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_6.php",
       "baseline": {
         "resp_length_base": 13537,
         "status_base": 200,
-        "dom_hash": -9158946337655515125,
-        "resp_time_base": 0.5544955730438232
+        "dom_hash": -7530786022757808381,
+        "resp_time_base": 0.54598069190979
       },
       "injection_points": [
         {
@@ -1691,12 +1926,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_16.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5212907791137695
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_16.php",
       "baseline": {
         "resp_length_base": 13146,
         "status_base": 200,
-        "dom_hash": 2676936492597737382,
-        "resp_time_base": 0.5651450157165527
+        "dom_hash": -5170072481510562122,
+        "resp_time_base": 0.5397560596466064
       },
       "injection_points": [
         {
@@ -1748,12 +1994,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xss_get.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.522026538848877
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xss_get.php",
       "baseline": {
         "resp_length_base": 13346,
         "status_base": 200,
-        "dom_hash": 6252482744155696902,
-        "resp_time_base": 0.5477840900421143
+        "dom_hash": 8523845228287833648,
+        "resp_time_base": 0.5351502895355225
       },
       "injection_points": [
         {
@@ -1805,12 +2062,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xss_post.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5400485992431641
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xss_post.php",
       "baseline": {
         "resp_length_base": 13351,
         "status_base": 200,
-        "dom_hash": 3918823267615239708,
-        "resp_time_base": 0.546579122543335
+        "dom_hash": 999505407273021655,
+        "resp_time_base": 0.5377464294433594
       },
       "injection_points": [
         {
@@ -1862,12 +2130,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xss_stored_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5193238258361816
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xss_stored_1.php",
       "baseline": {
         "resp_length_base": 14425,
         "status_base": 200,
-        "dom_hash": -5969441356478240293,
-        "resp_time_base": 0.5493080615997314
+        "dom_hash": 3188748317346027523,
+        "resp_time_base": 0.5355055332183838
       },
       "injection_points": [
         {
@@ -1931,12 +2210,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/commandi.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5239424705505371
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/commandi.php",
       "baseline": {
         "resp_length_base": 12969,
         "status_base": 200,
-        "dom_hash": 5395309143676681293,
-        "resp_time_base": 0.5546145439147949
+        "dom_hash": 3410689750042301837,
+        "resp_time_base": 0.5427114963531494
       },
       "injection_points": [
         {
@@ -1982,12 +2272,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/commandi_blind.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5212888717651367
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/commandi_blind.php",
       "baseline": {
         "resp_length_base": 12993,
         "status_base": 200,
-        "dom_hash": -1958212049164545429,
-        "resp_time_base": 0.5670614242553711
+        "dom_hash": 6590709781982069379,
+        "resp_time_base": 0.5459792613983154
       },
       "injection_points": [
         {
@@ -2033,12 +2334,34 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/fi_local.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.53049635887146
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/fi_local.php",
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5338139533996582
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5206573009490967
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/fi_remote.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5184268951416016
       },
       "injection_points": [],
       "security_level": "medium"
@@ -2048,8 +2371,19 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.523655891418457
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5278759002685547
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/unrestricted_file_upload.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5269057750701904
       },
       "injection_points": [],
       "security_level": "medium"
@@ -2059,8 +2393,8 @@
       "baseline": {
         "resp_length_base": 13402,
         "status_base": 200,
-        "dom_hash": -1175691308506084758,
-        "resp_time_base": 0.5473554134368896
+        "dom_hash": -3273507454655683435,
+        "resp_time_base": 0.536776065826416
       },
       "injection_points": [
         {
@@ -2118,12 +2452,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xmli_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.52378249168396
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xmli_1.php",
       "baseline": {
         "resp_length_base": 13165,
         "status_base": 200,
-        "dom_hash": -5662597398547037241,
-        "resp_time_base": 0.5382602214813232
+        "dom_hash": 4061491818368270028,
+        "resp_time_base": 0.5408458709716797
       },
       "injection_points": [
         {
@@ -2175,12 +2520,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xmli_2.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.517392635345459
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xmli_2.php",
       "baseline": {
         "resp_length_base": 13715,
         "status_base": 200,
-        "dom_hash": 6743112999116540549,
-        "resp_time_base": 0.5457229614257812
+        "dom_hash": -1276989803141895003,
+        "resp_time_base": 0.5380556583404541
       },
       "injection_points": [
         {
@@ -2226,12 +2582,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/phpi.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5247509479522705
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/phpi.php",
       "baseline": {
         "resp_length_base": 12777,
         "status_base": 200,
-        "dom_hash": 4031859604706149268,
-        "resp_time_base": 0.543825626373291
+        "dom_hash": -8030918520134428690,
+        "resp_time_base": 0.5376870632171631
       },
       "injection_points": [
         {
@@ -2264,12 +2631,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/csrf_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5283825397491455
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/csrf_1.php",
       "baseline": {
         "resp_length_base": 13401,
         "status_base": 200,
-        "dom_hash": -6390039926003358528,
-        "resp_time_base": 0.5419623851776123
+        "dom_hash": -1612478652777532223,
+        "resp_time_base": 0.5393667221069336
       },
       "injection_points": [
         {
@@ -2321,12 +2699,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/csrf_2.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5219511985778809
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/csrf_2.php",
       "baseline": {
         "resp_length_base": 13388,
         "status_base": 200,
-        "dom_hash": 7569235211068281080,
-        "resp_time_base": 0.5515310764312744
+        "dom_hash": -6083465977286112570,
+        "resp_time_base": 0.5419228076934814
       },
       "injection_points": [
         {
@@ -2378,12 +2767,34 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/ssrf_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5216095447540283
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/ssrf_1.php",
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5247936248779297
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5271620750427246
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/htmli_get.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5243253707885742
       },
       "injection_points": [],
       "security_level": "medium"
@@ -2393,8 +2804,8 @@
       "baseline": {
         "resp_length_base": 13274,
         "status_base": 200,
-        "dom_hash": -2342705826660791747,
-        "resp_time_base": 0.5486633777618408
+        "dom_hash": -9067339033879910411,
+        "resp_time_base": 0.5449509620666504
       },
       "injection_points": [
         {
@@ -2446,12 +2857,23 @@
       "security_level": "medium"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/htmli_post.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5232360363006592
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/htmli_post.php",
       "baseline": {
         "resp_length_base": 13362,
         "status_base": 200,
-        "dom_hash": -405536050745753766,
-        "resp_time_base": 0.540027379989624
+        "dom_hash": 7967316202642553598,
+        "resp_time_base": 0.5407190322875977
       },
       "injection_points": [
         {
@@ -2503,149 +2925,61 @@
       "security_level": "medium"
     },
     {
-      "url": "http://127.0.0.1/bWAPP/app/portal.php",
+      "url": "http://127.0.0.1/bWAPP/portal.php",
       "baseline": {
-        "resp_length_base": 23450,
-        "status_base": 200,
-        "dom_hash": -2586515880765611232,
-        "resp_time_base": 0.5696640014648438
-      },
-      "injection_points": [
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "security_level",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        }
-      ],
-      "security_level": "medium"
-    },
-    {
-      "url": "http://127.0.0.1/bWAPP/app/index.php",
-      "baseline": {
-        "resp_length_base": 23450,
-        "status_base": 200,
-        "dom_hash": -2586515880765611232,
-        "resp_time_base": 0.5567402839660645
-      },
-      "injection_points": [
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "security_level",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        }
-      ],
-      "security_level": "medium"
-    },
-    {
-      "url": "http://127.0.0.1/bWAPP/app/admin/",
-      "baseline": {
-        "resp_length_base": 3178,
-        "status_base": 200,
-        "dom_hash": -4083088423273780570,
-        "resp_time_base": 0.5353307723999023
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5239248275756836
       },
       "injection_points": [],
       "security_level": "medium"
     },
     {
-      "url": "http://127.0.0.1/bWAPP/app/login.php",
+      "url": "http://127.0.0.1/bWAPP/app/portal.php",
       "baseline": {
-        "resp_length_base": 4066,
+        "resp_length_base": 23450,
         "status_base": 200,
-        "dom_hash": -3302000748671707235,
-        "resp_time_base": 0.5569899082183838
+        "dom_hash": -397842106274281038,
+        "resp_time_base": 0.5400512218475342
       },
       "injection_points": [
         {
           "type": "form",
           "method": "POST",
-          "action": "/bWAPP/app/login.php",
+          "action": "/bWAPP/app/portal.php",
           "inputs": [
             {
-              "name": "login",
+              "name": "bug",
               "default": "SAFS_TEST_PAYLOAD",
               "type": "text",
-              "risk_level": "high"
-            },
-            {
-              "name": "password",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "password",
-              "risk_level": "high"
-            },
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
             {
               "name": "security_level",
               "default": "SAFS_TEST_PAYLOAD",
               "type": "text",
-              "risk_level": "high"
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
             }
           ]
         }
@@ -2653,12 +2987,45 @@
       "security_level": "medium"
     },
     {
-      "url": "http://127.0.0.1/bWAPP/app/help.php",
+      "url": "http://127.0.0.1/bWAPP/index.php",
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5253753662109375
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5239057540893555
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/admin/",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5241608619689941
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/login.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5231082439422607
+      },
+      "injection_points": [],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5242941379547119
       },
       "injection_points": [],
       "security_level": "medium"
@@ -2668,8 +3035,8 @@
       "baseline": {
         "resp_length_base": 13594,
         "status_base": 200,
-        "dom_hash": 3514194489998756509,
-        "resp_time_base": 0.5629782676696777
+        "dom_hash": 7576815599084953621,
+        "resp_time_base": 0.5362839698791504
       },
       "injection_points": [
         {
@@ -2731,8 +3098,8 @@
       "baseline": {
         "resp_length_base": 13959,
         "status_base": 200,
-        "dom_hash": 379810335500817715,
-        "resp_time_base": 0.5544590950012207
+        "dom_hash": -8610561154663982594,
+        "resp_time_base": 0.5377657413482666
       },
       "injection_points": [
         {
@@ -2812,8 +3179,8 @@
       "baseline": {
         "resp_length_base": 13435,
         "status_base": 200,
-        "dom_hash": -5409193815924076633,
-        "resp_time_base": 0.5700030326843262
+        "dom_hash": 5980604245026779068,
+        "resp_time_base": 0.5356571674346924
       },
       "injection_points": [
         {
@@ -2863,8 +3230,8 @@
       "baseline": {
         "resp_length_base": 12611,
         "status_base": 200,
-        "dom_hash": -6481739146040999371,
-        "resp_time_base": 0.5736372470855713
+        "dom_hash": -3724409443283654502,
+        "resp_time_base": 0.5593125820159912
       },
       "injection_points": [
         {
@@ -2901,8 +3268,8 @@
       "baseline": {
         "resp_length_base": 14102,
         "status_base": 200,
-        "dom_hash": -4986256471522944518,
-        "resp_time_base": 0.555959939956665
+        "dom_hash": 3887594000672530395,
+        "resp_time_base": 0.5329880714416504
       },
       "injection_points": [
         {
@@ -2939,8 +3306,8 @@
       "baseline": {
         "resp_length_base": 4066,
         "status_base": 200,
-        "dom_hash": -3302000748671707235,
-        "resp_time_base": 0.543086051940918
+        "dom_hash": 1154098549201151678,
+        "resp_time_base": 0.5352263450622559
       },
       "injection_points": [
         {
@@ -2976,8 +3343,8 @@
       "baseline": {
         "resp_length_base": 1633,
         "status_base": 500,
-        "dom_hash": 6222105850358975379,
-        "resp_time_base": 0.5322375297546387
+        "dom_hash": 6339051329739636892,
+        "resp_time_base": 0.5307285785675049
       },
       "injection_points": [
         {
@@ -3001,8 +3368,8 @@
       "baseline": {
         "resp_length_base": 3428,
         "status_base": 200,
-        "dom_hash": -532459657451045657,
-        "resp_time_base": 0.5384871959686279
+        "dom_hash": -7956390383931559194,
+        "resp_time_base": 0.5363433361053467
       },
       "injection_points": [
         {
@@ -3056,8 +3423,8 @@
       "baseline": {
         "resp_length_base": 3332,
         "status_base": 200,
-        "dom_hash": 2822513894795085548,
-        "resp_time_base": 0.5455727577209473
+        "dom_hash": -2871781052198470693,
+        "resp_time_base": 0.5317020416259766
       },
       "injection_points": [],
       "security_level": "medium"
@@ -3067,19 +3434,67 @@
       "baseline": {
         "resp_length_base": 3764,
         "status_base": 200,
-        "dom_hash": 4425253860518479632,
-        "resp_time_base": 0.5365450382232666
+        "dom_hash": 7347821363285007688,
+        "resp_time_base": 0.5295917987823486
       },
       "injection_points": [],
       "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/login.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": 1154098549201151678,
+        "resp_time_base": 0.5408124923706055
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/login.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
+      "security_level": "medium"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/sqli_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5246322154998779
+      },
+      "injection_points": [],
+      "security_level": "high"
     },
     {
       "url": "http://127.0.0.1/bWAPP/app/sqli_1.php",
       "baseline": {
         "resp_length_base": 13529,
         "status_base": 200,
-        "dom_hash": 5961405513697415691,
-        "resp_time_base": 0.5806517601013184
+        "dom_hash": -4075086529263817657,
+        "resp_time_base": 0.5881855487823486
       },
       "injection_points": [
         {
@@ -3125,12 +3540,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_2.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5254220962524414
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_2.php",
       "baseline": {
         "resp_length_base": 14259,
         "status_base": 200,
-        "dom_hash": -2828755622464585556,
-        "resp_time_base": 0.5486831665039062
+        "dom_hash": 6215945397569202149,
+        "resp_time_base": 0.5450356006622314
       },
       "injection_points": [
         {
@@ -3176,12 +3602,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_6.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5188581943511963
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_6.php",
       "baseline": {
         "resp_length_base": 13537,
         "status_base": 200,
-        "dom_hash": -9158946337655515125,
-        "resp_time_base": 0.5694363117218018
+        "dom_hash": -7530786022757808381,
+        "resp_time_base": 0.5265014171600342
       },
       "injection_points": [
         {
@@ -3227,12 +3664,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/sqli_16.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5202109813690186
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/sqli_16.php",
       "baseline": {
         "resp_length_base": 13146,
         "status_base": 200,
-        "dom_hash": 2676936492597737382,
-        "resp_time_base": 0.5482730865478516
+        "dom_hash": -5170072481510562122,
+        "resp_time_base": 0.5347673892974854
       },
       "injection_points": [
         {
@@ -3284,12 +3732,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xss_get.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5270354747772217
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xss_get.php",
       "baseline": {
         "resp_length_base": 13346,
         "status_base": 200,
-        "dom_hash": 6252482744155696902,
-        "resp_time_base": 0.5561211109161377
+        "dom_hash": 8523845228287833648,
+        "resp_time_base": 0.5276858806610107
       },
       "injection_points": [
         {
@@ -3341,12 +3800,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xss_post.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5212795734405518
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xss_post.php",
       "baseline": {
         "resp_length_base": 13351,
         "status_base": 200,
-        "dom_hash": 3918823267615239708,
-        "resp_time_base": 0.5372529029846191
+        "dom_hash": 999505407273021655,
+        "resp_time_base": 0.5332741737365723
       },
       "injection_points": [
         {
@@ -3398,12 +3868,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xss_stored_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.520038366317749
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xss_stored_1.php",
       "baseline": {
         "resp_length_base": 14425,
         "status_base": 200,
-        "dom_hash": -5969441356478240293,
-        "resp_time_base": 0.5451312065124512
+        "dom_hash": 3188748317346027523,
+        "resp_time_base": 0.5456850528717041
       },
       "injection_points": [
         {
@@ -3467,12 +3948,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/commandi.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5193352699279785
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/commandi.php",
       "baseline": {
         "resp_length_base": 12969,
         "status_base": 200,
-        "dom_hash": 5395309143676681293,
-        "resp_time_base": 0.5493617057800293
+        "dom_hash": 3410689750042301837,
+        "resp_time_base": 0.5423355102539062
       },
       "injection_points": [
         {
@@ -3518,12 +4010,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/commandi_blind.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5197305679321289
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/commandi_blind.php",
       "baseline": {
         "resp_length_base": 12993,
         "status_base": 200,
-        "dom_hash": -1958212049164545429,
-        "resp_time_base": 0.5418305397033691
+        "dom_hash": 6590709781982069379,
+        "resp_time_base": 0.5519387722015381
       },
       "injection_points": [
         {
@@ -3569,12 +4072,34 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/fi_local.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5247318744659424
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/fi_local.php",
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5335800647735596
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5216841697692871
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/fi_remote.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5219871997833252
       },
       "injection_points": [],
       "security_level": "high"
@@ -3584,8 +4109,19 @@
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5296573638916016
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.52333664894104
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/unrestricted_file_upload.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.521359920501709
       },
       "injection_points": [],
       "security_level": "high"
@@ -3595,8 +4131,8 @@
       "baseline": {
         "resp_length_base": 13402,
         "status_base": 200,
-        "dom_hash": -1175691308506084758,
-        "resp_time_base": 0.5466163158416748
+        "dom_hash": -3273507454655683435,
+        "resp_time_base": 0.5383057594299316
       },
       "injection_points": [
         {
@@ -3654,12 +4190,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xmli_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5180196762084961
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xmli_1.php",
       "baseline": {
         "resp_length_base": 13165,
         "status_base": 200,
-        "dom_hash": -5662597398547037241,
-        "resp_time_base": 0.5471398830413818
+        "dom_hash": 4061491818368270028,
+        "resp_time_base": 0.536231517791748
       },
       "injection_points": [
         {
@@ -3711,12 +4258,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/xmli_2.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5188205242156982
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/xmli_2.php",
       "baseline": {
         "resp_length_base": 13715,
         "status_base": 200,
-        "dom_hash": 6743112999116540549,
-        "resp_time_base": 0.5702307224273682
+        "dom_hash": -1276989803141895003,
+        "resp_time_base": 0.535942554473877
       },
       "injection_points": [
         {
@@ -3762,12 +4320,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/phpi.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5276658535003662
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/phpi.php",
       "baseline": {
         "resp_length_base": 12777,
         "status_base": 200,
-        "dom_hash": 4031859604706149268,
-        "resp_time_base": 0.5539305210113525
+        "dom_hash": -8030918520134428690,
+        "resp_time_base": 0.5275890827178955
       },
       "injection_points": [
         {
@@ -3800,12 +4369,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/csrf_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.521338701248169
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/csrf_1.php",
       "baseline": {
         "resp_length_base": 13401,
         "status_base": 200,
-        "dom_hash": -6390039926003358528,
-        "resp_time_base": 0.5575377941131592
+        "dom_hash": -1612478652777532223,
+        "resp_time_base": 0.5359060764312744
       },
       "injection_points": [
         {
@@ -3857,12 +4437,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/csrf_2.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5215518474578857
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/csrf_2.php",
       "baseline": {
         "resp_length_base": 13388,
         "status_base": 200,
-        "dom_hash": 7569235211068281080,
-        "resp_time_base": 0.5460517406463623
+        "dom_hash": -6083465977286112570,
+        "resp_time_base": 0.5430262088775635
       },
       "injection_points": [
         {
@@ -3914,12 +4505,34 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/ssrf_1.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5196614265441895
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/ssrf_1.php",
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.5248286724090576
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5211939811706543
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/htmli_get.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.518284797668457
       },
       "injection_points": [],
       "security_level": "high"
@@ -3929,8 +4542,8 @@
       "baseline": {
         "resp_length_base": 13274,
         "status_base": 200,
-        "dom_hash": -2342705826660791747,
-        "resp_time_base": 0.547278642654419
+        "dom_hash": -9067339033879910411,
+        "resp_time_base": 0.5300979614257812
       },
       "injection_points": [
         {
@@ -3982,12 +4595,23 @@
       "security_level": "high"
     },
     {
+      "url": "http://127.0.0.1/bWAPP/htmli_post.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5204682350158691
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
       "url": "http://127.0.0.1/bWAPP/app/htmli_post.php",
       "baseline": {
         "resp_length_base": 13362,
         "status_base": 200,
-        "dom_hash": -405536050745753766,
-        "resp_time_base": 0.55338454246521
+        "dom_hash": 7967316202642553598,
+        "resp_time_base": 0.5419573783874512
       },
       "injection_points": [
         {
@@ -4039,149 +4663,61 @@
       "security_level": "high"
     },
     {
-      "url": "http://127.0.0.1/bWAPP/app/portal.php",
+      "url": "http://127.0.0.1/bWAPP/portal.php",
       "baseline": {
-        "resp_length_base": 23450,
-        "status_base": 200,
-        "dom_hash": -2586515880765611232,
-        "resp_time_base": 0.5744187831878662
-      },
-      "injection_points": [
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "security_level",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        }
-      ],
-      "security_level": "high"
-    },
-    {
-      "url": "http://127.0.0.1/bWAPP/app/index.php",
-      "baseline": {
-        "resp_length_base": 23450,
-        "status_base": 200,
-        "dom_hash": -2586515880765611232,
-        "resp_time_base": 0.5587677955627441
-      },
-      "injection_points": [
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "security_level",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        },
-        {
-          "type": "form",
-          "method": "POST",
-          "action": "/bWAPP/app/portal.php",
-          "inputs": [
-            {
-              "name": "bug",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "text",
-              "risk_level": "normal"
-            }
-          ]
-        }
-      ],
-      "security_level": "high"
-    },
-    {
-      "url": "http://127.0.0.1/bWAPP/app/admin/",
-      "baseline": {
-        "resp_length_base": 3178,
-        "status_base": 200,
-        "dom_hash": -4083088423273780570,
-        "resp_time_base": 0.5383479595184326
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5251922607421875
       },
       "injection_points": [],
       "security_level": "high"
     },
     {
-      "url": "http://127.0.0.1/bWAPP/app/login.php",
+      "url": "http://127.0.0.1/bWAPP/app/portal.php",
       "baseline": {
-        "resp_length_base": 4066,
+        "resp_length_base": 23450,
         "status_base": 200,
-        "dom_hash": -3302000748671707235,
-        "resp_time_base": 0.5725839138031006
+        "dom_hash": -397842106274281038,
+        "resp_time_base": 0.559974193572998
       },
       "injection_points": [
         {
           "type": "form",
           "method": "POST",
-          "action": "/bWAPP/app/login.php",
+          "action": "/bWAPP/app/portal.php",
           "inputs": [
             {
-              "name": "login",
+              "name": "bug",
               "default": "SAFS_TEST_PAYLOAD",
               "type": "text",
-              "risk_level": "high"
-            },
-            {
-              "name": "password",
-              "default": "SAFS_TEST_PAYLOAD",
-              "type": "password",
-              "risk_level": "high"
-            },
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
             {
               "name": "security_level",
               "default": "SAFS_TEST_PAYLOAD",
               "type": "text",
-              "risk_level": "high"
+              "risk_level": "normal"
+            }
+          ]
+        },
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/portal.php",
+          "inputs": [
+            {
+              "name": "bug",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "normal"
             }
           ]
         }
@@ -4189,12 +4725,45 @@
       "security_level": "high"
     },
     {
-      "url": "http://127.0.0.1/bWAPP/app/help.php",
+      "url": "http://127.0.0.1/bWAPP/index.php",
       "baseline": {
         "resp_length_base": 270,
         "status_base": 404,
-        "dom_hash": 2998821001813420113,
-        "resp_time_base": 0.534928560256958
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.522409200668335
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/admin/",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5182745456695557
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/login.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5237693786621094
+      },
+      "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/help.php",
+      "baseline": {
+        "resp_length_base": 270,
+        "status_base": 404,
+        "dom_hash": 3105745836728366107,
+        "resp_time_base": 0.5192298889160156
       },
       "injection_points": [],
       "security_level": "high"
@@ -4204,8 +4773,8 @@
       "baseline": {
         "resp_length_base": 13594,
         "status_base": 200,
-        "dom_hash": 3514194489998756509,
-        "resp_time_base": 0.5594761371612549
+        "dom_hash": 7576815599084953621,
+        "resp_time_base": 0.5323355197906494
       },
       "injection_points": [
         {
@@ -4267,8 +4836,8 @@
       "baseline": {
         "resp_length_base": 13959,
         "status_base": 200,
-        "dom_hash": 379810335500817715,
-        "resp_time_base": 0.5446665287017822
+        "dom_hash": -8610561154663982594,
+        "resp_time_base": 0.5367445945739746
       },
       "injection_points": [
         {
@@ -4348,8 +4917,8 @@
       "baseline": {
         "resp_length_base": 13435,
         "status_base": 200,
-        "dom_hash": -5409193815924076633,
-        "resp_time_base": 0.5394353866577148
+        "dom_hash": 5980604245026779068,
+        "resp_time_base": 0.5332458019256592
       },
       "injection_points": [
         {
@@ -4399,8 +4968,8 @@
       "baseline": {
         "resp_length_base": 12611,
         "status_base": 200,
-        "dom_hash": -6481739146040999371,
-        "resp_time_base": 0.5615072250366211
+        "dom_hash": -3724409443283654502,
+        "resp_time_base": 0.5422365665435791
       },
       "injection_points": [
         {
@@ -4437,8 +5006,8 @@
       "baseline": {
         "resp_length_base": 14102,
         "status_base": 200,
-        "dom_hash": -4986256471522944518,
-        "resp_time_base": 0.5633499622344971
+        "dom_hash": 3887594000672530395,
+        "resp_time_base": 0.5382332801818848
       },
       "injection_points": [
         {
@@ -4475,8 +5044,8 @@
       "baseline": {
         "resp_length_base": 4066,
         "status_base": 200,
-        "dom_hash": -3302000748671707235,
-        "resp_time_base": 0.5465810298919678
+        "dom_hash": 1154098549201151678,
+        "resp_time_base": 0.539886474609375
       },
       "injection_points": [
         {
@@ -4512,8 +5081,8 @@
       "baseline": {
         "resp_length_base": 1633,
         "status_base": 500,
-        "dom_hash": 6222105850358975379,
-        "resp_time_base": 0.532261848449707
+        "dom_hash": 6339051329739636892,
+        "resp_time_base": 0.5245203971862793
       },
       "injection_points": [
         {
@@ -4537,8 +5106,8 @@
       "baseline": {
         "resp_length_base": 3428,
         "status_base": 200,
-        "dom_hash": -532459657451045657,
-        "resp_time_base": 0.5453605651855469
+        "dom_hash": -7956390383931559194,
+        "resp_time_base": 0.5381393432617188
       },
       "injection_points": [
         {
@@ -4592,8 +5161,8 @@
       "baseline": {
         "resp_length_base": 3332,
         "status_base": 200,
-        "dom_hash": 2822513894795085548,
-        "resp_time_base": 0.5324094295501709
+        "dom_hash": -2871781052198470693,
+        "resp_time_base": 0.5227758884429932
       },
       "injection_points": [],
       "security_level": "high"
@@ -4603,10 +5172,47 @@
       "baseline": {
         "resp_length_base": 3764,
         "status_base": 200,
-        "dom_hash": 4425253860518479632,
-        "resp_time_base": 0.5354404449462891
+        "dom_hash": 7347821363285007688,
+        "resp_time_base": 0.5282576084136963
       },
       "injection_points": [],
+      "security_level": "high"
+    },
+    {
+      "url": "http://127.0.0.1/bWAPP/app/login.php",
+      "baseline": {
+        "resp_length_base": 4066,
+        "status_base": 200,
+        "dom_hash": 1154098549201151678,
+        "resp_time_base": 0.5432765483856201
+      },
+      "injection_points": [
+        {
+          "type": "form",
+          "method": "POST",
+          "action": "/bWAPP/app/login.php",
+          "inputs": [
+            {
+              "name": "login",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            },
+            {
+              "name": "password",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "password",
+              "risk_level": "high"
+            },
+            {
+              "name": "security_level",
+              "default": "SAFS_TEST_PAYLOAD",
+              "type": "text",
+              "risk_level": "high"
+            }
+          ]
+        }
+      ],
       "security_level": "high"
     }
   ]
